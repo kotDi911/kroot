@@ -1,0 +1,31 @@
+.services{
+  &__cont{
+    max-width: 64rem;
+    margin: 0 auto;
+  }
+  & .text_details{
+    text-align: center;
+  }
+  &__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    padding-top: 3.25rem;
+  }
+  &__card{
+    padding: 3rem 2.5rem;
+    background: white;
+    border-radius: 25px;
+  }
+  &__link{
+    padding: 0 7px;
+    border: 1px solid $text;
+    border-radius: 10px;
+    &:hover{
+      transition: .3s linear;
+      background: $black;
+      color: white;
+    }
+  }
+}

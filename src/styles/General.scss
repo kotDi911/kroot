@@ -1,0 +1,163 @@
+$black: #070707;
+$text: #9ba1a0;
+$BG: #ebf1f5;
+$border: #dee2e5;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $BG;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+}
+
+.end {
+  align-items: flex-end;
+}
+
+.space-b {
+  justify-content: space-between;
+}
+.mt-16{
+  margin-top: 16px;
+}
+.mb-8{
+  margin-bottom: 8px;
+}
+
+.text {
+  text-align: center;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+}
+
+.h1 {
+  font-size: 64px;
+  color: $black;
+  margin: 0;
+  text-align: center;
+}
+
+.h3 {
+  font-size: 40px;
+}
+
+.regular {
+  font-size: 16px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.gray {
+  color: $text;
+}
+
+.section {
+  padding: 0 2.5rem;
+}
+
+.box {
+  background: $BG;
+  border: 1px solid $border;
+  border-radius: 10px;
+  padding: 2px 5px;
+  width: max-content;
+  height: max-content;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background: $black;
+  border-radius: 5px;
+  margin-right: 3px;
+}
+
+.mark{
+  width: 16px;
+  height: 16px;
+  border: 2px solid $text;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 40px;
+  border: 1px solid #dee2e5;
+  border-radius: 25px;
+
+  &-img {
+    width: 14px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &-bg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 20px;
+    background: rgba(222, 226, 229, 0.3);
+  }
+}
+
+.home__card:hover > div > div > .btn {
+  &-bg {
+    transition: linear .2s;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-img {
+    animation: 1s cubic-bezier(0.65, 0.05, 0.36, 1) move;
+  }
+}
+
+
+@keyframes move {
+  10% {
+    right: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    left: 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

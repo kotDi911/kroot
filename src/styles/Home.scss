@@ -1,0 +1,64 @@
+$black: #070707;
+$border: #dee2e5;
+
+.logo {
+  text-align: center;
+  padding: 2.25rem 0;
+}
+
+.home {
+  &__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding-top: 1rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  &__card {
+    background: white;
+    height: 20rem;
+    padding: 2rem 1.5rem;
+    border-radius: 25px;
+    justify-content: flex-end;
+    cursor: pointer;
+
+    &-title {
+      height: 100%;
+    }
+  }
+}
+
+.social{
+  position: absolute;
+  bottom: 0;
+  &-cont {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $border;
+    border-radius: 50%;
+    z-index: 1;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &:hover > .btn-bg {
+      transition: linear .2s;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.social-img {
+  position: absolute;
+  width: 14px;
+  z-index: 1;
+}
