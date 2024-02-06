@@ -35,6 +35,12 @@ code {
 .end {
   align-items: flex-end;
 }
+.absolute{
+  position: absolute;
+}
+.relative{
+  position: relative;
+}
 
 .space-b {
   justify-content: space-between;
@@ -45,7 +51,11 @@ code {
 .mb-8{
   margin-bottom: 8px;
 }
+.w-100{
+  width: 100%;
+}
 
+//-------------------------------------- TEXT
 .text {
   text-align: center;
   cursor: default;
@@ -73,9 +83,24 @@ a {
 .small {
   font-size: 12px;
 }
+//-------------------------------------- TEXT
+
+//-------------------------------------- COLOR
 
 .gray {
   color: $text;
+}
+.bg{
+  background: $BG;
+}
+.black{
+  color: $black;
+}
+//-------------------------------------- COLOR
+
+.img{
+  width: 100%;
+  height: 100%;
 }
 
 .section {

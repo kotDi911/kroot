@@ -25,8 +25,10 @@ const RouterApp = () => {
                     <Route path='home' element={<Home/>}/>
                     <Route path='about' element={<About/>}/>
                     <Route path='services' element={<Services/>}/>
-                    <Route path='projects' element={<Projects/>}/>
-                    <Route path='projects:name' element={<Details/>}/>
+                    <Route path='projects' element={<Outlet/>}>
+                        <Route path='' element={<Projects/>}/>
+                        <Route path=':name' element={<Details/>}/>
+                    </Route>
                     <Route path='contacts' element={<Contacts/>}/>
                     <Route path='career' element={<Career/>}/>
                     <Route path='generationkroot' element={<Generation/>}/>

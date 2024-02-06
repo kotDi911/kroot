@@ -1,0 +1,34 @@
+.projects{
+  &__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 1rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+  &__text{
+    padding: 2px 5px;
+    border: 1px solid $border;
+    border-radius: 10px;
+    background: $BG;
+  }
+  &__btn{
+    width: 100%;
+    padding: 0 2rem 2rem;
+  }
+  &__card{
+    &:hover>.absolute>div>.btn{
+      background: $text;
+    }
+  }
+}
+.project{
+  &-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem;
+  }
+}

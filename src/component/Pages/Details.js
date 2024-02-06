@@ -1,6 +1,9 @@
 const Details = () => {
     return (
         <section className="section details">
+            <div>
+                dfsggdfgf
+            </div>
         </section>
     )
 }

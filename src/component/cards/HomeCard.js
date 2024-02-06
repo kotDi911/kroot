@@ -36,7 +36,7 @@ const HomeCard = ({props}) => {
     }
 
     const GoToPage = () => {
-        reg.test(url) ? navigate(`/kroot/${url}`) : window.open(url, "_blank")
+        reg.test(url) ? navigate(`/${url}`) : window.open(url, "_blank")
     }
 
     const color = img ? dark : light
