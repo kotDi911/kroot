@@ -1,4 +1,4 @@
-import {Navigate, Routes} from "react-router";
+import {Navigate, Outlet, Routes} from "react-router";
 import {NavLink, Route} from "react-router-dom";
 import Home from "../Pages/Home";
 import logo from "../../assets/ico/Logo.svg"
@@ -16,20 +16,23 @@ const RouterApp = () => {
     return (
         <>
             <div className="logo">
-                <NavLink expect="" to="/">
+                <NavLink expect="" to="/home">
                     <img className="logo-img" src={logo} alt="logo"/>
                 </NavLink>
             </div>
             <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/about' element={<About/>}/>
-                <Route path='/services' element={<Services/>}/>
-                <Route path='/projects' element={<Projects/>}/>
-                <Route path='/projects:name' element={<Details/>}/>
-                <Route path='/contacts' element={<Contacts/>}/>
-                <Route path='/career' element={<Career/>}/>
-                <Route path='/generationkroot' element={<Generation/>}/>
-                <Route path='*' element={<Navigate to='/' replace/>}/>
+                <Route path='/' element={<Outlet/>}>
+                    <Route path='home' element={<Home/>}/>
+                    <Route path='about' element={<About/>}/>
+                    <Route path='services' element={<Services/>}/>
+                    <Route path='projects' element={<Projects/>}/>
+                    <Route path='projects:name' element={<Details/>}/>
+                    <Route path='contacts' element={<Contacts/>}/>
+                    <Route path='career' element={<Career/>}/>
+                    <Route path='generationkroot' element={<Generation/>}/>
+                    <Route path='*' element={<Navigate to='/home' replace/>}/>
+                    <Route path='/' element={<Navigate to='/home' replace/>}/>
+                </Route>
             </Routes>
             <Footer/>
         </>

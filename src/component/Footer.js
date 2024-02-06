@@ -19,13 +19,13 @@ const Footer = () => {
     return (
         <footer className="footer flex col">
             <div className="flex center space-b">
-                <NavLink className="logo-mini" to="/">
+                <NavLink className="logo-mini" to='/home'>
                     <img className="logo-img" src={logo} alt="logo"/>
                 </NavLink>
                 <nav className="nav flex end">
                     {links.map(link =>
                         <NavLink className="nav__link flex col center gray"
-                                 key={link.name} to={`/${link.name === "home" ? "" : link.name}`}>
+                                 key={link.name} to={`/${link.name}`}>
                             <div className="small">
                                 {link.name.toUpperCase()}
                             </div>
@@ -34,7 +34,7 @@ const Footer = () => {
                     )}
                 </nav>
                 {
-                    pathname === "/" ?
+                    pathname === "/home" ?
                         <span className="text small gray">© 2021 THE KROOT</span>
                         :
                         <div className="footer__social flex">
@@ -53,7 +53,7 @@ const Footer = () => {
                         </div>
                 }
             </div>
-            {pathname !== "/" && <span className="text small gray">© 2021 THE KROOT</span>}
+            {pathname !== "/home" && <span className="text small gray">© 2021 THE KROOT</span>}
         </footer>
     )
 }

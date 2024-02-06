@@ -36,7 +36,7 @@ const HomeCard = ({props}) => {
     }
 
     const GoToPage = () => {
-        reg.test(url) ? navigate(`/${url}`) : window.open(url, "_blank")
+        reg.test(url) ? navigate(`/kroot/${url}`) : window.open(url, "_blank")
     }
 
     const color = img ? dark : light
@@ -63,6 +63,7 @@ const HomeCard = ({props}) => {
                                          src={item.img}
                                          alt={item.name}
                                     />
+                                    {/*<img src="%PUBLIC_URL%/projects/1.gif" alt=""/>*/}
                                 </Link>
                             )}
                         </div>
