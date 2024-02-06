@@ -1,4 +1,4 @@
-import {Routes} from "react-router";
+import {Navigate, Routes} from "react-router";
 import {NavLink, Route} from "react-router-dom";
 import Home from "../Pages/Home";
 import logo from "../../assets/ico/Logo.svg"
@@ -29,6 +29,7 @@ const RouterApp = () => {
                 <Route path='/contacts' element={<Contacts/>}/>
                 <Route path='/career' element={<Career/>}/>
                 <Route path='/generationkroot' element={<Generation/>}/>
+                <Route path='*' element={<Navigate to='/' replace/>}/>
             </Routes>
             <Footer/>
         </>
