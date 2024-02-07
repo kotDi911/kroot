@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.e02bdd01.css",
-    "main.js": "/kroot/static/js/main.822b6da2.js",
+    "main.css": "/kroot/static/css/main.b6d35ff4.css",
+    "main.js": "/kroot/static/js/main.966fe806.js",
     "static/media/comer.gif": "/kroot/static/media/comer.1cf9bbb4eac63d6f9fad.gif",
     "static/media/music.gif": "/kroot/static/media/music.be6719d43363c0267446.gif",
     "static/media/beauty.gif": "/kroot/static/media/beauty.704e5a91f2df15c6fcb8.gif",
-    "static/media/Logo.svg": "/kroot/static/media/Logo.fed1c2e6c16d8efec1997db04cc488cb.svg",
     "static/media/vfx.svg": "/kroot/static/media/vfx.94c1c50249e1e1f8e889f38096c7a4d3.svg",
     "static/media/LogoMini.svg": "/kroot/static/media/LogoMini.4834cf5dbf8fa6a279608d3f461b35ba.svg",
     "static/media/unreal.svg": "/kroot/static/media/unreal.4c3d9e311f07f76fe223425e1c7b5aaa.svg",
@@ -16,11 +15,11 @@
     "static/media/cgi.svg": "/kroot/static/media/cgi.2dfbf87a07d5a09391ca89c62f0dce2e.svg",
     "index.html": "/kroot/index.html",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.e02bdd01.css.map": "/kroot/static/css/main.e02bdd01.css.map",
-    "main.822b6da2.js.map": "/kroot/static/js/main.822b6da2.js.map"
+    "main.b6d35ff4.css.map": "/kroot/static/css/main.b6d35ff4.css.map",
+    "main.966fe806.js.map": "/kroot/static/js/main.966fe806.js.map"
   },
   "entrypoints": [
-    "static/css/main.e02bdd01.css",
-    "static/js/main.822b6da2.js"
+    "static/css/main.b6d35ff4.css",
+    "static/js/main.966fe806.js"
   ]
 }
