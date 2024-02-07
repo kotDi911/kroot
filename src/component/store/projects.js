@@ -1,18 +1,18 @@
 import {create} from 'zustand'
 
 const URL = "https://github.com/kotDi911/kroot/blob/main/public/images/projects"
-const open = "preview.gif?raw=true"
+const open = "?raw=true"
+const preview = `preview.gif${open}`
 
 export const useCards = create(() => ({
     projects: [
         {
             id: 1,
             name: "Muni Long - Made For Me",
-            img: `${URL}/muni_long/${open}`,
+            img: `${URL}/muni_long/${preview}`,
             details: [
                 {
-                    img: "",
-                    title: "Title",
+                    img: `${URL}/muni_long/main1.jpg${open}`,
                     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
                         "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
                         "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
@@ -24,8 +24,7 @@ export const useCards = create(() => ({
                     ]
                 },
                 {
-                    img: "",
-                    title: "Title",
+                    img: `${URL}/muni_long/main2.jpg${open}`,
                     description: "",
                     options: []
                 }
@@ -33,18 +32,17 @@ export const useCards = create(() => ({
             galleryTitle: "Gallery",
             galleryDescription: "Gallery",
             galleryImg: [
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
+                {img: `${URL}/muni_long/gallery/1.jpg${open}`},
+                {img: `${URL}/muni_long/gallery/2.jpg${open}`},
+                {img: `${URL}/muni_long/gallery/3.jpg${open}`},
+                {img: `${URL}/muni_long/gallery/4.jpg${open}`},
+                {img: `${URL}/muni_long/gallery/5.jpg${open}`},
             ]
         },
         {
             id: 2,
             name: "6IX9INE - COMEBACK 2022",
-            img: `${URL}/6IX9INE/${open}`,
+            img: `${URL}/6IX9INE/${preview}`,
             details: [
                 {
                     img: "",
@@ -67,7 +65,7 @@ export const useCards = create(() => ({
         {
             id: 3,
             name: "TATRAS 2022",
-            img: `${URL}/tatras/${open}`,
+            img: `${URL}/tatras/${preview}`,
             details: [
                 {
                     img: "",
@@ -90,7 +88,7 @@ export const useCards = create(() => ({
         {
             id: 4,
             name: "JANET JACKSON",
-            img: `${URL}/janet_jackson/${open}`,
+            img: `${URL}/janet_jackson/${preview}`,
             details: [
                 {
                     img: "",
@@ -113,7 +111,7 @@ export const useCards = create(() => ({
         {
             id: 5,
             name: "OLIVER TREE - FREAKS & GEEKS",
-            img: `${URL}/oliver_tree/${open}`,
+            img: `${URL}/oliver_tree/${preview}`,
             details: [
                 {
                     img: "",
@@ -136,7 +134,7 @@ export const useCards = create(() => ({
         {
             id: 6,
             name: "SOFIA CARSON - LOUD",
-            img: `${URL}/sofia_carson/${open}`,
+            img: `${URL}/sofia_carson/${preview}`,
             details: [
                 {
                     img: "",
