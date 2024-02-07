@@ -6,7 +6,7 @@ const Projects = () => {
     return (
         <section className="section projects">
             <div className="projects__grid">
-                {projects.map(item => <ProjectsCard props={item}/>)}
+                {projects.map(item => <ProjectsCard key={item.id} props={item}/>)}
             </div>
         </section>
     )

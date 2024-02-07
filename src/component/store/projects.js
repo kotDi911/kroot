@@ -1,18 +1,31 @@
 import {create} from 'zustand'
 
 const URL = "https://github.com/kotDi911/kroot/blob/main/public/images/projects"
-const open = "?raw=true"
+const open = "preview.gif?raw=true"
 
 export const useCards = create(() => ({
     projects: [
         {
             id: 1,
             name: "Muni Long - Made For Me",
-            img: `${URL}/1.gif${open}`,
+            img: `${URL}/muni_long/${open}`,
             details: [
                 {
                     img: "",
-                    title: "",
+                    title: "Title",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                        "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                        "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                        " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                        " vitae voluptas voluptatum! Ab, consequuntur.",
+                    options: [
+                        {name: "1"},
+                        {name: "2"}
+                    ]
+                },
+                {
+                    img: "",
+                    title: "Title",
                     description: "",
                     options: []
                 }
@@ -31,7 +44,7 @@ export const useCards = create(() => ({
         {
             id: 2,
             name: "6IX9INE - COMEBACK 2022",
-            img: `${URL}/2.gif${open}`,
+            img: `${URL}/6IX9INE/${open}`,
             details: [
                 {
                     img: "",
@@ -54,7 +67,7 @@ export const useCards = create(() => ({
         {
             id: 3,
             name: "TATRAS 2022",
-            img: `${URL}/3.gif${open}`,
+            img: `${URL}/tatras/${open}`,
             details: [
                 {
                     img: "",
@@ -77,7 +90,7 @@ export const useCards = create(() => ({
         {
             id: 4,
             name: "JANET JACKSON",
-            img: `${URL}/4.gif${open}`,
+            img: `${URL}/janet_jackson/${open}`,
             details: [
                 {
                     img: "",
@@ -100,7 +113,7 @@ export const useCards = create(() => ({
         {
             id: 5,
             name: "OLIVER TREE - FREAKS & GEEKS",
-            img: `${URL}/5.gif${open}`,
+            img: `${URL}/oliver_tree/${open}`,
             details: [
                 {
                     img: "",
@@ -123,7 +136,7 @@ export const useCards = create(() => ({
         {
             id: 6,
             name: "SOFIA CARSON - LOUD",
-            img: `${URL}/6.gif${open}`,
+            img: `${URL}/sofia_carson/${open}`,
             details: [
                 {
                     img: "",
