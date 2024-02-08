@@ -1,7 +1,7 @@
 import {Navigate, Outlet, Routes} from "react-router";
 import {NavLink, Route, useLocation} from "react-router-dom";
 import Home from "../Pages/Home";
-import logo from "../../assets/ico/Logo.png"
+import logo from "../../assets/ico/Logo.svg"
 import About from "../Pages/About";
 import Services from "../Pages/Services";
 import Projects from "../Pages/Projects";
