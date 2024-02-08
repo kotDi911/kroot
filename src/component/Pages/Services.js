@@ -4,7 +4,7 @@ const Services = () => {
     const services = useServiceCard((store) => store.services)
     return (
         <section className="section services">
-            <div className="services__cont">
+            <div className="container-64">
                 <h1 className="h1">Services</h1>
                 <p className="text_details regular gray">
                     We bring creativity to life, enhance visual appeal, and ensure a flawless execution

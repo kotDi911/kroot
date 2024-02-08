@@ -43,7 +43,7 @@ const HomeCard = ({props}) => {
     return (
         <div className="home__card flex col" style={{gridArea: size, backgroundImage: `url(${img})`}} onClick={GoToPage}>
             <div className="home__card-title">
-                {title && <h2>{title}</h2>}
+                {title && <h3 className="h3">{title}</h3>}
             </div>
             <div className="flex end space-b">
                 {btnText &&
@@ -63,7 +63,6 @@ const HomeCard = ({props}) => {
                                          src={item.img}
                                          alt={item.name}
                                     />
-                                    {/*<img src="%PUBLIC_URL%/projects/1.gif" alt=""/>*/}
                                 </Link>
                             )}
                         </div>

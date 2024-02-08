@@ -35,7 +35,7 @@ const Footer = () => {
                 </nav>
                 {
                     pathname === "/home" ?
-                        <span className="text small gray">© 2021 THE KROOT</span>
+                        <span className="text-center small gray">© 2021 THE KROOT</span>
                         :
                         <div className="footer__social flex">
                             <Link className="footer__social-cont" to="" target="_blank">
@@ -53,7 +53,7 @@ const Footer = () => {
                         </div>
                 }
             </div>
-            {pathname !== "/home" && <span className="text small gray">© 2021 THE KROOT</span>}
+            {pathname !== "/home" && <span className="text-center small gray">© 2021 THE KROOT</span>}
         </footer>
     )
 }

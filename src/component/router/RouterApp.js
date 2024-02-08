@@ -1,5 +1,5 @@
 import {Navigate, Outlet, Routes} from "react-router";
-import {NavLink, Route} from "react-router-dom";
+import {NavLink, Route, useLocation} from "react-router-dom";
 import Home from "../Pages/Home";
 import logo from "../../assets/ico/Logo.png"
 import About from "../Pages/About";
@@ -10,8 +10,14 @@ import Contacts from "../Pages/Contacts";
 import Career from "../Pages/Career";
 import Generation from "../Pages/Generation";
 import Footer from "../Footer";
+import {useEffect} from "react";
 
 const RouterApp = () => {
+    const {pathname} = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     return (
         <>

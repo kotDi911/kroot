@@ -10,6 +10,7 @@ export const useCards = create(() => ({
             id: 1,
             name: "Muni Long - Made For Me",
             img: `${URL}/muni_long/${preview}`,
+            filter: "commercial",
             details: [
                 {
                     img: `${URL}/muni_long/main1.jpg${open}`,
@@ -43,6 +44,7 @@ export const useCards = create(() => ({
             id: 2,
             name: "6IX9INE - COMEBACK 2022",
             img: `${URL}/6IX9INE/${preview}`,
+            filter: "commercial",
             details: [
                 {
                     img: "",
@@ -66,6 +68,7 @@ export const useCards = create(() => ({
             id: 3,
             name: "TATRAS 2022",
             img: `${URL}/tatras/${preview}`,
+            filter: "commercial",
             details: [
                 {
                     img: "",
@@ -89,6 +92,7 @@ export const useCards = create(() => ({
             id: 4,
             name: "JANET JACKSON",
             img: `${URL}/janet_jackson/${preview}`,
+            filter: "beauty",
             details: [
                 {
                     img: "",
@@ -112,6 +116,7 @@ export const useCards = create(() => ({
             id: 5,
             name: "OLIVER TREE - FREAKS & GEEKS",
             img: `${URL}/oliver_tree/${preview}`,
+            filter: "animation",
             details: [
                 {
                     img: "",
@@ -135,6 +140,7 @@ export const useCards = create(() => ({
             id: 6,
             name: "SOFIA CARSON - LOUD",
             img: `${URL}/sofia_carson/${preview}`,
+            filter: "artwork",
             details: [
                 {
                     img: "",
