@@ -1,10 +1,11 @@
 import {create} from 'zustand'
-import comer from "../../assets/showreel/comer.gif";
-import music from "../../assets/showreel/music.gif";
-import beauty from "../../assets/showreel/beauty.gif";
-import insta from "../../assets/ico/insta.svg";
-import fb from "../../assets/ico/fb.svg";
-import linkedin from "../../assets/ico/linkedin.svg";
+import comer from "../../assets/showreel/comer.jpg";
+import music from "../../assets/showreel/music.jpg";
+import beauty from "../../assets/showreel/beauty.jpg";
+import about from "../../assets/ico/about.svg";
+
+const URL = "https://github.com/kotDi911/kroot/blob/main/public/images/showreel"
+const open = "?raw=true"
 
 export const useHomeCard = create(() => ({
     data: [
@@ -15,6 +16,7 @@ export const useHomeCard = create(() => ({
             title: null,
             ico: null,
             img: comer,
+            imgHover: `${URL}/comer${open}`,
             text: null,
             btnText: "comercial vfx showreel",
             social: null
@@ -26,6 +28,7 @@ export const useHomeCard = create(() => ({
             title: null,
             ico: null,
             img: music,
+            imgHover: `${URL}/music${open}`,
             text: null,
             btnText: "music video vfx showreel",
             social: null
@@ -57,9 +60,9 @@ export const useHomeCard = create(() => ({
             url: "about",
             size: 2,
             title: null,
-            ico: null,
+            ico: about,
             img: null,
-            text: null,
+            text: "We are dreamers and creative team who love any arts and animaiton.",
             btnText: "About us",
             social: null
         },
@@ -70,6 +73,7 @@ export const useHomeCard = create(() => ({
             title: null,
             ico: null,
             img: beauty,
+            imgHover: `${URL}/beauty${open}`,
             text: null,
             btnText: "beauty vfx showreel",
             social: null
@@ -83,26 +87,7 @@ export const useHomeCard = create(() => ({
             img: null,
             text: null,
             btnText: null,
-            social:[
-                {
-                    id: 1,
-                    name: "instagramm",
-                    img: insta,
-                    url: "https://www.instagram.com/"
-                },
-                {
-                    id: 2,
-                    name: "facebook",
-                    img: fb,
-                    url: "https://www.facebook.com/"
-                },
-                {
-                    id: 3,
-                    name: "linkedin",
-                    img: linkedin,
-                    url: "https://www.linkedin.com/"
-                },
-            ]
+            social: true,
         },
     ]
 }));

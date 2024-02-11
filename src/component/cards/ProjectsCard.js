@@ -6,7 +6,7 @@ const ProjectsCard = ({props}) => {
 
     return (
         <Link to={`/projects/${name.replace(/\s+/g, '').toLowerCase()}`}
-              className="projects__card flex end relative"
+              className="projects__card flex end relative hover__card"
               state={{
                   details: details,
                   galleryTitle: galleryTitle,
@@ -25,7 +25,7 @@ const ProjectsCard = ({props}) => {
                     </div>
                     <div className="btn bg">
                         <Arrow className="arrow btn-img"/>
-                        <span className="btn-bg"/>
+                        <span className="btn-bg white-bg"/>
                     </div>
                 </div>
             </div>

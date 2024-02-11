@@ -1,9 +1,10 @@
 import {ReactComponent as Arrow} from "../../assets/ico/arrow.svg";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import Social from "../Social";
 
 const dark = "#070707"
-const light = "#cbced0"
-const bg = "#ebf1f5"
+const light = "#9ba1a0"
+
 const HomeCard = ({props}) => {
     const {id, url, title, ico, img, text, btnText, social} = props;
     const navigate = useNavigate();
@@ -41,9 +42,14 @@ const HomeCard = ({props}) => {
 
     const color = img ? dark : light
     return (
-        <div className="home__card flex col" style={{gridArea: size, backgroundImage: `url(${img})`}} onClick={GoToPage}>
-            <div className="home__card-title">
+        <div className="home__card flex col hover__card"
+             style={{gridArea: size, backgroundImage: `url(${img})`}}
+             onClick={GoToPage}
+        >
+            <div className="home__card-title flex col">
                 {title && <h3 className="h3">{title}</h3>}
+                {ico && <div className="ico-img"><img className="img" src={ico} alt="icon"/></div>}
+                {text && <p className="gray mt-16">{text}</p>}
             </div>
             <div className="flex end space-b">
                 {btnText &&
@@ -53,24 +59,13 @@ const HomeCard = ({props}) => {
                     </div>
                 }
                 {social &&
-                    <div style={{position: "relative"}}>
-                        <div className="social flex">
-                            {social.map((item) =>
-                                <Link className="social-cont" key={item.name} to={item.url} target="_blank">
-                                    <span className="btn-bg"/>
-                                    <img className="social-img"
-                                         key={item.id}
-                                         src={item.img}
-                                         alt={item.name}
-                                    />
-                                </Link>
-                            )}
-                        </div>
+                    <div className="social flex">
+                        <Social props="light"/>
                     </div>
                 }
-                <div className="btn" style={{background: color === dark ? bg : "none"}}>
+                <div className={`btn ${color === dark ? "bg" : ""}`} >
                     <Arrow className="arrow btn-img" stroke={color}/>
-                    <span className="btn-bg"/>
+                    <span className={`btn-bg ${img ? "white-bg" : ""}`}/>
                 </div>
             </div>
         </div>

@@ -1,32 +1,9 @@
 import mtv from "../../assets/mtv.jpg";
 import team from "../../assets/team.jpg";
-import {Link, NavLink} from "react-router-dom";
-import insta from "../../assets/ico/insta.svg";
-import fb from "../../assets/ico/fb.svg";
-import linkedin from "../../assets/ico/linkedin.svg";
+import {NavLink} from "react-router-dom";
 import {ReactComponent as Arrow} from "../../assets/ico/arrow.svg";
+import Social from "../Social";
 
-
-const social = [
-    {
-        id: 1,
-        name: "instagramm",
-        img: insta,
-        url: "https://www.instagram.com/"
-    },
-    {
-        id: 2,
-        name: "facebook",
-        img: fb,
-        url: "https://www.facebook.com/"
-    },
-    {
-        id: 3,
-        name: "linkedin",
-        img: linkedin,
-        url: "https://www.linkedin.com/"
-    },
-]
 const firstCard = [
     {
         black: "15",
@@ -152,19 +129,10 @@ const About = () => {
                         Most of our artist from UkraineSince 24th of Fab 2022 we changed our workflow to remote.
                     </p>
                     <div className="about__social flex mt-16">
-                        {social.map((item) =>
-                            <Link className="social-cont" key={item.name} to={item.url} target="_blank">
-                                <span className="btn-bg"/>
-                                <img className="social-img"
-                                     key={item.id}
-                                     src={item.img}
-                                     alt={item.name}
-                                />
-                            </Link>
-                        )}
+                       <Social props="light"/>
                     </div>
                 </div>
-                <div className="long-btn mt-16">
+                <div className="long-btn hover__card mt-16">
                     <NavLink to="/career" className="flex center">
                         <>
                             <p className="numbers-content gray mr-16">text</p>

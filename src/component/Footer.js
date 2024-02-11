@@ -1,9 +1,7 @@
 import {Link, NavLink, useLocation} from "react-router-dom";
 import logo from "../assets/ico/LogoMini.svg"
 
-import {ReactComponent as Insta} from "../assets/ico/insta.svg";
-import {ReactComponent as Fb} from "../assets/ico/fb.svg";
-import {ReactComponent as Linkedin} from "../assets/ico/linkedin.svg";
+import Social from "./Social";
 
 const links = [
     {name: "home"},
@@ -12,7 +10,6 @@ const links = [
     {name: "projects"},
     {name: "contacts"},
 ]
-const color = "#070707";
 
 const Footer = () => {
     const {pathname} = useLocation();
@@ -33,25 +30,9 @@ const Footer = () => {
                         </NavLink>
                     )}
                 </nav>
-                {
-                    pathname === "/home" ?
-                        <span className="text-center small gray">© 2021 THE KROOT</span>
-                        :
-                        <div className="footer__social flex">
-                            <Link className="footer__social-cont" to="" target="_blank">
-                                <span className="btn-bg"/>
-                                <Insta className="social-img" fill={color}/>
-                            </Link>
-                            <Link className="footer__social-cont" to="" target="_blank">
-                                <span className="btn-bg"/>
-                                <Fb className="social-img" fill={color}/>
-                            </Link>
-                            <Link className="footer__social-cont" to="" target="_blank">
-                                <span className="btn-bg"/>
-                                <Linkedin className="social-img" fill={color}/>
-                            </Link>
-                        </div>
-                }
+                <div className="social flex">
+                    <Social props="dark"/>
+                </div>
             </div>
             {pathname !== "/home" && <span className="text-center small gray">© 2021 THE KROOT</span>}
         </footer>

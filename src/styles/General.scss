@@ -2,6 +2,7 @@ $black: #070707;
 $text: #9ba1a0;
 $BG: #ebf1f5;
 $border: #dee2e5;
+$hover: rgba(222, 226, 229, 0.3);
 
 * {
   box-sizing: border-box;
@@ -19,11 +20,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
 }
-.container-80{
+
+.container-80 {
   max-width: 80rem;
   margin: 0 auto;
 }
-.container-64{
+
+.container-64 {
   max-width: 64rem;
   margin: 0 auto;
 }
@@ -39,6 +42,7 @@ code {
 .center {
   align-items: center;
 }
+
 .base {
   align-items: baseline;
 }
@@ -46,26 +50,32 @@ code {
 .end {
   align-items: flex-end;
 }
-.absolute{
+
+.absolute {
   position: absolute;
 }
-.relative{
+
+.relative {
   position: relative;
 }
 
 .space-b {
   justify-content: space-between;
 }
-.mt-16{
+
+.mt-16 {
   margin-top: 16px;
 }
-.mr-16{
+
+.mr-16 {
   margin-right: 16px;
 }
-.mb-8{
+
+.mb-8 {
   margin-bottom: 8px;
 }
-.w-100{
+
+.w-100 {
   width: 100%;
 }
 
@@ -75,7 +85,8 @@ code {
   text-align: center;
   cursor: default;
 }
-.text-end{
+
+.text-end {
   text-align: right;
   cursor: default;
 }
@@ -92,7 +103,8 @@ a {
   font-weight: 500;
   cursor: default;
 }
-.h2{
+
+.h2 {
   font-size: 60px;
   font-weight: 500;
   cursor: default;
@@ -113,6 +125,7 @@ a {
   font-size: 12px;
   cursor: default;
 }
+
 //-------------------------------------- TEXT
 
 //-------------------------------------- COLOR
@@ -120,18 +133,45 @@ a {
 .gray {
   color: $text;
 }
-.bg{
+
+.bg {
   background: $BG;
 }
-.black{
+
+.black {
   color: $black;
 }
-.white{
+
+.light {
+  background: $hover;
+}
+
+.dark {
+  background: $black;
+}
+
+.white {
   color: white;
 }
-//-------------------------------------- COLOR
 
-.img{
+.white-bg {
+  background: white !important;
+}
+
+//-------------------------------------- COLOR
+.logo {
+  text-align: center;
+  padding: 1rem 0;
+
+  &-mini {
+    width: 100%;
+  }
+}
+.ico-img{
+  width: max-content;
+}
+
+.img {
   width: 100%;
   height: 100%;
 }
@@ -156,15 +196,16 @@ a {
   border-radius: 5px;
   margin-right: 3px;
 }
-.round{
+
+.round {
   height: 12px;
   width: 12px;
-  border: 3px solid #070707;
+  border: 3px solid $black;
   border-radius: 50%;
   margin-right: 6px;
 }
 
-.mark{
+.mark {
   width: 16px;
   height: 16px;
   border: 2px solid $text;
@@ -179,7 +220,7 @@ a {
   justify-content: center;
   width: 64px;
   height: 40px;
-  border: 1px solid #dee2e5;
+  border: 1px solid $border;
   border-radius: 25px;
 
   &-img {
@@ -195,11 +236,11 @@ a {
     width: 0;
     height: 0;
     border-radius: 20px;
-    background: rgba(222, 226, 229, 0.3);
+    background: $hover;
   }
 }
 
-.home__card:hover > div > div > .btn {
+.hover__card:hover .btn {
   &-bg {
     width: 100%;
     height: 100%;
@@ -207,6 +248,59 @@ a {
 
   &-img {
     animation: 1s cubic-bezier(0.65, 0.05, 0.36, 1) move;
+  }
+}
+
+.footer .social__cont {
+  border: 1px solid $black;
+}
+
+.social {
+  &__cont {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $border;
+    border-radius: 50%;
+    z-index: 1;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    & .dark ~ .social__img {
+      fill: $black;
+    }
+    &:hover {
+      & > .dark ~ .social__img {
+        fill: white;
+      }
+
+      & > .social__bg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__bg {
+    transition: linear .2s;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+
+    & .dark {
+      background: $black;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    width: 14px;
+    z-index: 1;
   }
 }
 
