@@ -3,6 +3,10 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    grid-template-areas:
+  "comercial comercial comercial comercial music music music music"
+  "service service service projects projects projects about about"
+  "beauty beauty beauty beauty contacts contacts contacts contacts";
     padding-top: 1rem;
     gap: 1rem;
   }
@@ -18,5 +22,9 @@
     &-title {
       height: 100%;
     }
+  }
+  &__social{
+    bottom: 2rem;
+    left: 1.5rem;
   }
 }

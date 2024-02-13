@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <section className="section home">
             <div className="container-80">
-                <div className="home__grid"> {/*grid-template-columns: repeat(8, 1fr);*/}
+                <div className="home__grid">
                     {data.map((item) => <HomeCard key={item.id} props={item}/>)}
                 </div>
             </div>

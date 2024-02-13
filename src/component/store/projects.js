@@ -1,6 +1,9 @@
 import {create} from 'zustand'
+import comer from "../../assets/showreel/comer.jpg";
+import music from "../../assets/showreel/music.jpg";
 
 const URL = "https://github.com/kotDi911/kroot/blob/main/public/images/projects"
+const URL2 = "https://github.com/kotDi911/kroot/blob/main/public/images/reels"
 const open = "?raw=true"
 const preview = `preview.gif${open}`
 
@@ -11,33 +14,54 @@ export const useCards = create(() => ({
             name: "Muni Long - Made For Me",
             img: `${URL}/muni_long/${preview}`,
             filter: "commercial",
-            details: [
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
                 {
                     img: `${URL}/muni_long/main1.jpg${open}`,
-                    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
-                        "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
-                        "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
-                        " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
-                        " vitae voluptas voluptatum! Ab, consequuntur.",
-                    options: [
-                        {name: "1"},
-                        {name: "2"}
-                    ]
                 },
                 {
-                    img: `${URL}/muni_long/main2.jpg${open}`,
-                    description: "",
-                    options: []
+                    img: `${URL}/muni_long/main2.jpg${open}`
                 }
             ],
-            galleryTitle: "Gallery",
-            galleryDescription: "Gallery",
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
             galleryImg: [
-                {img: `${URL}/muni_long/gallery/1.jpg${open}`},
-                {img: `${URL}/muni_long/gallery/2.jpg${open}`},
-                {img: `${URL}/muni_long/gallery/3.jpg${open}`},
-                {img: `${URL}/muni_long/gallery/4.jpg${open}`},
-                {img: `${URL}/muni_long/gallery/5.jpg${open}`},
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
             ]
         },
         {
@@ -45,23 +69,54 @@ export const useCards = create(() => ({
             name: "6IX9INE - COMEBACK 2022",
             img: `${URL}/6IX9INE/${preview}`,
             filter: "commercial",
-            details: [
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
                 {
-                    img: "",
-                    title: "",
-                    description: "",
-                    options: []
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
                 }
             ],
-            galleryTitle: "Gallery",
-            galleryDescription: "Gallery",
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
             galleryImg: [
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
             ]
         },
         {
@@ -69,23 +124,54 @@ export const useCards = create(() => ({
             name: "TATRAS 2022",
             img: `${URL}/tatras/${preview}`,
             filter: "commercial",
-            details: [
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
                 {
-                    img: "",
-                    title: "",
-                    description: "",
-                    options: []
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
                 }
             ],
-            galleryTitle: "Gallery",
-            galleryDescription: "Gallery",
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
             galleryImg: [
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
             ]
         },
         {
@@ -93,23 +179,54 @@ export const useCards = create(() => ({
             name: "JANET JACKSON",
             img: `${URL}/janet_jackson/${preview}`,
             filter: "beauty",
-            details: [
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
                 {
-                    img: "",
-                    title: "",
-                    description: "",
-                    options: []
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
                 }
             ],
-            galleryTitle: "Gallery",
-            galleryDescription: "Gallery",
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
             galleryImg: [
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
             ]
         },
         {
@@ -117,23 +234,54 @@ export const useCards = create(() => ({
             name: "OLIVER TREE - FREAKS & GEEKS",
             img: `${URL}/oliver_tree/${preview}`,
             filter: "animation",
-            details: [
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
                 {
-                    img: "",
-                    title: "",
-                    description: "",
-                    options: []
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
                 }
             ],
-            galleryTitle: "Gallery",
-            galleryDescription: "Gallery",
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
             galleryImg: [
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
             ]
         },
         {
@@ -141,25 +289,737 @@ export const useCards = create(() => ({
             name: "SOFIA CARSON - LOUD",
             img: `${URL}/sofia_carson/${preview}`,
             filter: "artwork",
-            details: [
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
                 {
-                    img: "",
-                    title: "",
-                    description: "",
-                    options: []
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
                 }
             ],
-            galleryTitle: "Gallery",
-            galleryDescription: "Gallery",
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
             galleryImg: [
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
-                {img: ""},
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
+            ]
+        },
+        {
+            id: 7,
+            name: "Muni Long - Made For Me",
+            img: `${URL}/muni_long/${preview}`,
+            filter: "commercial",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
+                {
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
+                }
+            ],
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
+            galleryImg: [
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
+            ]
+        },
+        {
+            id: 8,
+            name: "6IX9INE - COMEBACK 2022",
+            img: `${URL}/6IX9INE/${preview}`,
+            filter: "commercial",
+           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
+                {
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
+                }
+            ],
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
+            galleryImg: [
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
+            ]
+        },
+        {
+            id: 9,
+            name: "TATRAS 2022",
+            img: `${URL}/tatras/${preview}`,
+            filter: "commercial",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
+                {
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
+                }
+            ],
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
+            galleryImg: [
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
+            ]
+        },
+        {
+            id: 10,
+            name: "JANET JACKSON",
+            img: `${URL}/janet_jackson/${preview}`,
+            filter: "beauty",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
+                {
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
+                }
+            ],
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
+            galleryImg: [
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
+            ]
+        },
+        {
+            id: 11,
+            name: "OLIVER TREE - FREAKS & GEEKS",
+            img: `${URL}/oliver_tree/${preview}`,
+            filter: "animation",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
+                {
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
+                }
+            ],
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
+            galleryImg: [
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
+            ]
+        },
+        {
+            id: 12,
+            name: "SOFIA CARSON - LOUD",
+            img: `${URL}/sofia_carson/${preview}`,
+            filter: "artwork",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
+                {
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
+                }
+            ],
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
+            galleryImg: [
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
+            ]
+        },
+        {
+            id: 13,
+            name: "Muni Long - Made For Me",
+            img: `${URL}/muni_long/${preview}`,
+            filter: "commercial",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
+                {
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
+                }
+            ],
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
+            galleryImg: [
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
+            ]
+        },
+        {
+            id: 14,
+            name: "6IX9INE - COMEBACK 2022",
+            img: `${URL}/6IX9INE/${preview}`,
+            filter: "commercial",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
+                {
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
+                }
+            ],
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
+            galleryImg: [
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
+            ]
+        },
+        {
+            id: 15,
+            name: "TATRAS 2022",
+            img: `${URL}/tatras/${preview}`,
+            filter: "commercial",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
+                {
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
+                }
+            ],
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
+            galleryImg: [
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
+            ]
+        },
+        {
+            id: 16,
+            name: "JANET JACKSON",
+            img: `${URL}/janet_jackson/${preview}`,
+            filter: "beauty",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
+                {
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
+                }
+            ],
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
+            galleryImg: [
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
+            ]
+        },
+        {
+            id: 17,
+            name: "OLIVER TREE - FREAKS & GEEKS",
+            img: `${URL}/oliver_tree/${preview}`,
+            filter: "animation",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
+                {
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
+                }
+            ],
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
+            galleryImg: [
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
+            ]
+        },
+        {
+            id: 18,
+            name: "SOFIA CARSON - LOUD",
+            img: `${URL}/sofia_carson/${preview}`,
+            filter: "music video",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+                "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
+                "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
+                " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
+                " vitae voluptas voluptatum! Ab, consequuntur.",
+            descriptionImg: [
+                {
+                    img: `${URL}/muni_long/main1.jpg${open}`,
+                },
+                {
+                    img: `${URL}/muni_long/main2.jpg${open}`
+                }
+            ],
+            options: [
+                {
+                    title: "Director:",
+                    desc: "Oliver Tree"
+                },
+                {
+                    title: "Production:",
+                    desc: "Dreambear"
+                }
+            ],
+            galleryImg: [
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/4.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/5.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/6.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/1.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/3.jpg${open}`,
+                },
+                {
+                    before: `${URL}/muni_long/gallery/5.jpg${open}`,
+                    after: `${URL}/muni_long/gallery/2.jpg${open}`,
+                }
             ]
         },
     ],
-
+    cards: [
+        {
+            url: "projects",
+            name: "projects",
+            title: "Projects",
+            btnText: "all projects",
+        },
+        {
+            url: "https://www.youtube.com",
+            name: "music",
+            btnText: "Vfx breakdown",
+            img: music,
+            imgHover: `${URL2}/music.gif${open}`,
+        },
+        {
+            url: "https://www.youtube.com",
+            btnText: "official video",
+            name: "comercial",
+            img: comer,
+            imgHover: `${URL2}/music.gif${open}`,
+        },
+    ]
 }));

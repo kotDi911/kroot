@@ -4,40 +4,41 @@ import music from "../../assets/showreel/music.jpg";
 import beauty from "../../assets/showreel/beauty.jpg";
 import about from "../../assets/ico/about.svg";
 
-const URL = "https://github.com/kotDi911/kroot/blob/main/public/images/showreel"
-const open = "?raw=true"
+const URL = "https://github.com/kotDi911/kroot/blob/main/public/images/reels";
+const open = "?raw=true";
 
 export const useHomeCard = create(() => ({
     data: [
         {
             id: 1,
+            name: "comercial",
             url: "https://www.youtube.com/",
-            size: 4,
             title: null,
             ico: null,
             img: comer,
-            imgHover: `${URL}/comer${open}`,
+            imgHover: `${URL}/comer.gif${open}`,
             text: null,
             btnText: "comercial vfx showreel",
             social: null
         },
         {
             id: 2,
+            name: "music",
             url: "https://www.youtube.com/",
-            size: 4,
             title: null,
             ico: null,
             img: music,
-            imgHover: `${URL}/music${open}`,
+            imgHover: `${URL}/music.gif${open}`,
             text: null,
             btnText: "music video vfx showreel",
             social: null
         },
         {
             id: 3,
+            name: "service",
             url: "services",
-            size: 3,
-            title: "Services We offer",
+            title: "Services We",
+            gray: "offer",
             ico: null,
             img: null,
             text: null,
@@ -46,9 +47,10 @@ export const useHomeCard = create(() => ({
         },
         {
             id: 4,
+            name: "projects",
             url: "projects",
-            size: 3,
-            title: "Our projects",
+            title: "Our",
+            gray: "projects",
             ico: null,
             img: null,
             text: null,
@@ -57,8 +59,8 @@ export const useHomeCard = create(() => ({
         },
         {
             id: 5,
+            name: "about",
             url: "about",
-            size: 2,
             title: null,
             ico: about,
             img: null,
@@ -68,20 +70,20 @@ export const useHomeCard = create(() => ({
         },
         {
             id: 6,
+            name: "beauty",
             url: "https://www.youtube.com/",
-            size: 4,
             title: null,
             ico: null,
             img: beauty,
-            imgHover: `${URL}/beauty${open}`,
+            imgHover: `${URL}/beauty.gif${open}`,
             text: null,
             btnText: "beauty vfx showreel",
             social: null
         },
         {
             id: 7,
+            name: "contacts",
             url: "contacts",
-            size: 4,
             title: "Contacts",
             ico: null,
             img: null,

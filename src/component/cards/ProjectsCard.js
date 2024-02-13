@@ -1,17 +1,17 @@
-import {ReactComponent as Arrow} from "../../assets/ico/arrow.svg";
 import {Link} from "react-router-dom";
+import Button from "../Button";
 
 const ProjectsCard = ({props}) => {
-    const {name, img, details, galleryTitle, galleryDescription, galleryImg} = props;
-
+    const {name, img, description, descriptionImg, galleryImg, options} = props;
     return (
         <Link to={`/projects/${name.replace(/\s+/g, '').toLowerCase()}`}
               className="projects__card flex end relative hover__card"
               state={{
-                  details: details,
-                  galleryTitle: galleryTitle,
-                  galleryDescription: galleryDescription,
-                  galleryImg: galleryImg
+                  name: name,
+                  description: description,
+                  descriptionImg: descriptionImg,
+                  galleryImg: galleryImg,
+                  options: options,
               }}
         >
             <div>
@@ -23,10 +23,7 @@ const ProjectsCard = ({props}) => {
                         <div className="dot black"/>
                         <div className="small black">{name.toUpperCase()}</div>
                     </div>
-                    <div className="btn bg">
-                        <Arrow className="arrow btn-img"/>
-                        <span className="btn-bg white-bg"/>
-                    </div>
+                    <Button color={true}/>
                 </div>
             </div>
         </Link>

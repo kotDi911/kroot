@@ -1,0 +1,45 @@
+.submit{
+  padding: .75rem;
+  font-size: 1rem;
+  border: 1px solid #9ba1a0;
+  border-radius: 25px;
+  background: #070707;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s linear;
+  margin-top: 1rem;
+  &:hover{
+    background: #ebf1f5;
+    color: #9ba1a0;
+  }
+}
+.form{
+  &__cont{
+    padding: 4rem;
+    background: white;
+    border-radius: 25px;
+    margin-top: 52px;
+  }
+  &__social{
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+}
+
+.input{
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 1px solid $border;
+  font-size: 16px;
+  color: $black;
+  &.message{
+    width: 100%;
+    height: 8rem;
+    resize: none;
+    &::placeholder{
+
+    }
+  }
+}

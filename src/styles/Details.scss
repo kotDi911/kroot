@@ -1,7 +1,10 @@
 .details {
-  &__cont {
-    max-width: 80rem;
-    margin: 0 auto;
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    gap: 1rem;
+    grid-template-areas:
+    "projects projects comercial comercial comercial music music music";
   }
 }
 

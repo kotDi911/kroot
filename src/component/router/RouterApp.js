@@ -1,5 +1,5 @@
 import {Navigate, Outlet, Routes} from "react-router";
-import {NavLink, Route, useLocation} from "react-router-dom";
+import {Link, Route, useLocation} from "react-router-dom";
 import Home from "../Pages/Home";
 import logo from "../../assets/ico/Logo.svg"
 import About from "../Pages/About";
@@ -11,6 +11,8 @@ import Career from "../Pages/Career";
 import Generation from "../Pages/Generation";
 import Footer from "../Footer";
 import {useEffect} from "react";
+import CareerCards from "../cards/Career/CareerCards";
+import GetInTouch from "../Pages/GetInTouch";
 
 const RouterApp = () => {
     const {pathname} = useLocation();
@@ -22,9 +24,9 @@ const RouterApp = () => {
     return (
         <>
             <div className="logo">
-                <NavLink expect="" to="/home">
+                <Link expect="" to="/home">
                     <img className="logo-img" src={logo} alt="logo"/>
-                </NavLink>
+                </Link>
             </div>
             <Routes>
                 <Route path='/' element={<Outlet/>}>
@@ -36,8 +38,11 @@ const RouterApp = () => {
                         <Route path=':name' element={<Details/>}/>
                     </Route>
                     <Route path='contacts' element={<Contacts/>}/>
-                    <Route path='career' element={<Career/>}/>
-                    <Route path='generationkroot' element={<Generation/>}/>
+                    <Route path='career' element={<Career/>}>
+                        <Route path=':name' element={<CareerCards/>}/>
+                    </Route>
+                    <Route path='generation_kroot' element={<Generation/>}/>
+                    <Route path='get_in_touch' element={<GetInTouch/>}/>
                     <Route path='*' element={<Navigate to='/home' replace/>}/>
                     <Route path='/' element={<Navigate to='/home' replace/>}/>
                 </Route>
