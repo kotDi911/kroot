@@ -1009,7 +1009,7 @@ export const useCards = create(() => ({
         },
         {
             url: "https://www.youtube.com",
-            name: "music",
+            name: "comercial",
             btnText: "Vfx breakdown",
             img: music,
             imgHover: `${URL2}/music.gif${open}`,
@@ -1017,7 +1017,7 @@ export const useCards = create(() => ({
         {
             url: "https://www.youtube.com",
             btnText: "official video",
-            name: "comercial",
+            name: "music",
             img: comer,
             imgHover: `${URL2}/music.gif${open}`,
         },

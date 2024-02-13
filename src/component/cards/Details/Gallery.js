@@ -76,7 +76,7 @@ const Gallery = ({images}) => {
     useEffect(() => {
         const timeout = setInterval(() => {
             setCount((prevCount) => prevCount +1);
-        }, 3000);
+        }, 2000);
 
         return () => clearInterval(timeout)
     }, []);
