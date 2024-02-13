@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kroot/static/css/main.eab4bc81.css",
-    "main.js": "/kroot/static/js/main.5cf13992.js",
+    "main.js": "/kroot/static/js/main.b8d3ddcb.js",
     "static/media/team.jpg": "/kroot/static/media/team.c54c4bd344db17f03785.jpg",
     "static/media/mtv.jpg": "/kroot/static/media/mtv.21ca798eb7639aed726c.jpg",
     "static/media/beauty.jpg": "/kroot/static/media/beauty.2643c94726098df25acf.jpg",
@@ -20,10 +20,10 @@
     "index.html": "/kroot/index.html",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
     "main.eab4bc81.css.map": "/kroot/static/css/main.eab4bc81.css.map",
-    "main.5cf13992.js.map": "/kroot/static/js/main.5cf13992.js.map"
+    "main.b8d3ddcb.js.map": "/kroot/static/js/main.b8d3ddcb.js.map"
   },
   "entrypoints": [
     "static/css/main.eab4bc81.css",
-    "static/js/main.5cf13992.js"
+    "static/js/main.b8d3ddcb.js"
   ]
 }
