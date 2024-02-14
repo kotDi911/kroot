@@ -1,29 +1,34 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.eab4bc81.css",
-    "main.js": "/kroot/static/js/main.b8d3ddcb.js",
+    "main.css": "/kroot/static/css/main.52af2931.css",
+    "main.js": "/kroot/static/js/main.763a8069.js",
     "static/media/team.jpg": "/kroot/static/media/team.c54c4bd344db17f03785.jpg",
     "static/media/mtv.jpg": "/kroot/static/media/mtv.21ca798eb7639aed726c.jpg",
+    "static/media/team2.jpg": "/kroot/static/media/team2.be8f1b93f3e8a60281e0.jpg",
     "static/media/beauty.jpg": "/kroot/static/media/beauty.2643c94726098df25acf.jpg",
     "static/media/music.jpg": "/kroot/static/media/music.73e254c83e6b60fb86d3.jpg",
     "static/media/comer.jpg": "/kroot/static/media/comer.10d2acefa31f067e3d19.jpg",
+    "static/media/Tomash_Kuzmytskyi.png": "/kroot/static/media/Tomash_Kuzmytskyi.977721c32adfb82d4440.png",
+    "static/media/Julia_Lusenko.png": "/kroot/static/media/Julia_Lusenko.e6fda8ae509f69efae36.png",
     "static/media/vfx.svg": "/kroot/static/media/vfx.33e94cd66dfd50fb077a3cbd4348d159.svg",
     "static/media/Logo.svg": "/kroot/static/media/Logo.99f8f6e4ebd91d42831992adc443f343.svg",
     "static/media/LogoMini.svg": "/kroot/static/media/LogoMini.4834cf5dbf8fa6a279608d3f461b35ba.svg",
+    "static/media/mail.svg": "/kroot/static/media/mail.21002ad5d0634cfda995e12d953e91b3.svg",
     "static/media/unreal.svg": "/kroot/static/media/unreal.a6c4ae8a442b541681c80f8376422982.svg",
     "static/media/about.svg": "/kroot/static/media/about.bb2cca35afa5a11bf319e044cec2f939.svg",
     "static/media/insta.svg": "/kroot/static/media/insta.1f2ca33b4d64d5fe226741a73690d774.svg",
     "static/media/beauty.svg": "/kroot/static/media/beauty.6563b93a58996e1be5b99eeed8593dba.svg",
     "static/media/youtube.svg": "/kroot/static/media/youtube.0d5e0d931cd9a5cdb7766587458de70b.svg",
     "static/media/fb.svg": "/kroot/static/media/fb.96371725056f86fef0ecd075e473527c.svg",
+    "static/media/phone.svg": "/kroot/static/media/phone.26d256931df4f6f420d30c31c09c551a.svg",
     "static/media/cgi.svg": "/kroot/static/media/cgi.2dfbf87a07d5a09391ca89c62f0dce2e.svg",
     "index.html": "/kroot/index.html",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.eab4bc81.css.map": "/kroot/static/css/main.eab4bc81.css.map",
-    "main.b8d3ddcb.js.map": "/kroot/static/js/main.b8d3ddcb.js.map"
+    "main.52af2931.css.map": "/kroot/static/css/main.52af2931.css.map",
+    "main.763a8069.js.map": "/kroot/static/js/main.763a8069.js.map"
   },
   "entrypoints": [
-    "static/css/main.eab4bc81.css",
-    "static/js/main.b8d3ddcb.js"
+    "static/css/main.52af2931.css",
+    "static/js/main.763a8069.js"
   ]
 }
