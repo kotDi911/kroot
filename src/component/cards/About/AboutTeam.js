@@ -1,7 +1,11 @@
 import team from "../../../assets/team.jpg";
+import team2 from "../../../assets/team2.jpg";
 import Social from "../../Social";
+import {useEffect} from "react";
 
 const AboutTeam = () => {
+    const width = window.innerWidth;
+
     return(
         <div className="about__team mt-16">
             <h2 className="h2">Our team</h2>
@@ -9,7 +13,7 @@ const AboutTeam = () => {
                 Generation Kroot is our secret in the creation of visual effects!Everyone who joins our team
                 becomes a superstar. You’re Rad!
             </p>
-            <img className="img mt-16" src={team} alt="team"/>
+            <img className="team img mt-16" src={width <= 550 ? team2: team} alt="team"/>
             <p className="regular gray mt-16 text-center">
                 Successful and interesting projects were created under the leadership Tomash Kuzmitskyi, for
                 such musical artists as: Post Malone, Travis Scott, Justin Bieber, Imagine Dragons, Daft Punk,

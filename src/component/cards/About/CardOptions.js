@@ -1,6 +1,6 @@
 const CardOptions = ({props}) => {
     return (
-        <div className="flex col">
+        <div className="options flex col">
             {props.map((item, i) =>
                 <div key={i} className="flex base mt-16">
                     <div className="round"></div>

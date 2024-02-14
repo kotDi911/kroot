@@ -1,6 +1,7 @@
 .about {
   &__main-img{
     margin-top: 3.25rem;
+    background: black;
   }
   &__grid {
     display: grid;
@@ -35,7 +36,7 @@
   &__text-cont{
     height: 100%;
     padding: 2rem;
-
+    position: absolute;
   }
 
   &__card {

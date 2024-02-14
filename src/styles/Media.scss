@@ -1,0 +1,256 @@
+@media screen and (max-width: 1280px) {
+  .filter__grid {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .logo-mini {
+    width: 60%;
+  }
+  .about__grid {
+    grid-template-areas:
+        "nominations"
+        "numbers"
+        "options";
+  }
+  .about__grid, .about__grid-cards, .home__grid, .contacts__grid, .services__grid, .details__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .services-row {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+  .details__grid {
+    grid-template-areas:
+            "projects"
+            "comercial"
+            "music";
+  }
+  .contacts__grid {
+    grid-template-areas:
+    "photo"
+    "text"
+    "photo1"
+    "text1";
+  }
+  .home {
+    &__card {
+      height: 22rem;
+    }
+
+    &__grid {
+      grid-template-areas:
+  "comercial"
+  "music"
+  "service"
+  "projects"
+  "about"
+  "beauty"
+  "contacts";
+    }
+  }
+  .projects {
+    &__grid {
+      grid-template-columns: 1fr 1fr;;
+    }
+
+    &__btn {
+      padding: 1.5rem;
+    }
+  }
+  .filter__text {
+    width: max-content;
+    font-size: 14px;
+  }
+  .apps__img {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .form{
+    &__cont {
+      padding: 3rem;
+    }
+    &__social{
+      margin-bottom: 3rem;
+    }
+  }
+
+  .long-btn{
+    padding: 1.5rem;
+  }
+  .home {
+    &__card {
+      height: 20rem;
+    }
+  }
+  .about {
+    &__text-cont {
+      height: 100%;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+
+      & p {
+        padding: 1rem 0;
+      }
+
+      & h3 {
+        text-align: center;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      height: auto;
+      transform: translate(0, -50%);
+      top: 50%;
+    }
+  }
+  .footer > div {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer .nav {
+    padding: 4rem 0;
+  }
+  .footer .nav, .footer .social {
+    justify-content: center;
+  }
+
+  .filter__grid {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .filter__btn {
+      width: 30%;
+    }
+  }
+}
+@media screen and (max-width: 660px) {
+  .apps__img {
+    width: 54px;
+    height: 54px;
+  }
+  .long-btn{
+    padding: 1.25rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .h1 {
+    font-size: 52px;
+  }
+  .h2 {
+    font-size: 40px;
+  }
+  .h3 {
+    font-size: 36px;
+  }
+  .nav {
+    justify-content: space-between;
+    &__btn{
+      width: 30%;
+    }
+    &__cont{
+      padding: 1.5rem;
+    }
+    &__link {
+      margin-right: 0 !important;
+    }
+  }
+  .section {
+    padding: 0 5vw;
+  }
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+  .contacts__text, .contacts .contacts__photo {
+    padding: 1.5rem 1rem;
+  }
+  .contacts__text > div:last-child {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .apps__cont>div{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .form>div{
+    flex-direction: column;
+  }
+  .filter__grid .filter__btn {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .apps__cont, .career__card{
+    padding: 1rem 1.25rem;
+  }
+  .footer .nav {
+    flex-direction: column;
+    align-items: center;
+
+    &__link:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+  .mark {
+    margin-right: 0.5rem;
+  }
+  .services__card {
+    padding: 1.5rem 1rem;
+  }
+  .home {
+    &__card {
+      height: 18rem;
+      padding: 1.5rem 1rem;
+    }
+
+    &__social {
+      bottom: 1.5rem;
+      left: 1rem;
+    }
+  }
+  .services {
+    &__link {
+      padding: 0 10px;
+      text-align: center;
+    }
+
+    &-row {
+      flex-direction: column;
+      align-items: start;
+      gap: 0;
+    }
+  }
+  .form__cont {
+    padding: 3rem 1.5rem;
+  }
+  .input{
+    margin-bottom: 1rem;
+  }
+  .filter__grid .filter__btn {
+    width: 55%;
+  }
+  .carousel__item[data-pos="0"] {
+    width: 85%;
+  }
+  .gallery__cont{
+    padding: 1rem .25rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .social__cont:not(:last-child) {
+    margin-right: .5rem;
+  }
+}

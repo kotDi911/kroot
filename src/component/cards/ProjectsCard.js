@@ -14,7 +14,7 @@ const ProjectsCard = ({props}) => {
                   options: options,
               }}
         >
-            <div>
+            <div className="img-cont">
                 <img className="project-img" src={img} alt=""/>
             </div>
             <div className="absolute w-100">
