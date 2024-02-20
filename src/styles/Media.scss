@@ -189,6 +189,28 @@
   .filter__grid .filter__btn {
     width: 45%;
   }
+  .about{
+    &__img{
+      position: relative;
+      transform: none;
+    }
+    &__main-img{
+      display: flex;
+      flex-direction: column-reverse;
+      padding-top: 2rem;
+      border-radius: 25px;
+    }
+    &__text-cont{
+      padding-top: 1rem;
+    }
+    & .h3{
+      font-size: 24px;
+    }
+    & .regular{
+      font-size: 12px;
+      padding: .5rem 0;
+    }
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -241,11 +263,18 @@
   .filter__grid .filter__btn {
     width: 55%;
   }
-  .carousel__item[data-pos="0"] {
-    width: 85%;
-  }
-  .gallery__cont{
-    padding: 1rem .25rem;
+  //.carousel__item[data-pos="0"] {
+  //  width: 85%;
+  //}
+  //.gallery__cont{
+  //  padding: 1rem .25rem;
+  //}
+  .career__card{
+    flex-direction: column;
+    & .btn{
+      width: 100%;
+      margin-top: 1rem;
+    }
   }
 }
 

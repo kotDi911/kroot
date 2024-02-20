@@ -26,10 +26,10 @@ const Pagination = ({currentPage, previousPage, handleSetPage, nextPage, images}
     return (
         <div className="carousel relative">
             <div className="carousel__list relative">
-                <div onClick={previousPage} className="carousel__item" data-pos="-1">
-                    {images.map((item, i) => i === prevImg() &&
-                        <img key={i} className="img" src={item.before} alt=""/>)}
-                </div>
+                {/*<div onClick={previousPage} className="carousel__item" data-pos="-1">*/}
+                {/*    {images.map((item, i) => i === prevImg() &&*/}
+                {/*        <img key={i} className="img" src={item.before} alt="prev arrow"/>)}*/}
+                {/*</div>*/}
                 <div className="carousel__item relative" data-pos="0">
                     {images.map((item, i) => i === currentPage &&
                         <ReactCompareSlider
@@ -40,16 +40,18 @@ const Pagination = ({currentPage, previousPage, handleSetPage, nextPage, images}
                             itemTwo={<ReactCompareSliderImage alt="after" src={item.after}/>}
                             keyboardIncrement="5%"
                             position={50}
+                            changePositionOnHover={true}
+                            handle={<></>}
                             style={{
                                 width: '100%'
                             }}
                         />
                     )}
                 </div>
-                <div onClick={nextPage} className="carousel__item" data-pos="1">
-                    {images.map((item, i) => i === nextImg() &&
-                        <img key={i} className="img" src={item.before} alt=""/>)}
-                </div>
+                {/*<div onClick={nextPage} className="carousel__item" data-pos="1">*/}
+                {/*    {images.map((item, i) => i === nextImg() &&*/}
+                {/*        <img key={i} className="img" src={item.before} alt=""/>)}*/}
+                {/*</div>*/}
             </div>
             <div className="carousel__dots flex absolute w-100">
                 {dots()}
@@ -106,9 +108,13 @@ const Gallery = ({images}) => {
     }
 
     return (
-        <div className="gallery__cont mt-16" style={{background: "white", padding: "2.5rem 1rem"}}>
+        <div className="gallery__cont mt-32">
             {images &&
-                <div className="relative" onMouseEnter={() => setPause(false)} onMouseLeave={() => setPause(true)}>
+                <div className="relative"
+                     onClick={() => setPause(false)}
+                     onMouseEnter={() => setPause(false)}
+                     onMouseLeave={() => setPause(true)}
+                >
                     <Pagination
                         nextPage={nextPage}
                         previousPage={previousPage}
