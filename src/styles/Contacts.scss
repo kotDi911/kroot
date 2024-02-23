@@ -1,12 +1,12 @@
 .contacts {
   &__grid {
-    margin-top: 3.25rem;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     grid-template-areas:
-  "text text text photo photo"
-  "photo1 photo1 text1 text1 text1";
+  "text text text photo"
+  "button button button button"
+  "photo1 text1 text1 text1";
   }
 
   &__text, .contacts__photo {

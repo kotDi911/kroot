@@ -47,17 +47,20 @@
     gap: 1rem;
   }
 
-  &__text {
-    padding: 2px 5px;
-    border: 1px solid $border;
-    border-radius: 25px;
-    background: $BG;
-  }
+  //&__text {
+  //  padding: 2px 5px;
+  //  border: 1px solid $border;
+  //  border-radius: 25px;
+  //  background: $BG;
+  //}
 
   &__btn {
     width: 100%;
     padding: 0 2rem 2rem;
     border-radius: 25px;
+  }
+  &__card{
+    min-height: 20vw;
   }
 }
 

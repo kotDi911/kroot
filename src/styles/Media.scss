@@ -33,6 +33,7 @@
     grid-template-areas:
     "photo"
     "text"
+    "button"
     "photo1"
     "text1";
   }
@@ -79,14 +80,16 @@
     &__social{
       margin-bottom: 3rem;
     }
+    & > div {
+      flex-direction: column;
+    }
   }
-
   .long-btn{
     padding: 1.5rem;
   }
   .home {
     &__card {
-      height: 20rem;
+      height: 18rem;
     }
   }
   .about {
@@ -182,9 +185,6 @@
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
-  }
-  .form>div{
-    flex-direction: column;
   }
   .filter__grid .filter__btn {
     width: 45%;

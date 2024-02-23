@@ -1,7 +1,7 @@
 import {useCards} from "../store/projects";
-import ProjectsCard from "../cards/ProjectsCard";
-import {useEffect, useState} from "react";
-import button from "../Button";
+import {lazy, Suspense, useEffect, useState} from "react";
+
+const ProjectsCard = lazy(()=> import("../cards/ProjectsCard"))
 
 const filters = [
     {name: "all"},
@@ -17,13 +17,12 @@ let arrayForHoldingPosts = [];
 let filteredProjects = [];
 
 const FilterBtn = ({item, setFilter, filter}) => {
-    console.log(item, setFilter, filter)
     let name = item;
     if(!item) name = "all";
   return(
-      <div className={`filter__btn gray ${name === filter ? "filter__btn-active" : ""}`}>
+      <div className={`filter__btn gray ${name === filter ? "filter__btn-active" : ""}`} onClick={() => setFilter(name)}>
           <span className="filter__bg btn-bg"></span>
-          <div className="filter__text" onClick={() => setFilter(name)}>{name}</div>
+          <div className="filter__text">{name}</div>
       </div>
   )
 }
@@ -34,7 +33,7 @@ const Projects = () => {
     const [postsToShow, setPostsToShow] = useState([]);
     const [next, setNext] = useState(9);
     const [isActive, setIsActive] = useState(false);
-    const [width, setWidth] = useState(window.innerWidth);
+    // const [width, setWidth] = useState(window.innerWidth);
 
     const loopWithSlice = (start, end) => {
         const slicedPosts = filteredProjects.slice(start, end);
@@ -71,9 +70,11 @@ const Projects = () => {
                     )}
                 </div>
                 <div className="projects__grid mt-16">
+                    <Suspense fallback={<div>Loading...</div>}>
                     {
                         postsToShow.map((item) => <ProjectsCard key={item.id} props={item}/>)
                     }
+                    </Suspense>
                 </div>
                 {isActive &&
                     <div className="filter__btn gray mt-16" onClick={handleShowMorePosts}>

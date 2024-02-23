@@ -55,7 +55,7 @@ export const useAbout = create(() => ({
             url: "generation_kroot",
             title: "Generation",
             gray: "Kroot",
-            btnText: "all projects",
+            btnText: "generation kroot",
         },
     ]
 }));

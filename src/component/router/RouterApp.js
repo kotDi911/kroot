@@ -8,11 +8,11 @@ import Projects from "../Pages/Projects";
 import Details from "../Pages/Details";
 import Contacts from "../Pages/Contacts";
 import Career from "../Pages/Career";
-import Generation from "../Pages/Generation";
 import Footer from "../Footer";
 import {useEffect} from "react";
 import CareerCards from "../cards/Career/CareerCards";
 import GetInTouch from "../Pages/GetInTouch";
+import Generation from "../Pages/Generation";
 
 const RouterApp = () => {
     const {pathname} = useLocation();

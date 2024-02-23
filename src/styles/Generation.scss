@@ -1,0 +1,15 @@
+.generation{
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(4, 15vw);
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  &__link:hover{
+    color: $black;
+  }
+  &__img{
+    width: 15vw;
+    height: 15vw;
+  }
+}

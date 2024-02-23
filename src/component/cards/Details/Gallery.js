@@ -43,7 +43,8 @@ const Pagination = ({currentPage, previousPage, handleSetPage, nextPage, images}
                             changePositionOnHover={true}
                             handle={<></>}
                             style={{
-                                width: '100%'
+                                width: "100%",
+                                height: "36rem"
                             }}
                         />
                     )}
@@ -114,6 +115,7 @@ const Gallery = ({images}) => {
                      onClick={() => setPause(false)}
                      onMouseEnter={() => setPause(false)}
                      onMouseLeave={() => setPause(true)}
+                     onTouchStart={()=> setPause(false)}
                 >
                     <Pagination
                         nextPage={nextPage}

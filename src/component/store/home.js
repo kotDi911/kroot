@@ -18,7 +18,7 @@ export const useHomeCard = create(() => ({
             img: comer,
             imgHover: `${URL}/comer.gif${open}`,
             text: null,
-            btnText: "comercial vfx showreel",
+            btnText: "comercial showreel",
             social: null
         },
         {
@@ -30,7 +30,7 @@ export const useHomeCard = create(() => ({
             img: music,
             imgHover: `${URL}/music.gif${open}`,
             text: null,
-            btnText: "music video vfx showreel",
+            btnText: "music video showreel",
             social: null
         },
         {
@@ -77,7 +77,7 @@ export const useHomeCard = create(() => ({
             img: beauty,
             imgHover: `${URL}/beauty.gif${open}`,
             text: null,
-            btnText: "beauty vfx showreel",
+            btnText: "beauty vfx",
             social: null
         },
         {

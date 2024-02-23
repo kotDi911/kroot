@@ -18,13 +18,10 @@
     padding: 0 7px;
     border: 1px solid $text;
     border-radius: 25px;
-    background: $black;
-    color: white;
     cursor: pointer;
     transition: .3s linear;
     &:hover{
       background: $BG;
-      color: $text;
     }
   }
 }
