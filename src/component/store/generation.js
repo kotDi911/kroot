@@ -1,12 +1,12 @@
 import {create} from 'zustand'
 import coldplay from "../../assets/g_kroot/links/Coldplay.png";
-import justin from "../../assets/g_kroot/links/Jusin Bieber.png";
-import post from "../../assets/g_kroot/links/Post Malone.png";
-import billie from "../../assets/g_kroot/links/Billie Eilish.png";
+import justin from "../../assets/g_kroot/links/Justin_Bieber.png";
+import post from "../../assets/g_kroot/links/Post_Malone.png";
+import billie from "../../assets/g_kroot/links/Billie_Eilish.png";
 import khalid from "../../assets/g_kroot/links/Khalid.png";
-import french from "../../assets/g_kroot/links/French Montana.png";
+import french from "../../assets/g_kroot/links/French_Montana.png";
 import russ from "../../assets/g_kroot/links/RUSS.png";
-import travis from "../../assets/g_kroot/links/Travis Scott.png";
+import travis from "../../assets/g_kroot/links/Travis_Scott.png";
 
 export const useGeneration = create(() => ({
     links : [

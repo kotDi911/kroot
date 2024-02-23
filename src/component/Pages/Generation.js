@@ -4,7 +4,8 @@ import {useGeneration} from "../store/generation";
 import mtv from "../../assets/mtv.jpg";
 import LongButton from "../LongButton";
 
-const imdb = "https://www.imdb.com/name/nm6282617/?ref_=nv_sr_srsg_0"
+const imdb = "https://www.imdb.com/name/nm6282617/?ref_=nv_sr_srsg_0";
+const registration = "https://forms.gle/Dshcz75zEU3vJ9f17";
 const Generation = () => {
     const links = useGeneration((store) => store.links)
   return(
@@ -16,7 +17,7 @@ const Generation = () => {
               </video>
               <h1 className="h1 m-52">Experience from the<br/>
                   best Supervisors</h1>
-              <h3 className="h3">G. <span className="gray">Kroot</span></h3>
+              <h3 className="h3 gray"><span className="black">G.</span> Kroot</h3>
               <p className="regular gray mt-16">
                   Genration Kroot is an online vfx school.
                   We provide our experience from Music Video and Commercial Industry.
@@ -41,13 +42,26 @@ const Generation = () => {
               <div className="generation__grid m-52">
                   {links.map((link) => (
                       <Link key={link.id} to={link.url} className="generation__link flex col text-center gray">
-                          <img src={link.img} alt="icon" className="generation__img mb-8"/>
+                          <img src={link.img} alt="icon" className="generation__img mb-16"/>
                           {link.name}
                       </Link>
                   ))}
               </div>
               <img src={mtv} alt="mtv" className="img mb-32"/>
               <LongButton text="IMDB - link" link={imdb}/>
+              <h2 className="h2 gray mt-52 mb-32"><span className="black">G.</span> Masterclass</h2>
+              <p className="regular gray mb-32">
+                  We have created a master class on the Coldplay Up&Up project in different
+                  languages( English, Ukranian, Rus )Our analysis of the project so subtly
+                  shows the detailsYou will understand the basics of thinking and visual
+                  perception on the part of the director and learn how to look.This master
+                  class is a hybrid model. You can watch the master class when you have time.
+                  And we are conducting an online lesson to answer your questions about this
+                  project.For a small training, we suggest you do your homework for which we will
+                  give you feedback. This is a valuable consolidation and enlightenment of the
+                  master class.Pricing and dates you will find on registration page.Click ro REGISTRATION !Le'ts go!
+              </p>
+              <LongButton text="Registration" link={registration}/>
           </div>
       </section>
   )
