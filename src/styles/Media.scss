@@ -159,6 +159,9 @@
   .long-btn {
     padding: 1.25rem;
   }
+  .generation__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -298,6 +301,9 @@
       width: 100%;
       margin-top: 1rem;
     }
+  }
+  .generation__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
