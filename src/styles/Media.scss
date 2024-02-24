@@ -70,21 +70,34 @@
     width: 64px;
     height: 64px;
   }
+  .supervisor {
+    &__flex {
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__card {
+      max-width: 220px;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
-  .form{
+  .form {
     &__cont {
       padding: 3rem;
     }
-    &__social{
+
+    &__social {
       margin-bottom: 3rem;
     }
+
     & > div {
       flex-direction: column;
     }
   }
-  .long-btn{
+  .long-btn {
     padding: 1.5rem;
   }
   .home {
@@ -137,15 +150,17 @@
     }
   }
 }
+
 @media screen and (max-width: 660px) {
   .apps__img {
     width: 54px;
     height: 54px;
   }
-  .long-btn{
+  .long-btn {
     padding: 1.25rem;
   }
 }
+
 @media screen and (max-width: 550px) {
   .h1 {
     font-size: 52px;
@@ -158,12 +173,15 @@
   }
   .nav {
     justify-content: space-between;
-    &__btn{
+
+    &__btn {
       width: 30%;
     }
-    &__cont{
+
+    &__cont {
       padding: 1.5rem;
     }
+
     &__link {
       margin-right: 0 !important;
     }
@@ -181,7 +199,7 @@
     flex-direction: column;
     gap: 1rem;
   }
-  .apps__cont>div{
+  .apps__cont > div {
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
@@ -189,24 +207,28 @@
   .filter__grid .filter__btn {
     width: 45%;
   }
-  .about{
-    &__img{
+  .about {
+    &__img {
       position: relative;
       transform: none;
     }
-    &__main-img{
+
+    &__main-img {
       display: flex;
       flex-direction: column-reverse;
       padding-top: 2rem;
       border-radius: 25px;
     }
-    &__text-cont{
+
+    &__text-cont {
       padding-top: 1rem;
     }
-    & .h3{
+
+    & .h3 {
       font-size: 24px;
     }
-    & .regular{
+
+    & .regular {
       font-size: 12px;
       padding: .5rem 0;
     }
@@ -214,7 +236,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .apps__cont, .career__card{
+  .apps__cont, .career__card {
     padding: 1rem 1.25rem;
   }
   .footer .nav {
@@ -257,7 +279,7 @@
   .form__cont {
     padding: 3rem 1.5rem;
   }
-  .input{
+  .input {
     margin-bottom: 1rem;
   }
   .filter__grid .filter__btn {
@@ -269,9 +291,10 @@
   //.gallery__cont{
   //  padding: 1rem .25rem;
   //}
-  .career__card{
+  .career__card {
     flex-direction: column;
-    & .btn{
+
+    & .btn {
       width: 100%;
       margin-top: 1rem;
     }

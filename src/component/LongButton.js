@@ -8,20 +8,19 @@ const LongButton = ({text, link, style}) => {
     useEffect(() => {
         reg.test(link) ? setBlank(false) : setBlank(true)
     }, [])
-    console.log(blank)
     return (
-            <Link
-                to={blank ? link : `/${link}`}
-                target={blank ? "_blank" : ""}
-                className="flex long-btn hover__card"
-                style={{gridArea: style}}
-            >
-                <p className="fs-20 gray">{text.toUpperCase()}</p>
-                <div className="btn">
-                    <Arrow className="arrow btn-img"/>
-                    <span className="btn-bg"/>
-                </div>
-            </Link>
+        <Link
+            to={blank ? link : `/${link}`}
+            target={blank ? "_blank" : ""}
+            className="flex long-btn hover__card"
+            style={{gridArea: style}}
+        >
+            <p className="fs-20 gray">{text.toUpperCase()}</p>
+            <div className="btn">
+                <Arrow className="arrow btn-img"/>
+                <span className="btn-bg"/>
+            </div>
+        </Link>
     )
 }
 export default LongButton
