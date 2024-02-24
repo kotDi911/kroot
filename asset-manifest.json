@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.cdb77e3a.css",
-    "main.js": "/kroot/static/js/main.ee5c2c94.js",
+    "main.css": "/kroot/static/css/main.bd964f9d.css",
+    "main.js": "/kroot/static/js/main.3fcfd605.js",
     "static/js/0.7b3079fb.chunk.js": "/kroot/static/js/0.7b3079fb.chunk.js",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
+    "static/media/Khalid_Satelite.png": "/kroot/static/media/Khalid_Satelite.ea03c5fdfe19677e377e.png",
     "static/media/team.jpg": "/kroot/static/media/team.c54c4bd344db17f03785.jpg",
     "static/media/Coldplay.png": "/kroot/static/media/Coldplay.a7c77b9f91d6225d684b.png",
     "static/media/French_Montana.png": "/kroot/static/media/French_Montana.d693ced419f43b418022.png",
@@ -18,7 +19,10 @@
     "static/media/beauty.jpg": "/kroot/static/media/beauty.2643c94726098df25acf.jpg",
     "static/media/music.jpg": "/kroot/static/media/music.73e254c83e6b60fb86d3.jpg",
     "static/media/comer.jpg": "/kroot/static/media/comer.10d2acefa31f067e3d19.jpg",
+    "static/media/Oksana_Gryanka.png": "/kroot/static/media/Oksana_Gryanka.e2c52288813837525b86.png",
+    "static/media/Dimas_Nekrasov.png": "/kroot/static/media/Dimas_Nekrasov.9b78faa194ebbf8c47fc.png",
     "static/media/Tomash_Kuzmytskyi.png": "/kroot/static/media/Tomash_Kuzmytskyi.977721c32adfb82d4440.png",
+    "static/media/Sergii_Kravchenko.png": "/kroot/static/media/Sergii_Kravchenko.8641db3b25de2487adb9.png",
     "static/media/Julia_Lusenko.png": "/kroot/static/media/Julia_Lusenko.e6fda8ae509f69efae36.png",
     "static/media/Logo.svg": "/kroot/static/media/Logo.34ab3d525a37d06a3c37220522b7b3ed.svg",
     "static/media/vfx.svg": "/kroot/static/media/vfx.33e94cd66dfd50fb077a3cbd4348d159.svg",
@@ -36,12 +40,12 @@
     "static/media/done.svg": "/kroot/static/media/done.030b83cdc9c641773ed38794cf20effd.svg",
     "static/media/round.svg": "/kroot/static/media/round.6e7f9b734f73aece06e40819f21c10ed.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.cdb77e3a.css.map": "/kroot/static/css/main.cdb77e3a.css.map",
-    "main.ee5c2c94.js.map": "/kroot/static/js/main.ee5c2c94.js.map",
+    "main.bd964f9d.css.map": "/kroot/static/css/main.bd964f9d.css.map",
+    "main.3fcfd605.js.map": "/kroot/static/js/main.3fcfd605.js.map",
     "0.7b3079fb.chunk.js.map": "/kroot/static/js/0.7b3079fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdb77e3a.css",
-    "static/js/main.ee5c2c94.js"
+    "static/css/main.bd964f9d.css",
+    "static/js/main.3fcfd605.js"
   ]
 }
