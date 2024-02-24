@@ -28,10 +28,10 @@ const Options = ({options}) => {
     return (
         <div className="img-cont flex col mt-32">
             {options.map((option, i) =>
-                    <div key={i} className="flex col mt-16">
-                        <p className="gray fs-14">{option.title}</p>
-                        <p className="regular black">{option.desc}</p>
-                    </div>
+                <div key={i} className="flex col mt-16">
+                    <p className="gray fs-14">{option.title}</p>
+                    <p className="regular black">{option.desc}</p>
+                </div>
             )}
         </div>
     )
@@ -43,18 +43,20 @@ const Details = () => {
     const {name, description, descriptionImg, galleryImg, options} = state;
 
     return (
-        <section className="section details">
-            <div className="container-80">
+        <article className="article details">
+            <section className="container-80">
                 <Title title={name}/>
                 <p className="regular gray mt-16">{description}</p>
                 <Images images={descriptionImg}/>
                 <Gallery images={galleryImg}/>
                 <Options options={options}/>
+            </section>
+            <section className="container-80">
                 <div className="details__grid mt-112">
                     {cards.map((card, i) => <HomeCard key={i} props={card}/>)}
                 </div>
-            </div>
-        </section>
+            </section>
+        </article>
     )
 }
 export default Details

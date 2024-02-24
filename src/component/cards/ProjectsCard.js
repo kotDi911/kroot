@@ -2,21 +2,22 @@ import {Link} from "react-router-dom";
 import Button from "../Button";
 import {LazyLoadImage} from "react-lazy-load-image-component";
 
-const Image = ({image}) => {
-  return(
-      <>
-          <LazyLoadImage
-              alt="alt"
-              height="100%"
-              src={image}
-              width="100%"
-              effect="blur"
-          />
-      </>
-  )
+const Image = ({image, placeholder}) => {
+    return (
+        <>
+            <LazyLoadImage
+                alt="alt"
+                height="100%"
+                width="100%"
+                src={image}
+                placeholderSrc={placeholder}
+                effect="blur"
+            />
+        </>
+    )
 }
 const ProjectsCard = ({props}) => {
-    const {name, img, description, descriptionImg, galleryImg, options} = props;
+    const {name, img, placeholder, description, descriptionImg, galleryImg, options} = props;
     return (
         <Link to={`/projects/${name.replace(/\s+/g, '').toLowerCase()}`}
               className="projects__card flex end relative hover__card"
@@ -29,7 +30,7 @@ const ProjectsCard = ({props}) => {
               }}
         >
             <div className="img-cont">
-                <Image image={img}/>
+                <Image image={img} placeholder={placeholder}/>
                 {/*<img className="project-img" src={img} alt=""/>*/}
             </div>
             <div className="absolute w-100">

@@ -3,16 +3,16 @@ import {create} from 'zustand'
 export const useAbout = create(() => ({
     nominations: [
         {
-            name: "MTV AWARDS WINNER BEST LATIN",
-            gray: "– Billie Eilish, ROSALÍA - Lo Vas A Olvidar (2021)"
+            title: "MTV AWARDS WINNER BEST LATIN",
+            name: "– Billie Eilish, ROSALÍA - Lo Vas A Olvidar (2021)"
         },
         {
-            name: "MTV AWARDS WINNER BEST VISUAL EFFECT",
-            gray: "– Coldplay - Up&Up(2016)"
+            title: "MTV AWARDS WINNER BEST VISUAL EFFECT",
+            name: "– Coldplay - Up&Up(2016)"
         },
         {
-            name: "MTV AWARDS WINNER BEST VISUAL EFFECT",
-            gray: "– Justine Bieber - Where Are U Now (2015)"
+            title: "MTV AWARDS WINNER BEST VISUAL EFFECT",
+            name: "– Justine Bieber - Where Are U Now (2015)"
         }
     ],
     numbers: [

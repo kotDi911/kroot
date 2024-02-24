@@ -1,7 +1,7 @@
 import {useCards} from "../store/projects";
 import {lazy, Suspense, useEffect, useState} from "react";
 
-const ProjectsCard = lazy(()=> import("../cards/ProjectsCard"))
+const ProjectsCard = lazy(() => import("../cards/ProjectsCard"))
 
 const filters = [
     {name: "all"},
@@ -18,13 +18,14 @@ let filteredProjects = [];
 
 const FilterBtn = ({item, setFilter, filter}) => {
     let name = item;
-    if(!item) name = "all";
-  return(
-      <div className={`filter__btn gray ${name === filter ? "filter__btn-active" : ""}`} onClick={() => setFilter(name)}>
-          <span className="filter__bg btn-bg"></span>
-          <div className="filter__text">{name}</div>
-      </div>
-  )
+    if (!item) name = "all";
+    return (
+        <div className={`filter__btn gray ${name === filter ? "filter__btn-active" : ""}`}
+             onClick={() => setFilter(name)}>
+            <span className="filter__bg btn-bg"></span>
+            <div className="filter__text">{name}</div>
+        </div>
+    )
 }
 
 const Projects = () => {
@@ -60,20 +61,22 @@ const Projects = () => {
     };
 
     return (
-        <section className="section projects">
-            <div className="container-80">
+        <article className="article projects">
+            <section className="container-80">
                 <h1 className="h1">Projects</h1>
                 {/*{width <= 767 && <FilterBtn props={{item: filter, filter, setFilter}}/>}*/}
                 <div className="filter__grid mt-16">
                     {filters.map((item, i) =>
-                        <FilterBtn key={i} item={item.name} filter={filter}  setFilter={setFilter}/>
+                        <FilterBtn key={i} item={item.name} filter={filter} setFilter={setFilter}/>
                     )}
                 </div>
-                <div className="projects__grid mt-16">
+            </section>
+            <section className="container-80">
+                <div className="projects__grid mt-32">
                     <Suspense fallback={<div>Loading...</div>}>
-                    {
-                        postsToShow.map((item) => <ProjectsCard key={item.id} props={item}/>)
-                    }
+                        {
+                            postsToShow.map((item) => <ProjectsCard key={item.id} props={item}/>)
+                        }
                     </Suspense>
                 </div>
                 {isActive &&
@@ -82,8 +85,8 @@ const Projects = () => {
                         MORE
                     </div>
                 }
-            </div>
-        </section>
+            </section>
+        </article>
     )
 }
 export default Projects

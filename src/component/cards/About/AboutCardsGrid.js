@@ -1,5 +1,5 @@
 import {useAbout} from "../../store/about";
-import CardOptions from "./CardOptions";
+import CardOptions from "../CardOptions";
 import NumbersCard from "./NumbersCard";
 
 const AboutCardsGrid = () => {
@@ -9,7 +9,7 @@ const AboutCardsGrid = () => {
     return(
         <div className="about__grid mt-16">
             <div className="about__card" style={{gridArea: "nominations"}}>
-                <h3 className="h3">Nominations</h3>
+                <h3 className="h3 black">Nominations</h3>
                 <CardOptions props={nominations}/>
             </div>
             <div className="about__card flex col" style={{gridArea: "numbers"}}>

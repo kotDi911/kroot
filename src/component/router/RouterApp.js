@@ -23,30 +23,32 @@ const RouterApp = () => {
 
     return (
         <>
-            <div className="logo">
+            <header className="logo">
                 <Link expect="" to="/home">
                     <img className="logo-img" src={logo} alt="logo"/>
                 </Link>
-            </div>
-            <Routes>
-                <Route path='/' element={<Outlet/>}>
-                    <Route path='home' element={<Home/>}/>
-                    <Route path='about' element={<About/>}/>
-                    <Route path='services' element={<Services/>}/>
-                    <Route path='projects' element={<Outlet/>}>
-                        <Route path='' element={<Projects/>}/>
-                        <Route path=':name' element={<Details/>}/>
+            </header>
+            <main>
+                <Routes>
+                    <Route path='/' element={<Outlet/>}>
+                        <Route path='home' element={<Home/>}/>
+                        <Route path='about' element={<About/>}/>
+                        <Route path='services' element={<Services/>}/>
+                        <Route path='projects' element={<Outlet/>}>
+                            <Route path='' element={<Projects/>}/>
+                            <Route path=':name' element={<Details/>}/>
+                        </Route>
+                        <Route path='contacts' element={<Contacts/>}/>
+                        <Route path='career' element={<Career/>}>
+                            <Route path=':name' element={<CareerCards/>}/>
+                        </Route>
+                        <Route path='generation_kroot' element={<Generation/>}/>
+                        <Route path='get_in_touch' element={<GetInTouch/>}/>
+                        <Route path='*' element={<Navigate to='/home' replace/>}/>
+                        <Route path='/' element={<Navigate to='/home' replace/>}/>
                     </Route>
-                    <Route path='contacts' element={<Contacts/>}/>
-                    <Route path='career' element={<Career/>}>
-                        <Route path=':name' element={<CareerCards/>}/>
-                    </Route>
-                    <Route path='generation_kroot' element={<Generation/>}/>
-                    <Route path='get_in_touch' element={<GetInTouch/>}/>
-                    <Route path='*' element={<Navigate to='/home' replace/>}/>
-                    <Route path='/' element={<Navigate to='/home' replace/>}/>
-                </Route>
-            </Routes>
+                </Routes>
+            </main>
             <Footer/>
         </>
     );

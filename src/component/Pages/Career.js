@@ -31,15 +31,15 @@ const Career = () => {
     }, [pathname])
 
     return (
-        <section className="section career">
-            <div className="container-64">
+        <article className="article career">
+            <section className="container-64">
                 <h1 className="h1">Career</h1>
                 <CareerNav/>
                 <Outlet context={cards}/>
-                <LongButton text="Get in touch" link="get_in_touch"/>
+                <LongButton text="Get in touch" url="get_in_touch"/>
                 <AppsCard/>
-            </div>
-        </section>
+            </section>
+        </article>
     )
 }
 export default Career

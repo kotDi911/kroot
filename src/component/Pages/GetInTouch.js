@@ -17,8 +17,8 @@ const GetInTouch = () => {
         console.log(isActive)
     }
     return (
-        <section className="section get-in-touch">
-            <div className="container-48 relative">
+        <article className="article get-in-touch">
+            <section className="container-48 relative">
                 <h1 className="h1">Get in <span className="gray">touch</span></h1>
                 <p className="regular gray">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -30,12 +30,12 @@ const GetInTouch = () => {
                     </div>
                     <GetInTouchForm sentMail={sentMail}/>
                 </div>
-            </div>
+            </section>
             <div className={`popup__message ${isActive ? "active" : ""}`}>
                 <img className="mr-16" src={done} alt="ok" width="24px" height="24px"/>
                 <p className="popup__text fs-20">Your message has been sent</p>
             </div>
-        </section>
+        </article>
     )
 }
 export default GetInTouch

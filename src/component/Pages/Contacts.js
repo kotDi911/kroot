@@ -113,8 +113,8 @@ const photo1 =[
 
 const Contacts = () => {
     return (
-        <section className="section contacts">
-            <div className="container-64">
+        <article className="article contacts">
+            <section className="container-64">
                 <div className="contacts__grid">
                     <TextCard props={card1} areaName="text"/>
                     <PhotoCard props={photo}/>
@@ -122,8 +122,8 @@ const Contacts = () => {
                     <PhotoCard props={photo1}/>
                     <TextCard props={card2} areaName="text1"/>
                 </div>
-            </div>
-        </section>
+            </section>
+        </article>
     )
 }
 export default Contacts

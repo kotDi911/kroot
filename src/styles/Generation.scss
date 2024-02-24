@@ -1,28 +1,37 @@
-.generation{
-  &__grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 5%;
-    row-gap: 2rem;
+.generation {
+  &__grid {
+    &-links {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 5%;
+      row-gap: 2rem;
+    }
+
+    &-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
   }
-  &__flex{
-    display: flex;
-  }
-  &__link{
+
+  &__link {
     background: #B9C0C5;
     padding: 1rem;
     border: 1px solid $border;
     transition: .3s linear;
     color: white;
-    &:hover{
+
+    &:hover {
       color: $black;
       background: white;
-      & .generation__img{
+
+      & .generation__img {
         filter: grayscale(0);
       }
     }
   }
-  &__img{
+
+  &__img {
     width: 100%;
     background: $black;
     border: 1px solid $black;
@@ -30,22 +39,54 @@
     transition: .3s linear;
   }
 }
-.img__text{
+
+.img__text {
   bottom: 2rem;
   left: 2rem;
 }
-.supervisor{
-  &__flex{
+
+.supervisor {
+  &__flex {
     gap: 1rem;
   }
-  &__card{
+
+  &__card {
     background: white;
     padding: 1rem;
     width: 100%;
   }
-  &__img{
+
+  &__img {
     width: 100%;
     border: 1px solid $border;
     background: #bb21dc;
+  }
+}
+
+.symbol {
+  width: 36px;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.masterclass {
+  &__card {
+    padding: 2rem 1.5rem;
+    background: white;
+    border-radius: 25px;
+
+    //& .options {
+    //  margin-left: 1rem;
+    //}
+  }
+}
+
+.work__card {
+  padding: 2rem 1.5rem;
+  background: white;
+  border-radius: 25px;
+
+  & .options {
+    margin-left: 2rem;
   }
 }

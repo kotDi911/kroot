@@ -5,6 +5,7 @@ import music from "../../assets/showreel/music.jpg";
 const URL = "https://github.com/kotDi911/kroot/blob/main/public/images/projects"
 const URL2 = "https://github.com/kotDi911/kroot/blob/main/public/images/reels"
 const open = "?raw=true"
+const placeholder = `placeholder.gif${open}`
 const preview = `preview.gif${open}`
 
 export const useCards = create(() => ({
@@ -13,6 +14,7 @@ export const useCards = create(() => ({
             id: 1,
             name: "Muni Long - Made For Me",
             img: `${URL}/muni_long/${preview}`,
+            placeholder: `${URL}/muni_long/${preview}`,
             filter: "commercial",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
                 "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +

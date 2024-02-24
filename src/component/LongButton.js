@@ -1,25 +1,22 @@
 import {Link} from "react-router-dom";
-import {ReactComponent as Arrow} from "../assets/ico/arrow.svg";
 import {useEffect, useState} from "react";
+import Button from "./Button";
 
-const LongButton = ({text, link, style}) => {
+const LongButton = ({text, url, style}) => {
     const [blank, setBlank] = useState(false);
     const reg = /^\w+$/;
     useEffect(() => {
-        reg.test(link) ? setBlank(false) : setBlank(true)
+        reg.test(url) ? setBlank(false) : setBlank(true)
     }, [])
     return (
         <Link
-            to={blank ? link : `/${link}`}
+            to={blank ? url : `/${url}`}
             target={blank ? "_blank" : ""}
             className="flex long-btn hover__card"
             style={{gridArea: style}}
         >
             <p className="fs-20 gray">{text.toUpperCase()}</p>
-            <div className="btn">
-                <Arrow className="arrow btn-img"/>
-                <span className="btn-bg"/>
-            </div>
+            <Button/>
         </Link>
     )
 }
