@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.bd964f9d.css",
+    "main.css": "/kroot/static/css/main.f55b7f4d.css",
     "main.js": "/kroot/static/js/main.3fcfd605.js",
     "static/js/0.7b3079fb.chunk.js": "/kroot/static/js/0.7b3079fb.chunk.js",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
@@ -40,12 +40,12 @@
     "static/media/done.svg": "/kroot/static/media/done.030b83cdc9c641773ed38794cf20effd.svg",
     "static/media/round.svg": "/kroot/static/media/round.6e7f9b734f73aece06e40819f21c10ed.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.bd964f9d.css.map": "/kroot/static/css/main.bd964f9d.css.map",
+    "main.f55b7f4d.css.map": "/kroot/static/css/main.f55b7f4d.css.map",
     "main.3fcfd605.js.map": "/kroot/static/js/main.3fcfd605.js.map",
     "0.7b3079fb.chunk.js.map": "/kroot/static/js/0.7b3079fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd964f9d.css",
+    "static/css/main.f55b7f4d.css",
     "static/js/main.3fcfd605.js"
   ]
 }
