@@ -118,7 +118,7 @@ const Contacts = () => {
                 <div className="contacts__grid">
                     <TextCard props={card1} areaName="text"/>
                     <PhotoCard props={photo}/>
-                    <LongButton text="Get in touch" link="get_in_touch" style="button"/>
+                    <LongButton text="Get in touch" url="get_in_touch" style="button"/>
                     <PhotoCard props={photo1}/>
                     <TextCard props={card2} areaName="text1"/>
                 </div>

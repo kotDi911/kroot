@@ -33,7 +33,7 @@ const Career = () => {
     return (
         <article className="article career">
             <section className="container-64">
-                <h1 className="h1">Career</h1>
+                <h1 className="h1 black">Career</h1>
                 <CareerNav/>
                 <Outlet context={cards}/>
                 <LongButton text="Get in touch" url="get_in_touch"/>

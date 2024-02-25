@@ -44,7 +44,6 @@ const Pagination = ({currentPage, previousPage, handleSetPage, nextPage, images}
                             handle={<></>}
                             style={{
                                 width: "100%",
-                                height: "36rem"
                             }}
                         />
                     )}

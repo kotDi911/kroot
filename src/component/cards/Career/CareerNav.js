@@ -27,7 +27,7 @@ const CareerNav = () => {
 
     return (
         <div className="nav__cont">
-            <h3 className="h3 text-center">Location</h3>
+            <h3 className="h3 text-center black">Location</h3>
             <nav className="nav flex space-a mt-16">
                 {
                     links.map((link, i) => (

@@ -9,12 +9,11 @@ const GetInTouch = () => {
         const timer = setTimeout(() => {
             setIsActive(false)
         }, 2000);
-        console.log("use",isActive)
         return () => clearTimeout(timer);
     }, [isActive]);
+
     const sentMail = () => {
         setIsActive(true)
-        console.log(isActive)
     }
     return (
         <article className="article get-in-touch">

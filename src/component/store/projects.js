@@ -3,8 +3,12 @@ import comer from "../../assets/showreel/comer.jpg";
 import music from "../../assets/showreel/music.jpg";
 
 const URL = "https://github.com/kotDi911/kroot/blob/main/public/images/projects"
+// const URL = "images/projects"
 const URL2 = "https://github.com/kotDi911/kroot/blob/main/public/images/reels"
+// const URL2 = "images/reels"
 const open = "?raw=true"
+// const open = ""
+
 const placeholder = `placeholder.jpg${open}`
 const preview = `preview.gif${open}`
 

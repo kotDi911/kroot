@@ -11,30 +11,34 @@ const HomeCard = ({props}) => {
     const navigate = useNavigate();
     const [bgImg, setBgImg] = useState(img)
     const reg = /^\w+$/;
+
     const GoToPage = () => {
         reg.test(url) ? navigate(`/${url}`) : window.open(url, "_blank")
     }
     const color = img ? white : light
 
     return (
-        <div className={`${url === "generation_kroot" && "g_kroot"} main__card relative`} style={{gridArea: name}}>
+        <div className={`${url === "generation_kroot" && "g_kroot"} main__card relative`}
+             style={{gridArea: name ? name : ""}}>
             <div className="home__card flex col hover__card"
-                 style={{backgroundImage: `url(${bgImg})`}}
+                 style={bgImg && {backgroundImage: `url(${bgImg})`}}
                  onClick={GoToPage}
-                 onMouseEnter={() => setBgImg(imgHover)}
-                 onMouseLeave={() => setBgImg(img)}
-                 onTouchStart={() => setBgImg(imgHover)}
+                 onMouseEnter={() => imgHover && setBgImg(imgHover)}
+                 onMouseLeave={() => img && setBgImg(img)}
+                 onTouchStart={() => imgHover && setBgImg(imgHover)}
             >
                 <div className="home__card-title flex col">
-                    {title && <h3 className={`title ${name === "contacts" ? "fs-56" : "h3"}`} >{title} <span className="gray">{gray}</span></h3>}
+                    {title && <h3 className={`title ${name === "contacts" ? "fs-56" : "h3"}`}>{title} <span
+                        className="gray">{gray}</span></h3>}
                     {ico && <div className="ico-img"><img className="img" src={ico} alt="icon"/></div>}
                     {text && <p className="gray mt-16">{text}</p>}
                 </div>
-                <div className="flex end space-b" style={{justifyContent: social && "flex-end"}}>
+                <div className="flex end space-b" style={{justifyContent: social ? "flex-end" : ""}}>
                     {btnText &&
                         <div className="flex center">
                             {!img && <div className="dot" style={{background: color}}/>}
-                            <div className={img ? "fs-20" : "small"} style={{color: color}}>{btnText.toUpperCase()}</div>
+                            <div className={img ? "fs-20" : "small"}
+                                 style={{color: color}}>{btnText.toUpperCase()}</div>
                         </div>
                     }
                     <Button color={!!img}/>

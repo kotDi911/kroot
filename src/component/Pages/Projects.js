@@ -63,7 +63,6 @@ const ToggleFilterBtn = ({filter, setFilter}) => {
     )
 }
 
-
 const Projects = () => {
     const projects = useCards((store) => store.projects)
     const [filter, setFilter] = useState("all");

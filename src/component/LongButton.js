@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import Button from "./Button";
 
 const LongButton = ({text, url, style, className}) => {
-    console.log(className)
     const [blank, setBlank] = useState(false);
     const reg = /^\w+$/;
     useEffect(() => {

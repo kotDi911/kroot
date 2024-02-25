@@ -41,11 +41,30 @@ const GetInTouchForm = ({sentMail}) => {
                 .max(500, "Max letter in message must be 500")
                 .matches(/^[\w.,?!\/\\&():;"' -]+$/, "You can use: letters, numbers and next symbols: .,?!\/\\&():;\"' -"),
         }),
-        onSubmit: async ({firstName, lastName, email, phone, company, message},{resetForm}) => {
+        onSubmit: async ({firstName, lastName, email, phone, company, message}, {resetForm}) => {
             try {
-                sentMail()
-                await console.log(firstName, lastName, email, phone, company, message)
-                resetForm()
+                const data = new FormData()
+                data.append("firstName", `${firstName}`)
+                data.append("lastName", `${lastName}`)
+                data.append("email", `${email}`)
+                data.append("phone", `${phone}`)
+                data.append("company", `${company}`)
+                data.append("message", `${message}`)
+
+                const res = await fetch("send_mail.php", {
+                    method: "POST",
+                    body: data
+                })
+                if (res.ok) {
+                    sentMail()
+                    resetForm()
+                    console.log("res",res.json())
+                    for (let property of data.entries()) {
+                        console.log(property[0], property[1]);
+                    }
+                } else {
+                    alert(res.status)
+                }
             } catch (err) {
                 console.log(err)
             }
