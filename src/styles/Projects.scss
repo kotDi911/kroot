@@ -3,8 +3,17 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 3%;
-    text-transform: uppercase;
     text-align: center;
+  }
+  &__flex{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 5;
+    background: #ebf1f5;
+    width: 100%;
+    top: 2.75rem;
+    padding-bottom: 3rem;
   }
 
   &__btn {
@@ -17,6 +26,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    text-transform: uppercase;
+    &-toggle{
+      margin: 1rem auto 0;
+    }
     &-active{
       border-color: $black;
       background: rgba(222, 226, 229, 0.7);
@@ -35,6 +48,12 @@
 
   &__bg {
     z-index: -1;
+  }
+  &__img{
+    transition: .2s linear;
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
   }
 }
 
@@ -70,4 +89,8 @@
     object-fit: cover;
     border-radius: 1.5rem;
   }
+}
+
+.rotate{
+  transform: rotate(90deg);
 }

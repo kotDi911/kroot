@@ -7,10 +7,10 @@ const PreviewSection = () => {
                 Generation
                 <span className="gray">Kroot</span>
             </h1>
-            <video className="mt-52" width="100%" muted autoPlay loop>
+            <video className="mt-32 mb-32" width="100%" muted autoPlay loop>
                 <source src={videoPreview}/>
             </video>
-            <h1 className="h1 m-52">
+            <h1 className="h1 black">
                 Experience from the<br/>best Supervisors
             </h1>
         </section>

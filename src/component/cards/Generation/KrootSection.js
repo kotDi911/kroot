@@ -11,7 +11,7 @@ const KrootSection = () => {
     const krootText = useGeneration((store) => store.krootText);
     return (
         <section className="container-80">
-            <h2 className="h2 gray">
+            <h2 className="h2 gray mt-52 mb-32">
                 <span className="black">G.</span>
                 Kroot
             </h2>

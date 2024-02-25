@@ -7,7 +7,7 @@ const SupervisorsSection = () => {
     return (
         <section className="container-80">
             <h2 className="h2 gray mt-52 mb-32"><span className="black">G.</span> Supervisors</h2>
-            <div className="supervisor__flex flex m-52">
+            <div className="supervisor__flex flex mb-32">
                 {supervisorsCards.map(({id, img, name, title}) => (
                     <SupervisorCard key={id} {...{img, name, title}}/>
                 ))}

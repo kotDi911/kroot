@@ -1,5 +1,6 @@
 import {useCards} from "../store/projects";
 import {lazy, Suspense, useEffect, useState} from "react";
+import filterArrow from "../../assets/ico/filterArrow.svg"
 
 const ProjectsCard = lazy(() => import("../cards/ProjectsCard"))
 
@@ -16,17 +17,52 @@ const postsPerPage = 9;
 let arrayForHoldingPosts = [];
 let filteredProjects = [];
 
-const FilterBtn = ({item, setFilter, filter}) => {
+const FilterBtn = ({item, setFilter, filter, setIsToggle}) => {
     let name = item;
-    if (!item) name = "all";
+    if (!item) name = "ALL";
+    const handleToggle = () => {
+        setIsToggle && setIsToggle(false)
+        setFilter(name)
+    }
     return (
-        <div className={`filter__btn gray ${name === filter ? "filter__btn-active" : ""}`}
-             onClick={() => setFilter(name)}>
+        <div className={`filter__btn gray ${name === filter && !setIsToggle ? "filter__btn-active" : ""}`}
+             onClick={handleToggle}
+        >
             <span className="filter__bg btn-bg"></span>
             <div className="filter__text">{name}</div>
         </div>
     )
 }
+const ToggleFilterBtn = ({filter, setFilter}) => {
+    const [isToggle, setIsToggle] = useState(false)
+    const handleToggle = () => {
+        setIsToggle(!isToggle)
+    }
+    return (
+        <div className="relative">
+            <div className="filter__btn filter__btn-toggle filter__btn-active gray" onClick={handleToggle}>
+                <span className="filter__bg btn-bg"></span>
+                <div className="filter__text">{filter}</div>
+                <img src={filterArrow} alt="filter arrow" className={`${isToggle ? "rotate" : ""} filter__img`}/>
+            </div>
+            {
+                isToggle &&
+                <div className="filter__flex col absolute">
+                    {filters.map((item, i) =>
+                        <FilterBtn
+                            key={i}
+                            item={item.name}
+                            filter={filter}
+                            setFilter={setFilter}
+                            setIsToggle={setIsToggle}
+                        />
+                    )}
+                </div>
+            }
+        </div>
+    )
+}
+
 
 const Projects = () => {
     const projects = useCards((store) => store.projects)
@@ -34,7 +70,7 @@ const Projects = () => {
     const [postsToShow, setPostsToShow] = useState([]);
     const [next, setNext] = useState(9);
     const [isActive, setIsActive] = useState(false);
-    // const [width, setWidth] = useState(window.innerWidth);
+    const [isShow] = useState(window.innerWidth > 767);
 
     const loopWithSlice = (start, end) => {
         const slicedPosts = filteredProjects.slice(start, end);
@@ -62,14 +98,23 @@ const Projects = () => {
 
     return (
         <article className="article projects">
-            <section className="container-80">
+            <section className="container-80 relative">
                 <h1 className="h1">Projects</h1>
-                {/*{width <= 767 && <FilterBtn props={{item: filter, filter, setFilter}}/>}*/}
-                <div className="filter__grid mt-16">
-                    {filters.map((item, i) =>
-                        <FilterBtn key={i} item={item.name} filter={filter} setFilter={setFilter}/>
-                    )}
-                </div>
+                {
+                    isShow ?
+                        <div className="filter__grid mt-16">
+                            {filters.map((item, i) =>
+                                <FilterBtn
+                                    key={i}
+                                    item={item.name}
+                                    filter={filter}
+                                    setFilter={setFilter}
+                                />
+                            )}
+                        </div>
+                        :
+                        <ToggleFilterBtn filter={filter} setFilter={setFilter}/>
+                }
             </section>
             <section className="container-80">
                 <div className="projects__grid mt-32">

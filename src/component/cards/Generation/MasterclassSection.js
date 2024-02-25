@@ -16,8 +16,8 @@ const MasterclassSection = () => {
                 Masterclass
             </h2>
             {masterclassText.map((item, i) => <TextP key={i} text={item.text}/>)}
-            <LongButton text="Registration" url={registration}/>
-            <div className="generation__grid-cards mt-52">
+            <LongButton className="mt-32" text="Registration" url={registration}/>
+            <div className="generation__grid-cards mt-32">
                 {masterclassCards.map((item, i) => <MasterclassCard key={i} props={item}/>)}
             </div>
             <h1 className="h1 black m-52">New masterclass soon</h1>

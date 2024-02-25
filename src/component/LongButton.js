@@ -2,7 +2,8 @@ import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 import Button from "./Button";
 
-const LongButton = ({text, url, style}) => {
+const LongButton = ({text, url, style, className}) => {
+    console.log(className)
     const [blank, setBlank] = useState(false);
     const reg = /^\w+$/;
     useEffect(() => {
@@ -12,7 +13,7 @@ const LongButton = ({text, url, style}) => {
         <Link
             to={blank ? url : `/${url}`}
             target={blank ? "_blank" : ""}
-            className="flex long-btn hover__card"
+            className={`${className ? className : ""} flex long-btn hover__card`}
             style={{gridArea: style}}
         >
             <p className="fs-20 gray">{text.toUpperCase()}</p>
