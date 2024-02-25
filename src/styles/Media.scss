@@ -1,6 +1,6 @@
 @media screen and (max-width: 1280px) {
   .filter__grid {
-    gap: 0;
+    gap: 8px;
   }
 }
 
@@ -14,7 +14,7 @@
         "numbers"
         "options";
   }
-  .about__grid, .about__grid-cards, .home__grid, .contacts__grid, .services__grid, .details__grid {
+  .about__grid, .about__grid-cards, .home__grid, .contacts__grid, .services__grid, .details__grid, .generation__grid-cards {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -81,6 +81,12 @@
       max-width: 220px;
     }
   }
+  .generation__grid-links {
+    gap: 1rem;
+  }
+  .filter__grid {
+    gap: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -138,16 +144,8 @@
   .footer .nav, .footer .social {
     justify-content: center;
   }
-
-  .filter__grid {
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    & .filter__btn {
-      width: 30%;
-    }
+  .filter__btn {
+    width: 30%;
   }
 }
 
@@ -159,8 +157,11 @@
   .long-btn {
     padding: 1.25rem;
   }
-  .generation__grid {
+  .generation__grid-links {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .work__card .options {
+    margin-left: 1.5rem;
   }
 }
 
@@ -207,7 +208,7 @@
     gap: 1.5rem;
     justify-content: center;
   }
-  .filter__grid .filter__btn {
+  .filter__btn {
     width: 45%;
   }
   .about {
@@ -235,6 +236,9 @@
       font-size: 12px;
       padding: .5rem 0;
     }
+  }
+  .generation__grid-links {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -285,7 +289,7 @@
   .input {
     margin-bottom: 1rem;
   }
-  .filter__grid .filter__btn {
+  .filter__btn {
     width: 55%;
   }
   //.carousel__item[data-pos="0"] {
@@ -302,8 +306,8 @@
       margin-top: 1rem;
     }
   }
-  .generation__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .work__card .options {
+    margin-left: 0;
   }
 }
 
