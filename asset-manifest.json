@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.f8e7ace0.css",
-    "main.js": "/kroot/static/js/main.c3eeec37.js",
+    "main.css": "/kroot/static/css/main.b04ae2aa.css",
+    "main.js": "/kroot/static/js/main.bc8336eb.js",
     "static/js/0.34c6b7bc.chunk.js": "/kroot/static/js/0.34c6b7bc.chunk.js",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
     "static/media/Khalid_Satelite.png": "/kroot/static/media/Khalid_Satelite.ea03c5fdfe19677e377e.png",
@@ -41,12 +41,12 @@
     "static/media/round.svg": "/kroot/static/media/round.6e7f9b734f73aece06e40819f21c10ed.svg",
     "static/media/filterArrow.svg": "/kroot/static/media/filterArrow.59a4aaa6e35bb2182dfde125a9e6588c.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.f8e7ace0.css.map": "/kroot/static/css/main.f8e7ace0.css.map",
-    "main.c3eeec37.js.map": "/kroot/static/js/main.c3eeec37.js.map",
+    "main.b04ae2aa.css.map": "/kroot/static/css/main.b04ae2aa.css.map",
+    "main.bc8336eb.js.map": "/kroot/static/js/main.bc8336eb.js.map",
     "0.34c6b7bc.chunk.js.map": "/kroot/static/js/0.34c6b7bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8e7ace0.css",
-    "static/js/main.c3eeec37.js"
+    "static/css/main.b04ae2aa.css",
+    "static/js/main.bc8336eb.js"
   ]
 }
