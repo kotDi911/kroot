@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.b04ae2aa.css",
-    "main.js": "/kroot/static/js/main.721407cb.js",
-    "static/js/0.34c6b7bc.chunk.js": "/kroot/static/js/0.34c6b7bc.chunk.js",
+    "main.css": "/kroot/static/css/main.0431b614.css",
+    "main.js": "/kroot/static/js/main.0f3b889e.js",
+    "static/js/0.72d163a8.chunk.js": "/kroot/static/js/0.72d163a8.chunk.js",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
     "static/media/Khalid_Satelite.png": "/kroot/static/media/Khalid_Satelite.ea03c5fdfe19677e377e.png",
-    "static/media/team.jpg": "/kroot/static/media/team.c54c4bd344db17f03785.jpg",
     "static/media/Coldplay.png": "/kroot/static/media/Coldplay.a7c77b9f91d6225d684b.png",
+    "static/media/team.jpg": "/kroot/static/media/team.1ec3e2e66e743a602395.jpg",
     "static/media/French_Montana.png": "/kroot/static/media/French_Montana.d693ced419f43b418022.png",
+    "static/media/team6x5.jpg": "/kroot/static/media/team6x5.6c8373503961572b6cd1.jpg",
+    "static/media/team3x10.jpg": "/kroot/static/media/team3x10.320cd49403bad6a57115.jpg",
+    "static/media/team5x6.jpg": "/kroot/static/media/team5x6.0d6110a08a883891c7ce.jpg",
     "static/media/RUSS.png": "/kroot/static/media/RUSS.565a1bcd30bed913d32a.png",
     "static/media/Post_Malone.png": "/kroot/static/media/Post_Malone.3a955b215f9ce1b7ce51.png",
     "static/media/mtv.jpg": "/kroot/static/media/mtv.21ca798eb7639aed726c.jpg",
     "static/media/Travis_Scott.png": "/kroot/static/media/Travis_Scott.03e8eefc5e6db45ea90c.png",
     "static/media/Justin_Bieber.png": "/kroot/static/media/Justin_Bieber.92e280dca7a5709673fd.png",
     "static/media/Billie_Eilish.png": "/kroot/static/media/Billie_Eilish.398e3e6821f454ba82b9.png",
-    "static/media/team2.jpg": "/kroot/static/media/team2.be8f1b93f3e8a60281e0.jpg",
     "static/media/Khalid.png": "/kroot/static/media/Khalid.867d42b9d79a08b462b2.png",
     "static/media/beauty.jpg": "/kroot/static/media/beauty.2643c94726098df25acf.jpg",
     "static/media/music.jpg": "/kroot/static/media/music.73e254c83e6b60fb86d3.jpg",
@@ -41,12 +43,12 @@
     "static/media/round.svg": "/kroot/static/media/round.6e7f9b734f73aece06e40819f21c10ed.svg",
     "static/media/filterArrow.svg": "/kroot/static/media/filterArrow.59a4aaa6e35bb2182dfde125a9e6588c.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.b04ae2aa.css.map": "/kroot/static/css/main.b04ae2aa.css.map",
-    "main.721407cb.js.map": "/kroot/static/js/main.721407cb.js.map",
-    "0.34c6b7bc.chunk.js.map": "/kroot/static/js/0.34c6b7bc.chunk.js.map"
+    "main.0431b614.css.map": "/kroot/static/css/main.0431b614.css.map",
+    "main.0f3b889e.js.map": "/kroot/static/js/main.0f3b889e.js.map",
+    "0.72d163a8.chunk.js.map": "/kroot/static/js/0.72d163a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b04ae2aa.css",
-    "static/js/main.721407cb.js"
+    "static/css/main.0431b614.css",
+    "static/js/main.0f3b889e.js"
   ]
 }
