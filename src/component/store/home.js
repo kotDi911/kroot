@@ -2,6 +2,7 @@ import {create} from 'zustand'
 import comer from "../../assets/showreel/comer.jpg";
 import music from "../../assets/showreel/music.jpg";
 import beauty from "../../assets/showreel/beauty.jpg";
+import beautyM from "../../assets/showreel/beauty.mp4";
 import about from "../../assets/ico/about.svg";
 
 const URL = "https://github.com/kotDi911/kroot/blob/main/public/images/reels";
@@ -75,7 +76,8 @@ export const useHomeCard = create(() => ({
             title: null,
             ico: null,
             img: beauty,
-            imgHover: `${URL}/beauty.gif${open}`,
+            // imgHover: `${URL}/beauty.gif${open}`,
+            imgHover: beautyM,
             text: null,
             btnText: "beauty vfx",
             social: null
