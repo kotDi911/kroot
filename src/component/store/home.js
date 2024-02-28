@@ -77,7 +77,7 @@ export const useHomeCard = create(() => ({
             ico: null,
             img: beauty,
             // imgHover: `${URL}/beauty.gif${open}`,
-            imgHover: beautyM,
+            imgHover: `${URL}/beauty.gif${open}`,
             text: null,
             btnText: "beauty vfx",
             social: null
