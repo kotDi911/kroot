@@ -1,3 +1,15 @@
+.variant {
+  background: black;
+  color: white;
+  border-radius: 25px;
+  padding: 5px 15px;
+  transition: .5s linear;
+  &:hover{
+    background: white;
+    color: black;
+    border: 1px solid black;
+  }
+}
 .about {
   &__main-img{
     margin-top: 2rem;
