@@ -51,20 +51,32 @@ const GetInTouchForm = ({sentMail}) => {
                 data.append("company", `${company}`)
                 data.append("message", `${message}`)
 
+                // console.log(data)
                 const res = await fetch("send_mail.php", {
                     method: "POST",
-                    body: data
+                    body: data,
                 })
+                // response.then(res => {
                 if (res.ok) {
-                    sentMail()
-                    resetForm()
-                    console.log("res",res.json())
-                    for (let property of data.entries()) {
-                        console.log(property[0], property[1]);
-                    }
+                    // res.then(response => {
+                        res.json().then(data => {
+                            if (data.result === "success") {
+                                sentMail(data.status, data.result)
+                            } else {
+                                sentMail(data.status, data.result)
+                            }
+                            resetForm()
+                            console.log(data)
+                        })
+                    // })
                 } else {
-                    alert(res.status)
+                    //page 404
+                    alert(res.status + " " + res.statusText)
+                    //sentMail(res.status, res.result)
                 }
+                console.log("res", res)
+                console.log("status msg", res.status, "result msg", res.statusText)
+                // })
             } catch (err) {
                 console.log(err)
             }

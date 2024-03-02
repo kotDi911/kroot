@@ -2,9 +2,12 @@ import Social from "../Social";
 import GetInTouchForm from "../Form";
 import {useEffect, useState} from "react";
 import done from "../../assets/ico/done.svg"
+import notDone from "../../assets/ico/notDone.svg"
 
 const GetInTouch = () => {
     const [isActive, setIsActive] = useState(false)
+    const [message, setMessage] = useState("")
+    const [doneImg, setDoneImg] = useState(done)
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsActive(false)
@@ -12,8 +15,10 @@ const GetInTouch = () => {
         return () => clearTimeout(timer);
     }, [isActive]);
 
-    const sentMail = () => {
+    const sentMail = (msg, res) => {
         setIsActive(true)
+        setMessage(msg)
+        res === "success" ? setDoneImg(done) : setDoneImg(notDone)
     }
     return (
         <article className="article get-in-touch">
@@ -31,8 +36,8 @@ const GetInTouch = () => {
                 </div>
             </section>
             <div className={`popup__message ${isActive ? "active" : ""}`}>
-                <img className="mr-16" src={done} alt="ok" width="24px" height="24px"/>
-                <p className="popup__text fs-20">Your message has been sent</p>
+                <img className="mr-16" src={doneImg} alt="ok" width="24px" height="24px"/>
+                <p className="popup__text fs-20">{message}</p>
             </div>
         </article>
     )

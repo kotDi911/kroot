@@ -1,3 +1,8 @@
+@media screen and (max-width: 1440px) {
+  .details__grid .home__card {
+    height: 17rem;
+  }
+}
 @media screen and (max-width: 1280px) {
   .filter__grid {
     gap: 8px;
@@ -16,6 +21,9 @@
 @media screen and (max-width: 991px) {
   .logo-mini {
     width: 60%;
+  }
+  .details__grid .home__card {
+    height: 22rem;
   }
   .about__grid {
     grid-template-areas:
@@ -125,6 +133,9 @@
     &__card {
       height: 18rem;
     }
+  }
+  .details__grid .home__card {
+    height: 18rem;
   }
   .about {
     &__text-cont {
@@ -298,8 +309,10 @@
   }
   .home {
     &__card {
-      height: 18rem;
       padding: 1.5rem 1rem;
+      &-text-cont {
+        padding: 1.5rem 1rem;
+      }
     }
 
     &__social {

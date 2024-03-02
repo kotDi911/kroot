@@ -1,5 +1,6 @@
 import HomeCard from "../cards/HomeCard";
 import {useHomeCard} from "../store/home";
+import {useSize} from "../store/size";
 
 const Home = () => {
     const data = useHomeCard((store) => store.data)

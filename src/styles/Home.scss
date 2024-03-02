@@ -19,12 +19,27 @@
     justify-content: flex-end;
     cursor: pointer;
 
+    &-text-cont {
+      left: 0;
+      bottom: 0;
+      padding: 0 2rem 1.5rem;
+    }
+
     &-title {
       height: 100%;
     }
   }
-  &__social{
+
+  &__social {
     bottom: 2rem;
     left: 1.5rem;
   }
+}
+
+.main__card:hover .video-cont {
+  background: black;
+}
+
+.main__card:hover .video {
+  opacity: .4;
 }

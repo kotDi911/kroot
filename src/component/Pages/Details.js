@@ -2,6 +2,7 @@ import {useLocation} from "react-router-dom";
 import Gallery from "../cards/Details/Gallery";
 import HomeCard from "../cards/HomeCard";
 import {useCards} from "../store/projects";
+import {useSize} from "../store/size";
 
 const Title = ({title}) => {
     const slice = title.indexOf("-");
@@ -26,7 +27,7 @@ const Images = ({images}) => {
 }
 const Options = ({options}) => {
     return (
-        <div className="img-cont flex col mt-32">
+        <div className="flex col mt-32">
             {options.map((option, i) =>
                 <div key={i} className="flex col mt-16">
                     <p className="gray fs-14">{option.title}</p>
@@ -38,6 +39,7 @@ const Options = ({options}) => {
 }
 
 const Details = () => {
+    const size = useSize((store) => store.size)
     const cards = useCards((store) => store.cards)
     const {state} = useLocation()
     const {name, description, descriptionImg, galleryImg, options} = state;
@@ -53,7 +55,7 @@ const Details = () => {
             </section>
             <section className="container-80">
                 <div className="details__grid mt-112">
-                    {cards.map((card, i) => <HomeCard key={i} props={card}/>)}
+                    {cards.map((card, i) => <HomeCard key={i} props={card} size={size}/>)}
                 </div>
             </section>
         </article>

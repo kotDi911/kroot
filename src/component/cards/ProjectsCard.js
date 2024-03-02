@@ -1,6 +1,10 @@
 import {Link} from "react-router-dom";
 import Button from "../Button";
 import {LazyLoadImage} from "react-lazy-load-image-component";
+import videoM from "../../assets/470H.mp4";
+import videoD from "../../assets/920H.mp4";
+import poster from "../../assets/poster.png"
+import {useSize} from "../store/size";
 
 const Image = ({image, placeholder}) => {
     return (
@@ -17,6 +21,7 @@ const Image = ({image, placeholder}) => {
     )
 }
 const ProjectsCard = ({props}) => {
+    const size = useSize((store) => store.size)
     const {name, img, placeholder, description, descriptionImg, galleryImg, options} = props;
     return (
         <Link to={`/projects/${name.replace(/\s+/g, '').toLowerCase()}`}
@@ -29,9 +34,8 @@ const ProjectsCard = ({props}) => {
                   options: options,
               }}
         >
-            <div className="img-cont">
-                <Image image={img} placeholder={placeholder}/>
-                {/*<img className="project-img" src={img} alt=""/>*/}
+            <div className="video-cont">
+                <video src={size <= 550 ? videoM : videoD} autoPlay muted loop className="video" poster={poster}/>
             </div>
             <div className="absolute w-100">
                 <div className="flex end space-b projects__btn">
