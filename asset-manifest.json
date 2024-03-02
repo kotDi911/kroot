@@ -1,15 +1,12 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.65482e60.css",
-    "main.js": "/kroot/static/js/main.b3d65b79.js",
-    "static/js/0.468e67e7.chunk.js": "/kroot/static/js/0.468e67e7.chunk.js",
+    "main.css": "/kroot/static/css/main.bc4d014b.css",
+    "main.js": "/kroot/static/js/main.ecd5fc85.js",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
     "static/media/920H.mp4": "/kroot/static/media/920H.fbccd24965e840b2b7ec.mp4",
     "static/media/poster.png": "/kroot/static/media/poster.cf396b74a1119feffa3b.png",
     "static/media/470H.mp4": "/kroot/static/media/470H.236d9eb8e83b42df7620.mp4",
-    "static/media/335H.mp4": "/kroot/static/media/335H.242ef2b41ddf2c23bfcd.mp4",
     "static/media/Khalid_Satelite.png": "/kroot/static/media/Khalid_Satelite.ea03c5fdfe19677e377e.png",
-    "static/media/beauty.mp4": "/kroot/static/media/beauty.586aa1a7233849accba6.mp4",
     "static/media/Coldplay.png": "/kroot/static/media/Coldplay.a7c77b9f91d6225d684b.png",
     "static/media/team.jpg": "/kroot/static/media/team.1ec3e2e66e743a602395.jpg",
     "static/media/French_Montana.png": "/kroot/static/media/French_Montana.d693ced419f43b418022.png",
@@ -23,7 +20,6 @@
     "static/media/Justin_Bieber.png": "/kroot/static/media/Justin_Bieber.92e280dca7a5709673fd.png",
     "static/media/Billie_Eilish.png": "/kroot/static/media/Billie_Eilish.398e3e6821f454ba82b9.png",
     "static/media/Khalid.png": "/kroot/static/media/Khalid.867d42b9d79a08b462b2.png",
-    "static/media/beauty.jpg": "/kroot/static/media/beauty.2643c94726098df25acf.jpg",
     "static/media/music.jpg": "/kroot/static/media/music.73e254c83e6b60fb86d3.jpg",
     "static/media/comer.jpg": "/kroot/static/media/comer.10d2acefa31f067e3d19.jpg",
     "static/media/Oksana_Gryanka.png": "/kroot/static/media/Oksana_Gryanka.e2c52288813837525b86.png",
@@ -49,12 +45,11 @@
     "static/media/round.svg": "/kroot/static/media/round.6e7f9b734f73aece06e40819f21c10ed.svg",
     "static/media/filterArrow.svg": "/kroot/static/media/filterArrow.59a4aaa6e35bb2182dfde125a9e6588c.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.65482e60.css.map": "/kroot/static/css/main.65482e60.css.map",
-    "main.b3d65b79.js.map": "/kroot/static/js/main.b3d65b79.js.map",
-    "0.468e67e7.chunk.js.map": "/kroot/static/js/0.468e67e7.chunk.js.map"
+    "main.bc4d014b.css.map": "/kroot/static/css/main.bc4d014b.css.map",
+    "main.ecd5fc85.js.map": "/kroot/static/js/main.ecd5fc85.js.map"
   },
   "entrypoints": [
-    "static/css/main.65482e60.css",
-    "static/js/main.b3d65b79.js"
+    "static/css/main.bc4d014b.css",
+    "static/js/main.ecd5fc85.js"
   ]
 }
