@@ -1,14 +1,14 @@
-import {Link} from "react-router-dom";
-import Button from "../Button";
 import {useSize} from "../store/size";
+import {Link, useLocation} from "react-router-dom";
+import Button from "../Button";
 
-const ProjectsCard = ({props}) => {
+const VideoCard = ({props}) => {
     const size = useSize((store) => store.size)
-    const {name, videoM, videoD, poster} = props;
+    const {name, btnText, videoM, videoD, poster, url} = props;
     return (
-        <Link to={`/projects/${name.replace(/\s+/g, '').toLowerCase()}`}
-              className="projects__card flex end relative hover__card"
-              state={props}
+        <Link to={url} target="_blank"
+              className="main__card flex end relative hover__card"
+              style={{gridArea: name ? name : ""}}
         >
             <div className="video-cont">
                 <video
@@ -25,7 +25,7 @@ const ProjectsCard = ({props}) => {
             <div className="absolute w-100">
                 <div className="flex end space-b projects__btn">
                     <div className="flex center projects__text">
-                        <span className="fs-20 white">{name.toUpperCase()}</span>
+                        <span className="fs-20 white">{btnText.toUpperCase()}</span>
                     </div>
                     <Button color={true}/>
                 </div>
@@ -33,4 +33,4 @@ const ProjectsCard = ({props}) => {
         </Link>
     )
 }
-export default ProjectsCard
+export default VideoCard

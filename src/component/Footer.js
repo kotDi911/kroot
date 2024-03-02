@@ -15,13 +15,13 @@ const Footer = () => {
     return (
         <footer className="footer flex col">
             <div className="flex center space-b">
-                <Link className="logo-mini" to='/home'>
+                <Link className="logo-mini" to='/'>
                     <img className="logo-img" src={logo} alt="logo"/>
                 </Link>
                 <nav className="nav flex end">
                     {links.map(link =>
                         <Link className="nav__link flex col center gray"
-                                 key={link.name} to={`/${link.name}`}>
+                                 key={link.name} to={`/${link.name === "home" ? "": link.name}`}>
                             <div className="small">
                                 {link.name.toUpperCase()}
                             </div>

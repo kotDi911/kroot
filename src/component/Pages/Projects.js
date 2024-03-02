@@ -124,7 +124,7 @@ const Projects = () => {
                     </Suspense>
                 </div>
                 {isActive &&
-                    <div className="filter__btn gray mt-16" onClick={handleShowMorePosts}>
+                    <div className="filter__btn gray mt-16 more-btn" onClick={handleShowMorePosts}>
                         <span className="filter__bg btn-bg"></span>
                         MORE
                     </div>

@@ -2,7 +2,7 @@ import {useLocation} from "react-router-dom";
 import Gallery from "../cards/Details/Gallery";
 import HomeCard from "../cards/HomeCard";
 import {useCards} from "../store/projects";
-import {useSize} from "../store/size";
+import VideoCard from "../cards/VideoCard";
 
 const Title = ({title}) => {
     const slice = title.indexOf("-");
@@ -39,26 +39,29 @@ const Options = ({options}) => {
 }
 
 const Details = () => {
-    const size = useSize((store) => store.size)
     const cards = useCards((store) => store.cards)
     const {state} = useLocation()
-    const {name, description, descriptionImg, galleryImg, options} = state;
 
-    return (
-        <article className="article details">
-            <section className="container-80">
-                <Title title={name}/>
-                <p className="regular gray mt-16">{description}</p>
-                <Images images={descriptionImg}/>
-                <Gallery images={galleryImg}/>
-                <Options options={options}/>
-            </section>
-            <section className="container-80">
-                <div className="details__grid mt-112">
-                    {cards.map((card, i) => <HomeCard key={i} props={card} size={size}/>)}
-                </div>
-            </section>
-        </article>
-    )
+    // const {props} = state;
+    const {name, description, descriptionImg, galleryImg, options} = state;
+    console.log(state)
+    // console.log(name)
+    // return (
+    //     <article className="article details">
+    //         <section className="container-80">
+    //             <Title title={name}/>
+    //             <p className="regular gray mt-16">{description}</p>
+    //             <Images images={descriptionImg}/>
+    //             <Gallery images={galleryImg}/>
+    //             <Options options={options}/>
+    //         </section>
+    //         <section className="container-80">
+    //             <div className="details__grid mt-112">
+    //                 <HomeCard props={{name: "projects",  url: "projects", title: "Projects", btnText: "all projects"}}/>
+    //                 {cards.map((card, i) => <VideoCard key={i} props={card}/>)}
+    //             </div>
+    //         </section>
+    //     </article>
+    // )
 }
 export default Details
