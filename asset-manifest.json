@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.0c841009.css",
-    "main.js": "/kroot/static/js/main.581a7bb9.js",
-    "static/js/408.aea2db11.chunk.js": "/kroot/static/js/408.aea2db11.chunk.js",
+    "main.css": "/kroot/static/css/main.542b4685.css",
+    "main.js": "/kroot/static/js/main.c5d63f87.js",
+    "static/js/408.a3fc5637.chunk.js": "/kroot/static/js/408.a3fc5637.chunk.js",
+    "static/media/832-624.mp4": "/kroot/static/media/832-624.eb0bb947e9b2fc0369b6.mp4",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
     "static/media/920H.mp4": "/kroot/static/media/920H.fbccd24965e840b2b7ec.mp4",
     "static/media/poster.png": "/kroot/static/media/poster.cf396b74a1119feffa3b.png",
+    "static/media/1440-1080-ещ-416-312.mp4": "/kroot/static/media/1440-1080-ещ-416-312.667e2d0dee4e40f3d604.mp4",
     "static/media/470H.mp4": "/kroot/static/media/470H.236d9eb8e83b42df7620.mp4",
     "static/media/Khalid_Satelite.png": "/kroot/static/media/Khalid_Satelite.ea03c5fdfe19677e377e.png",
     "static/media/Coldplay.png": "/kroot/static/media/Coldplay.a7c77b9f91d6225d684b.png",
@@ -46,12 +48,12 @@
     "static/media/round.svg": "/kroot/static/media/round.6e7f9b734f73aece06e40819f21c10ed.svg",
     "static/media/filterArrow.svg": "/kroot/static/media/filterArrow.59a4aaa6e35bb2182dfde125a9e6588c.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.0c841009.css.map": "/kroot/static/css/main.0c841009.css.map",
-    "main.581a7bb9.js.map": "/kroot/static/js/main.581a7bb9.js.map",
-    "408.aea2db11.chunk.js.map": "/kroot/static/js/408.aea2db11.chunk.js.map"
+    "main.542b4685.css.map": "/kroot/static/css/main.542b4685.css.map",
+    "main.c5d63f87.js.map": "/kroot/static/js/main.c5d63f87.js.map",
+    "408.a3fc5637.chunk.js.map": "/kroot/static/js/408.a3fc5637.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c841009.css",
-    "static/js/main.581a7bb9.js"
+    "static/css/main.542b4685.css",
+    "static/js/main.c5d63f87.js"
   ]
 }
