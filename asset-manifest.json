@@ -1,27 +1,14 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.1b9cabdf.css",
-    "main.js": "/kroot/static/js/main.12df1b84.js",
-    "static/js/16.2b0fb425.chunk.js": "/kroot/static/js/16.2b0fb425.chunk.js",
-    "static/media/1920x1080 origin compr.mp4": "/kroot/static/media/1920x1080 origin compr.375aeb569168d3eedcd4.mp4",
-    "static/media/1280x720 80pr.mp4": "/kroot/static/media/1280x720 80pr.053e03e706ea8a6e1b71.mp4",
-    "static/media/1280x720 cbr10.mp4": "/kroot/static/media/1280x720 cbr10.6a32eb44b81e5adeca27.mp4",
-    "static/media/1920x1080 cbr10.mp4": "/kroot/static/media/1920x1080 cbr10.0ba149946010863345e0.mp4",
-    "static/media/540p.mp4": "/kroot/static/media/540p.a2038dda99fb0e3cf6be.mp4",
-    "static/media/832-624.mp4": "/kroot/static/media/832-624.eb0bb947e9b2fc0369b6.mp4",
-    "static/media/640x480 4x3 vbr7.mp4": "/kroot/static/media/640x480 4x3 vbr7.883412c0e27c4dad032c.mp4",
-    "static/media/1280x720 cbr6.mp4": "/kroot/static/media/1280x720 cbr6.92067ac7e9253cbf79ba.mp4",
-    "static/media/480p 1000b.mp4": "/kroot/static/media/480p 1000b.81bd7213ec0895c1efae.mp4",
-    "static/media/480p loft.mp4": "/kroot/static/media/480p loft.81bd7213ec0895c1efae.mp4",
-    "static/media/1920x1080 cbr6.mp4": "/kroot/static/media/1920x1080 cbr6.c7046feef3b640382f9b.mp4",
+    "main.css": "/kroot/static/css/main.68a92920.css",
+    "main.js": "/kroot/static/js/main.91e8a745.js",
+    "static/js/856.492997b6.chunk.js": "/kroot/static/js/856.492997b6.chunk.js",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
-    "static/media/480X320 H265 h.mp4": "/kroot/static/media/480X320 H265 h.6d2d88b2fb6ec8b499b9.mp4",
-    "static/media/480X320 H264.mp4": "/kroot/static/media/480X320 H264.c13581edfb4a6c996344.mp4",
-    "static/media/1920-1080.mp4": "/kroot/static/media/1920-1080.ce55e4cbfaa2a24143bc.mp4",
-    "static/media/1920x1080 cbr4.mp4": "/kroot/static/media/1920x1080 cbr4.c34bcc637d853a3474cc.mp4",
     "static/media/poster.png": "/kroot/static/media/poster.cf396b74a1119feffa3b.png",
-    "static/media/640x243.mp4": "/kroot/static/media/640x243.3b4101d22ce6b7bd4001.mp4",
-    "static/media/320x240 vbr2.mp4": "/kroot/static/media/320x240 vbr2.b6083dfdfa9e5464b405.mp4",
+    "static/media/480x240.mp4": "/kroot/static/media/480x240.4ceb60e3e44f938e7b66.mp4",
+    "static/media/640x360.mp4": "/kroot/static/media/640x360.1c0171b6f68ffea5e4fe.mp4",
+    "static/media/480X320.mp4": "/kroot/static/media/480X320.6159d074947e317e84a3.mp4",
+    "static/media/320x240.mp4": "/kroot/static/media/320x240.0a6674a34055b4793a53.mp4",
     "static/media/Khalid_Satelite.png": "/kroot/static/media/Khalid_Satelite.ea03c5fdfe19677e377e.png",
     "static/media/Coldplay.png": "/kroot/static/media/Coldplay.a7c77b9f91d6225d684b.png",
     "static/media/team.jpg": "/kroot/static/media/team.1ec3e2e66e743a602395.jpg",
@@ -59,12 +46,12 @@
     "static/media/round.svg": "/kroot/static/media/round.6e7f9b734f73aece06e40819f21c10ed.svg",
     "static/media/filterArrow.svg": "/kroot/static/media/filterArrow.59a4aaa6e35bb2182dfde125a9e6588c.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.1b9cabdf.css.map": "/kroot/static/css/main.1b9cabdf.css.map",
-    "main.12df1b84.js.map": "/kroot/static/js/main.12df1b84.js.map",
-    "16.2b0fb425.chunk.js.map": "/kroot/static/js/16.2b0fb425.chunk.js.map"
+    "main.68a92920.css.map": "/kroot/static/css/main.68a92920.css.map",
+    "main.91e8a745.js.map": "/kroot/static/js/main.91e8a745.js.map",
+    "856.492997b6.chunk.js.map": "/kroot/static/js/856.492997b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b9cabdf.css",
-    "static/js/main.12df1b84.js"
+    "static/css/main.68a92920.css",
+    "static/js/main.91e8a745.js"
   ]
 }
