@@ -1,13 +1,24 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.542b4685.css",
-    "main.js": "/kroot/static/js/main.845ef6da.js",
+    "main.css": "/kroot/static/css/main.50bbb17a.css",
+    "main.js": "/kroot/static/js/main.03d1fbc2.js",
     "static/js/16.2b0fb425.chunk.js": "/kroot/static/js/16.2b0fb425.chunk.js",
-    "static/media/1280x720_14.98k.cweb.webm": "/kroot/static/media/1280x720_14.98k.cweb.80144fabe688c63186d5.webm",
+    "static/media/1280x720 cbr10.mp4": "/kroot/static/media/1280x720 cbr10.6a32eb44b81e5adeca27.mp4",
+    "static/media/960x540 cbr10.mp4": "/kroot/static/media/960x540 cbr10.62f60413c20391ff189a.mp4",
+    "static/media/640x480 4x3 cbr10.mp4": "/kroot/static/media/640x480 4x3 cbr10.2a3aca04614859a92bca.mp4",
+    "static/media/1920x1080 cbr10.mp4": "/kroot/static/media/1920x1080 cbr10.0ba149946010863345e0.mp4",
     "static/media/832-624.mp4": "/kroot/static/media/832-624.eb0bb947e9b2fc0369b6.mp4",
-    "static/media/1280x720_30k.c mp4.mp4": "/kroot/static/media/1280x720_30k.c mp4.68f01954ecc767eded70.mp4",
+    "static/media/720x540 4x3 cbr6.mp4": "/kroot/static/media/720x540 4x3 cbr6.5eb24c62cdace6d12c25.mp4",
+    "static/media/640x480 4x3 cbr6.mp4": "/kroot/static/media/640x480 4x3 cbr6.ef994a73d29cf1bd11f4.mp4",
+    "static/media/960x540 cbr6.mp4": "/kroot/static/media/960x540 cbr6.b8f50b1a19a5ff1ab52b.mp4",
+    "static/media/1280x720 cbr6.mp4": "/kroot/static/media/1280x720 cbr6.92067ac7e9253cbf79ba.mp4",
+    "static/media/1920x1080 cbr6.mp4": "/kroot/static/media/1920x1080 cbr6.c7046feef3b640382f9b.mp4",
+    "static/media/480x320 cbr6.mp4": "/kroot/static/media/480x320 cbr6.27e0ab95219b5847a170.mp4",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
-    "static/media/2133-1080 - to Tipad - 632-320 MAIN(1).mp4": "/kroot/static/media/2133-1080 - to Tipad - 632-320 MAIN(1).5fd09a2789e51b3a069f.mp4",
+    "static/media/640x480 4x3 cbr4.mp4": "/kroot/static/media/640x480 4x3 cbr4.c23ed1507e5c70e0b213.mp4",
+    "static/media/1280x720 cbr4.mp4": "/kroot/static/media/1280x720 cbr4.a7fd1c48df7de029c499.mp4",
+    "static/media/1920-1080.mp4": "/kroot/static/media/1920-1080.ce55e4cbfaa2a24143bc.mp4",
+    "static/media/1920x1080 cbr4.mp4": "/kroot/static/media/1920x1080 cbr4.c34bcc637d853a3474cc.mp4",
     "static/media/920H.mp4": "/kroot/static/media/920H.fbccd24965e840b2b7ec.mp4",
     "static/media/poster.png": "/kroot/static/media/poster.cf396b74a1119feffa3b.png",
     "static/media/470H.mp4": "/kroot/static/media/470H.236d9eb8e83b42df7620.mp4",
@@ -25,8 +36,6 @@
     "static/media/Justin_Bieber.png": "/kroot/static/media/Justin_Bieber.92e280dca7a5709673fd.png",
     "static/media/Billie_Eilish.png": "/kroot/static/media/Billie_Eilish.398e3e6821f454ba82b9.png",
     "static/media/Khalid.png": "/kroot/static/media/Khalid.867d42b9d79a08b462b2.png",
-    "static/media/music.jpg": "/kroot/static/media/music.73e254c83e6b60fb86d3.jpg",
-    "static/media/comer.jpg": "/kroot/static/media/comer.10d2acefa31f067e3d19.jpg",
     "static/media/Oksana_Gryanka.png": "/kroot/static/media/Oksana_Gryanka.e2c52288813837525b86.png",
     "static/media/Dimas_Nekrasov.png": "/kroot/static/media/Dimas_Nekrasov.9b78faa194ebbf8c47fc.png",
     "static/media/Tomash_Kuzmytskyi.png": "/kroot/static/media/Tomash_Kuzmytskyi.977721c32adfb82d4440.png",
@@ -50,12 +59,12 @@
     "static/media/round.svg": "/kroot/static/media/round.6e7f9b734f73aece06e40819f21c10ed.svg",
     "static/media/filterArrow.svg": "/kroot/static/media/filterArrow.59a4aaa6e35bb2182dfde125a9e6588c.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.542b4685.css.map": "/kroot/static/css/main.542b4685.css.map",
-    "main.845ef6da.js.map": "/kroot/static/js/main.845ef6da.js.map",
+    "main.50bbb17a.css.map": "/kroot/static/css/main.50bbb17a.css.map",
+    "main.03d1fbc2.js.map": "/kroot/static/js/main.03d1fbc2.js.map",
     "16.2b0fb425.chunk.js.map": "/kroot/static/js/16.2b0fb425.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.542b4685.css",
-    "static/js/main.845ef6da.js"
+    "static/css/main.50bbb17a.css",
+    "static/js/main.03d1fbc2.js"
   ]
 }
