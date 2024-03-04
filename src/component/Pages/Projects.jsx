@@ -1,6 +1,10 @@
 import {useCards} from "../store/projects";
 import {lazy, Suspense, useEffect, useState} from "react";
 import filterArrow from "../../assets/ico/filterArrow.svg"
+// import poster from "../../assets/poster.png"
+// import video from "../../assets/video/projects/480p 1000b.mp4"
+// import Button from "../Button";
+// import {Link} from "react-router-dom";
 
 const ProjectsCard = lazy(() => import("../cards/ProjectsCard"))
 
@@ -97,7 +101,7 @@ const Projects = () => {
 
     return (
         <article className="article projects">
-            <section className="container-80 relative">
+            <section className="container-80 relative p_top">
                 <h1 className="h1">Projects</h1>
                 {
                     isShow ?

@@ -1,7 +1,7 @@
-import {Link, useLocation} from "react-router-dom";
-import logo from "../../assets/ico/Logo.svg"
+import {useLocation} from "react-router-dom";
 import Footer from "../Footer";
 import {useEffect} from "react";
+import Header from "../Header";
 
 const RouterApp = ({props}) => {
     const {pathname} = useLocation();
@@ -12,11 +12,7 @@ const RouterApp = ({props}) => {
 
     return (
         <>
-            <header className="logo">
-                <Link expect="" to="/">
-                    <img className="logo-img" src={logo} alt="logo"/>
-                </Link>
-            </header>
+            <Header/>
             <main>
                 {props}
             </main>

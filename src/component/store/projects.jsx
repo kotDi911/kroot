@@ -1,8 +1,10 @@
 import {create} from 'zustand'
-import comer from "../../assets/showreel/comer.jpg";
-import music from "../../assets/showreel/music.jpg";
-import videoM from "../../assets/470H.mp4";
-import videoD from "../../assets/920H.mp4";
+// import videoM from "../../assets/1920-1080.mp4";
+// import videoD from "../../assets/1920-1080.mp4";
+
+import videoM from "../../assets/video/projects/320x240.mp4";
+import videoD from "../../assets/video/projects/480X320.mp4";
+// import videoD from "../../assets/video/projects/480x240.mp4";
 import poster from "../../assets/poster.png"
 
 const URL = "https://github.com/kotDi911/kroot/blob/main/public/images/projects"
@@ -435,7 +437,7 @@ export const useCards = create(() => ({
             videoD: videoD,
             poster: poster,
             filter: "commercial",
-           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
                 "fugiat obcaecati praesentium quidem temporibus. Blanditiis commodi consequatur consequuntur " +
                 "dignissimos doloremque ducimus eum expedita, facere facilis, inventore ipsam ipsum iste maiores" +
                 " modi nemo neque nihil nulla optio quis, recusandae reprehenderit repudiandae sequi totam veritatis" +
@@ -1056,26 +1058,67 @@ export const useCards = create(() => ({
             ]
         },
     ],
-    cards: [
-        // {
-        //     url: "projects",
-        //     name: "projects",
-        //     title: "Projects",
-        //     btnText: "all projects",
-        // },
-        {
-            url: "https://www.youtube.com",
-            name: "comercial",
-            btnText: "Vfx breakdown",
-            img: music,
-            imgHover: `${URL2}/music.gif${open}`,
-        },
-        {
-            url: "https://www.youtube.com",
-            btnText: "official video",
-            name: "music",
-            img: comer,
-            imgHover: `${URL2}/music.gif${open}`,
-        },
-    ]
+    // cards: [
+    //     {
+    //         name: "html",
+    //         video: html,
+    //     },
+    //     {
+    //         name: "480x320 cbr6",
+    //         video: s480x320,
+    //     },
+    //     {
+    //         name: "640x480 4x3 cbr4",
+    //         video: a640x480,
+    //     },
+    //     {
+    //         name: "640x480 4x3 cbr6",
+    //         video: b640x480,
+    //     },
+    //     {
+    //         name: "640x480 4x3 cbr10",
+    //         video: c640x480,
+    //     },
+    //     {
+    //         name: "720x540 4x3 cbr6",
+    //         video: a720x540,
+    //     },
+    //     {
+    //         name: "960x540 cbr6",
+    //         video: a960x540,
+    //     },
+    //     {
+    //         name: "960x540 cbr10",
+    //         video: b960x540,
+    //     },
+    //     {
+    //         name: "1280x720 cbr4",
+    //         video: a1280x720,
+    //     },
+    //     {
+    //         name: "1280x720 cbr6",
+    //         video: b1280x720,
+    //     },
+    //     {
+    //         name: "1280x720 cbr10",
+    //         video: c1280x720,
+    //     },
+    //     {
+    //         name: "1920x1080 cbr4",
+    //         video: a1920x1080,
+    //     },
+    //     {
+    //         name: "1920x1080 cbr6",
+    //         video: b1920x1080,
+    //     },
+    //     {
+    //         name: "1920x1080 cbr10",
+    //         video: c1920x1080,
+    //     },
+    // ]
 }));
+
+
+
+
+

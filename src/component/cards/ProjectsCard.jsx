@@ -2,13 +2,34 @@ import {Link} from "react-router-dom";
 import Button from "../Button";
 import {useSize} from "../store/size";
 
+import videoX from "../../assets/video/projects/640x360.mp4"
+
 const ProjectsCard = ({props}) => {
     const size = useSize((store) => store.size)
-    const {name, videoM, videoD, poster} = props;
+    const {
+        buttons,
+        description,
+        descriptionImg,
+        galleryImg,
+        name,
+        options,
+        poster,
+        videoD,
+        videoM
+    } = props;
     return (
         <Link to={`/projects/${name.replace(/\s+/g, '').toLowerCase()}`}
               className="projects__card flex end relative hover__card"
-              state={props}
+              state={
+                  {
+                      buttons,
+                      description,
+                      descriptionImg,
+                      galleryImg,
+                      name,
+                      options,
+                  }
+              }
         >
             <div className="video-cont">
                 <video

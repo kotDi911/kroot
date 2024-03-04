@@ -1,3 +1,9 @@
+@media screen and (max-width: 1440px) {
+  .footer.active {
+    padding: 1.5rem 2.5rem;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .filter__grid {
     gap: 8px;
@@ -5,11 +11,23 @@
   .gallery__card {
     height: 45rem;
   }
+  .logo {
+    padding: 10px;
+  }
+  .p_top {
+    padding-top: 86px;
+  }
+  .footer.active {
+    padding: 1rem 2.5rem;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .gallery__card {
     height: 35rem;
+  }
+  .home__grid{
+    grid-auto-rows: 18rem;
   }
 }
 
@@ -33,6 +51,7 @@
     align-items: center;
   }
   .details__grid {
+    grid-auto-rows: 22rem;
     grid-template-areas:
             "projects"
             "comercial"
@@ -46,11 +65,13 @@
     "photo1"
     "text1";
   }
-  .main__card {
-    height: 22rem;
-  }
+  //.main__card {
+  //  height: 22rem;
+  //  min-height: 22rem;
+  //}
   .home {
     &__grid {
+      grid-auto-rows: 22rem;
       grid-template-areas:
   "comercial"
   "music"
@@ -124,8 +145,12 @@
   .long-btn {
     padding: 1.5rem;
   }
-  .main__card {
-    height: 18rem;
+  //.main__card {
+  //  height: 18rem;
+  //  min-height: 18rem;
+  //}
+  .home__grid, .details__grid {
+    grid-auto-rows: 20rem;
   }
   .about {
     &__text-cont {
@@ -218,6 +243,9 @@
   .projects__grid {
     grid-template-columns: 1fr;
   }
+  .home__grid, .details__grid {
+    grid-auto-rows: 18rem;
+  }
   .contacts__text, .contacts .contacts__photo {
     padding: 1.5rem 1rem;
   }
@@ -308,6 +336,10 @@
       &-text-cont {
         padding: 1.5rem 1rem;
       }
+    }
+
+    &__grid, .details__grid {
+      grid-auto-rows: 16rem;
     }
 
     &__social {

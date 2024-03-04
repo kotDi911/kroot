@@ -1,3 +1,6 @@
+.p_top{
+  padding-top: 6rem;
+}
 .filter {
   &__grid {
     display: grid;
@@ -78,7 +81,7 @@
     border-radius: 25px;
   }
   &__card{
-    min-height: 18rem;
+    //min-height: 20rem;
     &:hover{
       & .video{
         opacity: .4;

@@ -1,5 +1,5 @@
 import {useSize} from "../store/size";
-import {Link, useLocation} from "react-router-dom";
+import {Link} from "react-router-dom";
 import Button from "../Button";
 
 const VideoCard = ({props}) => {

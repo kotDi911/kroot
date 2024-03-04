@@ -1,6 +1,6 @@
 import {create} from 'zustand'
-import videoM from "../../assets/470H.mp4";
-import videoD from "../../assets/920H.mp4";
+import videoM from "../../assets/video/projects/320x240.mp4";
+import videoD from "../../assets/video/projects/480x240.mp4";
 import poster from "../../assets/poster.png"
 import about from "../../assets/ico/about.svg";
 
