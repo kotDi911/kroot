@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kroot/static/css/main.50bbb17a.css",
-    "main.js": "/kroot/static/js/main.03d1fbc2.js",
+    "main.js": "/kroot/static/js/main.923f4788.js",
     "static/js/16.2b0fb425.chunk.js": "/kroot/static/js/16.2b0fb425.chunk.js",
     "static/media/1280x720 cbr10.mp4": "/kroot/static/media/1280x720 cbr10.6a32eb44b81e5adeca27.mp4",
     "static/media/960x540 cbr10.mp4": "/kroot/static/media/960x540 cbr10.62f60413c20391ff189a.mp4",
@@ -21,6 +21,7 @@
     "static/media/1920x1080 cbr4.mp4": "/kroot/static/media/1920x1080 cbr4.c34bcc637d853a3474cc.mp4",
     "static/media/920H.mp4": "/kroot/static/media/920H.fbccd24965e840b2b7ec.mp4",
     "static/media/poster.png": "/kroot/static/media/poster.cf396b74a1119feffa3b.png",
+    "static/media/html.mp4": "/kroot/static/media/html.1add66ae0fea7264bd7f.mp4",
     "static/media/470H.mp4": "/kroot/static/media/470H.236d9eb8e83b42df7620.mp4",
     "static/media/Khalid_Satelite.png": "/kroot/static/media/Khalid_Satelite.ea03c5fdfe19677e377e.png",
     "static/media/Coldplay.png": "/kroot/static/media/Coldplay.a7c77b9f91d6225d684b.png",
@@ -60,11 +61,11 @@
     "static/media/filterArrow.svg": "/kroot/static/media/filterArrow.59a4aaa6e35bb2182dfde125a9e6588c.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
     "main.50bbb17a.css.map": "/kroot/static/css/main.50bbb17a.css.map",
-    "main.03d1fbc2.js.map": "/kroot/static/js/main.03d1fbc2.js.map",
+    "main.923f4788.js.map": "/kroot/static/js/main.923f4788.js.map",
     "16.2b0fb425.chunk.js.map": "/kroot/static/js/16.2b0fb425.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.50bbb17a.css",
-    "static/js/main.03d1fbc2.js"
+    "static/js/main.923f4788.js"
   ]
 }
