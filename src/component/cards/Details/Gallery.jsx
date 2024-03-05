@@ -6,7 +6,6 @@ const Gallery = ({images}) => {
     const [pause, setPause] = useState(true);
     const [count, setCount] = useState(0);
 
-    console.log(count)
     const play = () => setTimeout(() => {
         setCurrentPage((prevCurrentPage) => {
             if (prevCurrentPage >= images.length - 1) {

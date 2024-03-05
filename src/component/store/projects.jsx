@@ -1,9 +1,9 @@
 import {create} from 'zustand'
-// import videoM from "../../assets/1920-1080.mp4";
-// import videoD from "../../assets/1920-1080.mp4";
+// import videoM from "../../assets/video/projects/320x240.mp4";
+// import videoD from "../../assets/video/projects/480X320.mp4";
 
-import videoM from "../../assets/video/projects/320x240.mp4";
-import videoD from "../../assets/video/projects/480X320.mp4";
+import videoM from "https://qdz.guk.temporary.site/projects/muni_long/video/320x240.mp4";
+import videoD from "https://qdz.guk.temporary.site/projects/muni_long/video/480X320.mp4";
 // import videoD from "../../assets/video/projects/480x240.mp4";
 import poster from "../../assets/poster.png"
 

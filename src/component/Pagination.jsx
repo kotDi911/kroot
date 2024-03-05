@@ -4,10 +4,13 @@ const Pagination = ({currentPage, handleSetPage, images}) => {
         let ul = [];
         let li;
         for (let i = 0; i <= images.length - 1; i++) {
-            li = <div key={i}
-                      className={`${currentPage === i ? "dot-active" : ""} carousel__dot`}
-                      onClick={() => handleSetPage(i)}
-            ></div>
+            li = <div className="carousel__dot-cont"
+                      onClick={() => handleSetPage(i)}>
+                <div key={i}
+                     className={`${currentPage === i ? "dot-active" : ""} carousel__dot`}
+                ></div>
+            </div>
+
             ul = [...ul, li]
         }
         return ul

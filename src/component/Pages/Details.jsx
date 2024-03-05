@@ -50,7 +50,7 @@ const Details = () => {
 
     return (
         <article className="article details">
-            <section className="container-80">
+            <section className="container-80 p_top">
                 <Title title={name}/>
                 <p className="regular gray mt-16">{description}</p>
                 <Images images={descriptionImg}/>

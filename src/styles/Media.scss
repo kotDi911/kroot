@@ -26,7 +26,7 @@
   .gallery__card {
     height: 35rem;
   }
-  .home__grid{
+  .home__grid, .about__grid-cards{
     grid-auto-rows: 18rem;
   }
 }
@@ -56,6 +56,9 @@
             "projects"
             "comercial"
             "music";
+  }
+  .about__grid-cardsP {
+    grid-auto-rows: 22rem;
   }
   .contacts__grid {
     grid-template-areas:
@@ -149,7 +152,7 @@
   //  height: 18rem;
   //  min-height: 18rem;
   //}
-  .home__grid, .details__grid {
+  .home__grid, .details__grid, .about__grid-cards {
     grid-auto-rows: 20rem;
   }
   .about {
@@ -243,7 +246,7 @@
   .projects__grid {
     grid-template-columns: 1fr;
   }
-  .home__grid, .details__grid {
+  .home__grid, .details__grid, .about__grid-cards {
     grid-auto-rows: 18rem;
   }
   .contacts__text, .contacts .contacts__photo {
@@ -338,7 +341,7 @@
       }
     }
 
-    &__grid, .details__grid {
+    &__grid, .details__grid, .about__grid-cards {
       grid-auto-rows: 16rem;
     }
 
