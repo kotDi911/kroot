@@ -1,14 +1,12 @@
 import {ReactCompareSlider, ReactCompareSliderImage} from "react-compare-slider";
+
 const Pagination = ({currentPage, handleSetPage, images}) => {
     const dots = () => {
         let ul = [];
         let li;
         for (let i = 0; i <= images.length - 1; i++) {
-            li = <div className="carousel__dot-cont"
-                      onClick={() => handleSetPage(i)}>
-                <div key={i}
-                     className={`${currentPage === i ? "dot-active" : ""} carousel__dot`}
-                ></div>
+            li = <div className="carousel__dot-cont" onClick={() => handleSetPage(i)} key={i}>
+                <div className={`${currentPage === i ? "dot-active" : ""} carousel__dot`}></div>
             </div>
 
             ul = [...ul, li]
@@ -19,7 +17,7 @@ const Pagination = ({currentPage, handleSetPage, images}) => {
     return (
         <div className="carousel relative">
             <div className="carousel__list relative">
-                <div className="carousel__item relative" data-pos="0">
+                <div className="carousel__item relative">
                     {images.map((item, i) => i === currentPage &&
                         <ReactCompareSlider
                             key={i}

@@ -1,23 +1,49 @@
 import {create} from 'zustand'
 // import videoM from "../../assets/video/projects/320x240.mp4";
 // import videoD from "../../assets/video/projects/480X320.mp4";
-
-import videoM from "https://qdz.guk.temporary.site/projects/muni_long/video/320x240.mp4";
-import videoD from "https://qdz.guk.temporary.site/projects/muni_long/video/480X320.mp4";
-// import videoD from "../../assets/video/projects/480x240.mp4";
 import poster from "../../assets/poster.png"
+const videoM = "https://qdz.guk.temporary.site/projects/muni_long/video/320x180.mp4";
+const videoD = "https://qdz.guk.temporary.site/projects/muni_long/video/480X320.mp4";
+
+// import videoM from "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
+// import videoD from "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
+// import videoD from "../../assets/video/projects/480x240.mp4";
+
 
 const URL = "https://github.com/kotDi911/kroot/blob/main/public/images/projects"
-const URL2 = "https://github.com/kotDi911/kroot/blob/main/public/images/reels"
+// const URL2 = "https://github.com/kotDi911/kroot/blob/main/public/images/reels"
 const open = "?raw=true"
 
 export const useCards = create(() => ({
+    videos: [
+        {
+            sources: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        },
+        {
+            sources: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+        },
+        {
+            sources: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+        },
+        {
+            sources: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+        },
+        {
+            sources: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+        },
+        {
+            sources: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+        },
+        {
+            sources: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+        },
+    ],
     projects: [
         {
             id: 1,
             name: "Muni Long - Made For Me",
             videoM: videoM,
-            videoD: videoD,
+            videoD: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
             poster: poster,
             filter: "commercial",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
@@ -92,7 +118,7 @@ export const useCards = create(() => ({
             id: 2,
             name: "6IX9INE - COMEBACK 2022",
             videoM: videoM,
-            videoD: videoD,
+            videoD: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
             poster: poster,
             filter: "commercial",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
@@ -149,7 +175,7 @@ export const useCards = create(() => ({
             id: 3,
             name: "TATRAS 2022",
             videoM: videoM,
-            videoD: videoD,
+            videoD: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
             poster: poster,
             filter: "commercial",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
@@ -206,7 +232,7 @@ export const useCards = create(() => ({
             id: 4,
             name: "JANET JACKSON",
             videoM: videoM,
-            videoD: videoD,
+            videoD: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
             poster: poster,
             filter: "beauty",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
@@ -263,7 +289,7 @@ export const useCards = create(() => ({
             id: 5,
             name: "OLIVER TREE - FREAKS & GEEKS",
             videoM: videoM,
-            videoD: videoD,
+            videoD: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
             poster: poster,
             filter: "animation",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
@@ -320,7 +346,7 @@ export const useCards = create(() => ({
             id: 6,
             name: "SOFIA CARSON - LOUD",
             videoM: videoM,
-            videoD: videoD,
+            videoD: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
             poster: poster,
             filter: "artwork",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
@@ -377,7 +403,7 @@ export const useCards = create(() => ({
             id: 7,
             name: "Muni Long - Made For Me",
             videoM: videoM,
-            videoD: videoD,
+            videoD: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
             poster: poster,
             filter: "commercial",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
@@ -434,7 +460,7 @@ export const useCards = create(() => ({
             id: 8,
             name: "6IX9INE - COMEBACK 2022",
             videoM: videoM,
-            videoD: videoD,
+            videoD: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
             poster: poster,
             filter: "commercial",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
@@ -491,7 +517,7 @@ export const useCards = create(() => ({
             id: 9,
             name: "TATRAS 2022",
             videoM: videoM,
-            videoD: videoD,
+            videoD: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
             poster: poster,
             filter: "commercial",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus explicabo " +
