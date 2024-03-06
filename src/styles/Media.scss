@@ -20,6 +20,9 @@
   .footer.active {
     padding: 1rem 2.5rem;
   }
+  .projects__card{
+    min-height: 14rem;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -213,6 +216,9 @@
   .gallery__card {
     height: 22rem;
   }
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -242,9 +248,6 @@
   }
   .section {
     padding: 0 5vw;
-  }
-  .projects__grid {
-    grid-template-columns: 1fr;
   }
   .home__grid, .details__grid, .about__grid-cards {
     grid-auto-rows: 18rem;

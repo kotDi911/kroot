@@ -20,6 +20,7 @@ const VideoCard = ({props}) => {
                     loop
                     playsInline
                     controls={false}
+                    preload="none"
                 />
             </div>
             <div className="absolute w-100">

@@ -3,7 +3,9 @@ import {create} from 'zustand'
 // import videoD from "../../assets/video/projects/480X320.mp4";
 import poster from "../../assets/poster.png"
 const videoM = "https://qdz.guk.temporary.site/projects/muni_long/video/320x180.mp4";
-const videoD = "https://qdz.guk.temporary.site/projects/muni_long/video/480X320.mp4";
+const videoD = "https://qdz.guk.temporary.site/projects/muni_long/video/480x320.mp4";
+// const videoB = "https://qdz.guk.temporary.site/projects/muni_long/video/480x240.mp4";
+const videoB = "https://youtu.be/GXskclwDBCA?t=10";
 
 // import videoM from "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
 // import videoD from "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
@@ -101,7 +103,7 @@ export const useCards = create(() => ({
                     name: "comercial",
                     btnText: "Vfx breakdown",
                     videoM: videoM,
-                    videoD: videoD,
+                    videoD: videoB,
                     poster: poster,
                 },
                 {
@@ -109,7 +111,7 @@ export const useCards = create(() => ({
                     name: "music",
                     btnText: "official video",
                     videoM: videoM,
-                    videoD: videoD,
+                    videoD: videoB,
                     poster: poster,
                 },
             ],
@@ -168,7 +170,26 @@ export const useCards = create(() => ({
                 {
                     before: `${URL}/muni_long/gallery/5.jpg${open}`,
                     after: `${URL}/muni_long/gallery/2.jpg${open}`,
-                }
+                },
+
+            ],
+            buttons: [
+                {
+                    url: "https://www.youtube.com",
+                    name: "comercial",
+                    btnText: "Vfx breakdown",
+                    videoM: videoM,
+                    videoD: videoB,
+                    poster: poster,
+                },
+                {
+                    url: "https://www.youtube.com",
+                    name: "music",
+                    btnText: "official video",
+                    videoM: videoM,
+                    videoD: videoB,
+                    poster: poster,
+                },
             ]
         },
         {
@@ -226,6 +247,24 @@ export const useCards = create(() => ({
                     before: `${URL}/muni_long/gallery/5.jpg${open}`,
                     after: `${URL}/muni_long/gallery/2.jpg${open}`,
                 }
+            ],
+            buttons: [
+                {
+                    url: "https://www.youtube.com",
+                    name: "comercial",
+                    btnText: "Vfx breakdown",
+                    videoM: videoM,
+                    videoD: videoB,
+                    poster: poster,
+                },
+                {
+                    url: "https://www.youtube.com",
+                    name: "music",
+                    btnText: "official video",
+                    videoM: videoM,
+                    videoD: videoB,
+                    poster: poster,
+                },
             ]
         },
         {
@@ -283,6 +322,24 @@ export const useCards = create(() => ({
                     before: `${URL}/muni_long/gallery/5.jpg${open}`,
                     after: `${URL}/muni_long/gallery/2.jpg${open}`,
                 }
+            ],
+            buttons: [
+                {
+                    url: "https://www.youtube.com",
+                    name: "comercial",
+                    btnText: "Vfx breakdown",
+                    videoM: videoM,
+                    videoD: videoB,
+                    poster: poster,
+                },
+                {
+                    url: "https://www.youtube.com",
+                    name: "music",
+                    btnText: "official video",
+                    videoM: videoM,
+                    videoD: videoB,
+                    poster: poster,
+                },
             ]
         },
         {
@@ -340,6 +397,24 @@ export const useCards = create(() => ({
                     before: `${URL}/muni_long/gallery/5.jpg${open}`,
                     after: `${URL}/muni_long/gallery/2.jpg${open}`,
                 }
+            ],
+            buttons: [
+                {
+                    url: "https://www.youtube.com",
+                    name: "comercial",
+                    btnText: "Vfx breakdown",
+                    videoM: videoM,
+                    videoD: videoB,
+                    poster: poster,
+                },
+                {
+                    url: "https://www.youtube.com",
+                    name: "music",
+                    btnText: "official video",
+                    videoM: videoM,
+                    videoD: videoB,
+                    poster: poster,
+                },
             ]
         },
         {

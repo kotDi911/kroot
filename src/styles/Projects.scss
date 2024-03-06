@@ -83,6 +83,7 @@
   &__card{
     //min-height: 20rem;
     min-height: 16rem;
+    max-height: 20rem;
     height: 100%;
     &:hover{
       & .video{

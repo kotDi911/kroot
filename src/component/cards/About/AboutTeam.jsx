@@ -7,52 +7,32 @@ import {useEffect, useState} from "react";
 
 const AboutTeam = () => {
     const width = window.innerWidth;
-
-    const [teamImg, setTeamImg] = useState()
-    const [teamMob, setTeamMob] = useState()
-    const [page, setPage] = useState(0)
+    const [img, setImg] = useState()
     useEffect(() => {
-        handleSetImages(page)
+        handleSetImages()
     }, [])
-    const handleSetImages = (page) => {
-        if(page > 2) {
-            setPage(0)
-            return handleSetImages(0);
-        }
-        if(page < 0){
-            setPage(3)
-            return handleSetImages(2)
-        }
-        setPage(page)
-        switch (page) {
-            case 0:
-                setTeamImg(team)
-                setTeamMob(team1)
-                break;
-            case 1:
-                setTeamImg(team1)
-                setTeamMob(team2)
-                break;
-            case 2:
-                setTeamImg(team2)
-                setTeamMob(team3)
-                break;
-            default:
-                break;
+
+    const handleSetImages = () => {
+        if (width <= 450) {
+            setImg(team3)
+        } else if (width > 450 && width <= 767) {
+            setImg(team2)
+        } else if (width > 767) {
+            setImg(team)
         }
     }
     return (
         <div className="about__team mt-16">
-            <div className="flex" style={{justifyContent: "center", gap: "2rem"}}>
-                <button className="variant" onClick={()=>handleSetImages(page-1)}>prev Version</button>
-                <button className="variant" onClick={()=>handleSetImages(page+1)}>next Version</button>
-            </div>
+            {/*<div className="flex" style={{justifyContent: "center", gap: "2rem"}}>*/}
+            {/*    <button className="variant" onClick={()=>handleSetImages(page-1)}>prev Version</button>*/}
+            {/*    <button className="variant" onClick={()=>handleSetImages(page+1)}>next Version</button>*/}
+            {/*</div>*/}
             <h2 className="h2">Our team</h2>
             <p className="text_details regular gray mt-16">
                 Generation Kroot is our secret in the creation of visual effects!Everyone who joins our team
                 becomes a superstar. You’re Rad!
             </p>
-            <img className="team img mt-16" src={width <= 550 ? teamMob : teamImg} alt="team"/>
+            <img className="team img mt-16" src={img} alt="team"/>
             <p className="regular gray mt-16 text-center">
                 Successful and interesting projects were created under the leadership Tomash Kuzmitskyi, for
                 such musical artists as: Post Malone, Travis Scott, Justin Bieber, Imagine Dragons, Daft Punk,

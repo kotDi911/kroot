@@ -1,5 +1,5 @@
 import {useCards} from "../store/projects";
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import filterArrow from "../../assets/ico/filterArrow.svg"
 import ProjectsCard from "../cards/ProjectsCard";
 
@@ -12,10 +12,6 @@ const filters = [
     {name: "artwork"},
     {name: "tv show"},
 ]
-// const postsPerPage = 9;
-// let arrayForHoldingPosts = [];
-// let filteredProjects = [];
-
 const FilterBtn = ({item, setFilter, filter, setIsToggle}) => {
     let name = item;
     if (!item) name = "ALL";
@@ -62,39 +58,44 @@ const ToggleFilterBtn = ({filter, setFilter}) => {
     )
 }
 
+const postsPerPage = 9;
+let arrayForHoldingPosts = [];
+let filteredProjects = [];
+
+
 const Projects = () => {
     const projects = useCards((store) => store.projects)
     const [filter, setFilter] = useState("all");
-    // const [postsToShow, setPostsToShow] = useState([]);
-    // const [next, setNext] = useState(9);
-    // const [isActive, setIsActive] = useState(false);
+    const [postsToShow, setPostsToShow] = useState([]);
+    const [next, setNext] = useState(9);
+    const [isActive, setIsActive] = useState(false);
     const [isShow] = useState(window.innerWidth > 767);
     const ref = useRef();
 
-    // const loopWithSlice = (start, end) => {
-    //     const slicedPosts = filteredProjects.slice(start, end);
-    //     arrayForHoldingPosts = [...arrayForHoldingPosts, ...slicedPosts];
-    //     setPostsToShow(arrayForHoldingPosts);
-    // };
-    //
-    // useEffect(() => {
-    //     setNext(9);
-    //     arrayForHoldingPosts = [];
-    //     filteredProjects = projects.filter(project => project.filter === filter || filter === "all");
-    //     loopWithSlice(0, postsPerPage);
-    //     next + 1 <= filteredProjects.length ? setIsActive(true) : setIsActive(false)
-    // }, [filter])
-    //
-    // useEffect(() => {
-    //     next + 1 <= filteredProjects.length ? setIsActive(true) : setIsActive(false)
-    // }, [next])
-    //
-    //
-    // const handleShowMorePosts = () => {
-    //     loopWithSlice(next, next + postsPerPage);
-    //     setNext(next + postsPerPage);
-    //     next + postsPerPage <= filteredProjects.length ? setIsActive(true) : setIsActive(false)
-    // };
+    const loopWithSlice = (start, end) => {
+        const slicedPosts = filteredProjects.slice(start, end);
+        arrayForHoldingPosts = [...arrayForHoldingPosts, ...slicedPosts];
+        setPostsToShow(arrayForHoldingPosts);
+    };
+
+    useEffect(() => {
+        setNext(9);
+        arrayForHoldingPosts = [];
+        filteredProjects = projects.filter(project => project.filter === filter || filter === "all");
+        loopWithSlice(0, postsPerPage);
+        next + 1 <= filteredProjects.length ? setIsActive(true) : setIsActive(false)
+    }, [filter])
+
+    useEffect(() => {
+        next + 1 <= filteredProjects.length ? setIsActive(true) : setIsActive(false)
+    }, [next])
+
+
+    const handleShowMorePosts = () => {
+        loopWithSlice(next, next + postsPerPage);
+        setNext(next + postsPerPage);
+        next + postsPerPage <= filteredProjects.length ? setIsActive(true) : setIsActive(false)
+    };
 
 
     return (
@@ -120,18 +121,18 @@ const Projects = () => {
             <section className="container-80">
                 <div className="projects__grid mt-32" ref={ref}>
                     {
-                        projects.map((item, i) =>
+                        postsToShow.map((item, i) =>
                             <ProjectsCard key={i} props={item}/>
                         )
                     }
                 </div>
                 <div></div>
-                {/*{isActive &&*/}
-                {/*    <div className="filter__btn gray mt-16 more-btn" onClick={handleShowMorePosts}>*/}
-                {/*        <span className="filter__bg btn-bg"></span>*/}
-                {/*        MORE*/}
-                {/*    </div>*/}
-                {/*}*/}
+                {isActive &&
+                    <div className="filter__btn gray mt-16 more-btn" onClick={handleShowMorePosts}>
+                        <span className="filter__bg btn-bg"></span>
+                        MORE
+                    </div>
+                }
             </section>
         </article>
     )
