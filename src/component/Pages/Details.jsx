@@ -2,6 +2,8 @@ import {useLocation} from "react-router-dom";
 import Gallery from "../cards/Details/Gallery";
 import HomeCard from "../cards/HomeCard";
 import VideoCard from "../cards/VideoCard";
+import {LazyLoadImage} from "react-lazy-load-image-component";
+import {useState} from "react";
 
 const Title = ({title}) => {
     const slice = title.indexOf("-");
@@ -16,10 +18,27 @@ const Title = ({title}) => {
         </h1>
     )
 }
-const Images = ({images}) => {
+const Images = ({images, name}) => {
+    const slice = name.indexOf("-");
+    const alt = name.slice(0, slice) + "details image"
+    const [style, setStyle] = useState({filter: "blur(.2rem)"})
     return (
-        <div className="img-cont flex col">
-            {images.map((img, i) => <img key={i} src={img.img} alt="info image" className="img mt-32"/>)}
+        <div className="img-cont flex col mt-32">
+            {
+                images.map((img, i) =>
+                    <div className="w-100 h-100" style={style}>
+                        <LazyLoadImage key={i}
+                                       width="100%"
+                                       heihg="100%"
+                                       className="img img__main"
+                                       src={img.img}
+                                       alt={alt + "-" + (i + 1)}
+                                       placeholderSrc={img.poster}
+                                       onLoad={() => setStyle({filter: "none"})}
+                        />
+                    </div>
+                )
+            }
         </div>
     )
 }
@@ -47,21 +66,20 @@ const Details = () => {
         name,
         options,
     } = state;
-
     return (
         <article className="article details">
             <section className="container-80 p_top">
-                <Title title={name}/>
-                <p className="regular gray mt-16">{description}</p>
-                <Images images={descriptionImg}/>
-                <Gallery images={galleryImg}/>
-                <Options options={options}/>
+                    <Title title={name}/>
+                    <p className="regular gray mt-16">{description}</p>
+                    <Images images={descriptionImg} name={name}/>
+                    <Gallery images={galleryImg}/>
+                    <Options options={options}/>
             </section>
             <section className="container-80">
-                <div className="details__grid mt-112">
-                    <HomeCard props={{name: "projects",  url: "projects", title: "Projects", btnText: "all projects"}}/>
-                    {buttons.map((card, i) => <VideoCard key={i} props={card}/>)}
-                </div>
+                    <div className="details__grid mt-112">
+                        <HomeCard props={{name: "projects", url: "projects", title: "Projects", btnText: "all projects"}}/>
+                        {buttons.map((card, i) => <VideoCard key={i} props={card}/>)}
+                    </div>
             </section>
         </article>
     )

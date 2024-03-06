@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import RouterApp from "./component/router/RouterApp";
-import {createBrowserRouter as Router, Navigate, RouterProvider} from "react-router-dom";
+import {createHashRouter as Router, Navigate, RouterProvider} from "react-router-dom";
 import Home, {homeLoader} from "./component/Pages/Home";
 import About from "./component/Pages/About";
 import ErrorPage from "./component/Pages/ErrorPage";
