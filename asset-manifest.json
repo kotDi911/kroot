@@ -1,13 +1,9 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.68a92920.css",
-    "main.js": "/kroot/static/js/main.91e8a745.js",
-    "static/js/856.492997b6.chunk.js": "/kroot/static/js/856.492997b6.chunk.js",
+    "main.css": "/kroot/static/css/main.9589682d.css",
+    "main.js": "/kroot/static/js/main.9ee48e78.js",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
-    "static/media/poster.png": "/kroot/static/media/poster.cf396b74a1119feffa3b.png",
     "static/media/480x240.mp4": "/kroot/static/media/480x240.4ceb60e3e44f938e7b66.mp4",
-    "static/media/640x360.mp4": "/kroot/static/media/640x360.1c0171b6f68ffea5e4fe.mp4",
-    "static/media/480X320.mp4": "/kroot/static/media/480X320.6159d074947e317e84a3.mp4",
     "static/media/320x240.mp4": "/kroot/static/media/320x240.0a6674a34055b4793a53.mp4",
     "static/media/Khalid_Satelite.png": "/kroot/static/media/Khalid_Satelite.ea03c5fdfe19677e377e.png",
     "static/media/Coldplay.png": "/kroot/static/media/Coldplay.a7c77b9f91d6225d684b.png",
@@ -17,6 +13,7 @@
     "static/media/team3x10.jpg": "/kroot/static/media/team3x10.320cd49403bad6a57115.jpg",
     "static/media/team5x6.jpg": "/kroot/static/media/team5x6.0d6110a08a883891c7ce.jpg",
     "static/media/RUSS.png": "/kroot/static/media/RUSS.565a1bcd30bed913d32a.png",
+    "static/media/poster.png": "/kroot/static/media/poster.9895d50cb1e9f1e1e215.png",
     "static/media/Post_Malone.png": "/kroot/static/media/Post_Malone.3a955b215f9ce1b7ce51.png",
     "static/media/mtv.jpg": "/kroot/static/media/mtv.21ca798eb7639aed726c.jpg",
     "static/media/Travis_Scott.png": "/kroot/static/media/Travis_Scott.03e8eefc5e6db45ea90c.png",
@@ -46,12 +43,11 @@
     "static/media/round.svg": "/kroot/static/media/round.6e7f9b734f73aece06e40819f21c10ed.svg",
     "static/media/filterArrow.svg": "/kroot/static/media/filterArrow.59a4aaa6e35bb2182dfde125a9e6588c.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.68a92920.css.map": "/kroot/static/css/main.68a92920.css.map",
-    "main.91e8a745.js.map": "/kroot/static/js/main.91e8a745.js.map",
-    "856.492997b6.chunk.js.map": "/kroot/static/js/856.492997b6.chunk.js.map"
+    "main.9589682d.css.map": "/kroot/static/css/main.9589682d.css.map",
+    "main.9ee48e78.js.map": "/kroot/static/js/main.9ee48e78.js.map"
   },
   "entrypoints": [
-    "static/css/main.68a92920.css",
-    "static/js/main.91e8a745.js"
+    "static/css/main.9589682d.css",
+    "static/js/main.9ee48e78.js"
   ]
 }
