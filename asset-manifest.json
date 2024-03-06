@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kroot/static/css/main.9589682d.css",
-    "main.js": "/kroot/static/js/main.98dafd76.js",
+    "main.js": "/kroot/static/js/main.c5938a14.js",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
     "static/media/480x240.mp4": "/kroot/static/media/480x240.4ceb60e3e44f938e7b66.mp4",
     "static/media/320x240.mp4": "/kroot/static/media/320x240.0a6674a34055b4793a53.mp4",
@@ -44,10 +44,10 @@
     "static/media/filterArrow.svg": "/kroot/static/media/filterArrow.59a4aaa6e35bb2182dfde125a9e6588c.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
     "main.9589682d.css.map": "/kroot/static/css/main.9589682d.css.map",
-    "main.98dafd76.js.map": "/kroot/static/js/main.98dafd76.js.map"
+    "main.c5938a14.js.map": "/kroot/static/js/main.c5938a14.js.map"
   },
   "entrypoints": [
     "static/css/main.9589682d.css",
-    "static/js/main.98dafd76.js"
+    "static/js/main.c5938a14.js"
   ]
 }
