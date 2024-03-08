@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.18b3a937.css",
-    "main.js": "/kroot/static/js/main.f687d376.js",
+    "main.css": "/kroot/static/css/main.1d4a7289.css",
+    "main.js": "/kroot/static/js/main.ee6df1c3.js",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
     "static/media/Khalid_Satelite.png": "/kroot/static/media/Khalid_Satelite.ea03c5fdfe19677e377e.png",
     "static/media/Coldplay.png": "/kroot/static/media/Coldplay.a7c77b9f91d6225d684b.png",
     "static/media/team.jpg": "/kroot/static/media/team.1ec3e2e66e743a602395.jpg",
     "static/media/French_Montana.png": "/kroot/static/media/French_Montana.d693ced419f43b418022.png",
-    "static/media/team6x5.jpg": "/kroot/static/media/team6x5.6c8373503961572b6cd1.jpg",
     "static/media/team3x10.jpg": "/kroot/static/media/team3x10.320cd49403bad6a57115.jpg",
     "static/media/team5x6.jpg": "/kroot/static/media/team5x6.0d6110a08a883891c7ce.jpg",
     "static/media/RUSS.png": "/kroot/static/media/RUSS.565a1bcd30bed913d32a.png",
@@ -25,14 +24,14 @@
     "static/media/Logo.svg": "/kroot/static/media/Logo.34ab3d525a37d06a3c37220522b7b3ed.svg",
     "static/media/vfx.svg": "/kroot/static/media/vfx.33e94cd66dfd50fb077a3cbd4348d159.svg",
     "static/media/LogoMini.svg": "/kroot/static/media/LogoMini.4834cf5dbf8fa6a279608d3f461b35ba.svg",
-    "static/media/mail.svg": "/kroot/static/media/mail.21002ad5d0634cfda995e12d953e91b3.svg",
     "static/media/unreal.svg": "/kroot/static/media/unreal.a6c4ae8a442b541681c80f8376422982.svg",
     "static/media/about.svg": "/kroot/static/media/about.bb2cca35afa5a11bf319e044cec2f939.svg",
+    "static/media/mail.svg": "/kroot/static/media/mail.83df2293675fe18646018e1e29da16fb.svg",
     "static/media/insta.svg": "/kroot/static/media/insta.1f2ca33b4d64d5fe226741a73690d774.svg",
     "static/media/beauty.svg": "/kroot/static/media/beauty.6563b93a58996e1be5b99eeed8593dba.svg",
     "static/media/youtube.svg": "/kroot/static/media/youtube.0d5e0d931cd9a5cdb7766587458de70b.svg",
     "static/media/fb.svg": "/kroot/static/media/fb.96371725056f86fef0ecd075e473527c.svg",
-    "static/media/phone.svg": "/kroot/static/media/phone.26d256931df4f6f420d30c31c09c551a.svg",
+    "static/media/phone.svg": "/kroot/static/media/phone.21a8f8d1ed050f3de439d60a6ed2caec.svg",
     "static/media/cgi.svg": "/kroot/static/media/cgi.2dfbf87a07d5a09391ca89c62f0dce2e.svg",
     "index.html": "/kroot/index.html",
     "static/media/notDone.svg": "/kroot/static/media/notDone.a72e1bba1beb2b2c90ba25d2d1100630.svg",
@@ -40,11 +39,11 @@
     "static/media/round.svg": "/kroot/static/media/round.6e7f9b734f73aece06e40819f21c10ed.svg",
     "static/media/filterArrow.svg": "/kroot/static/media/filterArrow.59a4aaa6e35bb2182dfde125a9e6588c.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.18b3a937.css.map": "/kroot/static/css/main.18b3a937.css.map",
-    "main.f687d376.js.map": "/kroot/static/js/main.f687d376.js.map"
+    "main.1d4a7289.css.map": "/kroot/static/css/main.1d4a7289.css.map",
+    "main.ee6df1c3.js.map": "/kroot/static/js/main.ee6df1c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.18b3a937.css",
-    "static/js/main.f687d376.js"
+    "static/css/main.1d4a7289.css",
+    "static/js/main.ee6df1c3.js"
   ]
 }
