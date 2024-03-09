@@ -116,8 +116,8 @@ const Projects = () => {
                 }
             </section>
             <section className="container-80">
+                {isLoading ? <Loader/> : <></>}
                 <div className="projects__grid mt-32" ref={ref}>
-                    {/*{!isLoading ? <Loader/> : <></>}*/}
                     {card}
                 </div>
             </section>

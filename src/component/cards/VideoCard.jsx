@@ -6,6 +6,7 @@ const VideoCard = ({props}) => {
     const size = useSize((store) => store.size)
     const {name, btnText, videoM, videoD, poster, url} = props;
 
+    console.log(props)
     return (
         <Link to={url === "" ? "/error" : url} target={url !== "" ? "_blank": ""}
             className="main__card flex end relative hover__card"

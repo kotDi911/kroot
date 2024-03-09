@@ -7,7 +7,7 @@
     grid-auto-rows: 1fr;
     grid-template-areas:
   "commercial commercial commercial commercial music music music music"
-  "service service service projects projects projects about about"
+  "services services services projects projects projects about about"
   "beauty beauty beauty beauty contacts contacts contacts contacts";
     gap: 1rem;
   }
@@ -38,7 +38,7 @@
   }
 }
 .main__card{
-  //min-height: 20rem;
+  min-height: 14rem;
 }
 
 .main__card:hover .video-cont {

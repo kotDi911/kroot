@@ -10,6 +10,8 @@ const HomeCard = ({props}) => {
     const reg = /^\w+$/;
 
     const GoToPage = () => {
+        let url
+        if(!url)  url = name
         reg.test(url) ? navigate(`/${url}`) : window.open(url, "_blank")
     }
 
