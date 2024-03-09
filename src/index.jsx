@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import RouterApp from "./component/router/RouterApp";
-import {createHashRouter as Router, Navigate, RouterProvider} from "react-router-dom";
-import Home, {homeLoader} from "./component/Pages/Home";
+import {createHashRouter as Router, RouterProvider} from "react-router-dom";
+import Home, {loaderHome} from "./component/Pages/Home";
 import About from "./component/Pages/About";
 import ErrorPage from "./component/Pages/ErrorPage";
 import Services from "./component/Pages/Services";
@@ -14,11 +14,13 @@ import Career from "./component/Pages/Career";
 import CareerCards from "./component/cards/Career/CareerCards";
 import Generation from "./component/Pages/Generation";
 import GetInTouch from "./component/Pages/GetInTouch";
+import {ProjectsV2} from "./component/test/ProjectsV2";
+
 const router = Router([
     {
         path: "/",
         element: <RouterApp props={<Home/>}/>,
-        // loader: homeLoader,
+        loader: loaderHome,
         errorElement: <RouterApp props={<ErrorPage/>}/>,
     },
     {
@@ -72,15 +74,19 @@ const router = Router([
         errorElement: <RouterApp props={<ErrorPage/>}/>,
     },
     {
-        path: "*",
-        element: <Navigate to='/' replace/>,
+        path: "/error",
         errorElement: <RouterApp props={<ErrorPage/>}/>,
-    }
+    },
+    // {
+    //     path: "*",
+    //     element: <Navigate to='/' replace/>,
+    //     errorElement: <RouterApp props={<ErrorPage/>}/>,
+    // }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-      <RouterProvider router={router}/>
-  </React.StrictMode>
+    <React.StrictMode>
+        <RouterProvider router={router}/>
+    </React.StrictMode>
 );

@@ -18,12 +18,12 @@ export const useGeneration = create(() => ({
     krootText: [
         {
             text: "Genration Kroot is an online vfx school.\n" +
-                "                We provide our experience from Music Video and Commercial Industry.\n" +
-                "                We have program for Courses, Workshops and also Masterclasses to help\n" +
-                "                understand vision in this VFX industry. Our lessons are designed to target\n" +
-                "                the most importiang areas what we VFX supervisers go through on a daily basis.\n" +
-                "                Our supervisers will check your skill level to offer you the best classes for you.\n" +
-                "                \"Generation Kroot\" team will support you as feedback or notes during the education"
+                "We provide our experience from Music Video and Commercial Industry.\n" +
+                "We have program for Courses, Workshops and also Masterclasses to help\n" +
+                "understand vision in this VFX industry. Our lessons are designed to target\n" +
+                "the most importiang areas what we VFX supervisers go through on a daily basis.\n" +
+                "Our supervisers will check your skill level to offer you the best classes for you.\n" +
+                "\"Generation Kroot\" team will support you as feedback or notes during the education"
         },
         {
             text: "Tomash Kuzmytskyi is a Visual Effects society member and MTV VMA winning The Best\n" +

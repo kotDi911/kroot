@@ -1,14 +1,14 @@
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import Pagination from "../../Pagination";
 
-const Gallery = ({images}) => {
+const Gallery = ({images, path}) => {
     const [currentPage, setCurrentPage] = useState(0);
     const [pause, setPause] = useState(true);
     const [count, setCount] = useState(0);
 
     const play = () => setTimeout(() => {
         setCurrentPage((prevCurrentPage) => {
-            if (prevCurrentPage >= images.length - 1) {
+            if (prevCurrentPage >= images - 1) {
                 return 0;
             } else {
                 return prevCurrentPage + 1;
@@ -33,12 +33,12 @@ const Gallery = ({images}) => {
         if (currentPage >= 1) {
             setCurrentPage(currentPage - 1)
         } else {
-            setCurrentPage(images.length - 1);
+            setCurrentPage(images - 1);
         }
     };
 
     const nextPage = () => {
-        if (currentPage >= images.length - 1) {
+        if (currentPage >= images - 1) {
             setCurrentPage(0)
         } else {
             setCurrentPage(currentPage + 1);
@@ -63,6 +63,7 @@ const Gallery = ({images}) => {
                         handleSetPage={handleSetPage}
                         images={images}
                         currentPage={currentPage}
+                        path={path}
                     />
                 </div>
             }

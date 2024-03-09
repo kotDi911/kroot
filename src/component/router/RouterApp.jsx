@@ -1,6 +1,6 @@
 import {useLocation} from "react-router-dom";
 import Footer from "../Footer";
-import {useEffect} from "react";
+import {useEffect, useMemo} from "react";
 import Header from "../Header";
 
 const RouterApp = ({props}) => {
@@ -9,14 +9,20 @@ const RouterApp = ({props}) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [pathname]);
+    const header = useMemo(()=> {
+        return(<Header path={pathname}/>)
+    },[pathname])
+    const footer = useMemo(()=> {
+        return(<Footer/>)
+    },[])
 
     return (
         <>
-            <Header/>
+            {header}
             <main>
                 {props}
             </main>
-            <Footer/>
+            {footer}
         </>
     );
 }

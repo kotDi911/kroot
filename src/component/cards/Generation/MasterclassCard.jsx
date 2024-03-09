@@ -1,4 +1,3 @@
-import CardOptions from "../CardOptions";
 import BaseOptionsCard from "./BaseOptionsCard";
 
 const MasterclassCard = ({props}) => {

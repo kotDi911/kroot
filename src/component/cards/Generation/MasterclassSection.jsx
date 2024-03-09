@@ -22,7 +22,7 @@ const MasterclassSection = () => {
             </div>
             <h1 className="h1 black m-52">New masterclass soon</h1>
             <div className="relative">
-                <img className="img" src={khalid} alt="Khalid Satelite"/>
+                <img className="img g__img" src={khalid} alt="Khalid Satelite"/>
                 <span className="img__text absolute white h3">Khalid Satelite</span>
             </div>
         </section>

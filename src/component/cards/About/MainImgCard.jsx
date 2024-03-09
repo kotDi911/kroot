@@ -12,7 +12,7 @@ const MainImgCard = () => {
                 </p>
                 <h3 className="h3 text-end">Best Visual Effect</h3>
             </div>
-            <img className="about__img img" src={mtv} alt=""/>
+            <img className="about__img img" src={mtv} style={{borderRadius: "25px"}} alt="Mtv Award wining"/>
         </div>
     )
 }

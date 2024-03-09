@@ -1,5 +1,4 @@
 import team from "../../../assets/team.jpg";
-import team1 from "../../../assets/team6x5.jpg";
 import team2 from "../../../assets/team5x6.jpg";
 import team3 from "../../../assets/team3x10.jpg";
 import Social from "../../Social";
@@ -23,10 +22,6 @@ const AboutTeam = () => {
     }
     return (
         <div className="about__team mt-16">
-            {/*<div className="flex" style={{justifyContent: "center", gap: "2rem"}}>*/}
-            {/*    <button className="variant" onClick={()=>handleSetImages(page-1)}>prev Version</button>*/}
-            {/*    <button className="variant" onClick={()=>handleSetImages(page+1)}>next Version</button>*/}
-            {/*</div>*/}
             <h2 className="h2">Our team</h2>
             <p className="text_details regular gray mt-16">
                 Generation Kroot is our secret in the creation of visual effects!Everyone who joins our team

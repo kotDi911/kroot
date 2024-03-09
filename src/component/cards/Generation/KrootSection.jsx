@@ -27,7 +27,7 @@ const KrootSection = () => {
                     </Link>
                 ))}
             </div>
-            <img src={mtv} alt="mtv" className="img mb-32"/>
+            <img src={mtv} alt="Mtv Award" className="img mb-32 g__img"/>
             <LongButton text="IMDB - link" url={imdb}/>
         </section>
     )

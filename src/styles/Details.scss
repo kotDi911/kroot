@@ -5,7 +5,7 @@
     grid-auto-rows: 18rem;
     gap: 1rem;
     grid-template-areas:
-    "projects projects comercial comercial comercial music music music";
+    "projects projects breakdown breakdown breakdown official official official";
   }
 }
 
@@ -22,7 +22,8 @@
 
   &__card {
     border-radius: 25px;
-    height: 48rem;
+    height: 38rem;
+    background: #9ba1a0;
   }
 }
 

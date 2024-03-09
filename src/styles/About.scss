@@ -14,6 +14,8 @@
   &__main-img{
     margin-top: 2rem;
     background: black;
+    min-height: 26rem;
+    border-radius: 25px;
   }
   &__grid {
     display: grid;
@@ -71,4 +73,7 @@
   justify-self: start;
   text-transform: uppercase;
   cursor: default;
+}
+.g__img{
+  border-radius: 25px;
 }

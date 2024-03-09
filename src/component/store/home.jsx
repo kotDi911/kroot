@@ -1,27 +1,29 @@
 import {create} from 'zustand'
-import videoM from "../../assets/video/projects/320x240.mp4";
-import videoD from "../../assets/video/projects/480x240.mp4";
-import poster from "../../assets/poster.png"
 import about from "../../assets/ico/about.svg";
+
+const URL = "https://qdz.guk.temporary.site/home/";
+const mobile = "_mobile.mp4";
+const desktop = "_desktop.mp4";
+const poster = "_poster.jpg";
 
 export const useHomeCard = create(() => ({
     data: [
         {
             id: 1,
-            name: "comercial",
+            name: "commercial",
             url: "https://www.youtube.com/",
-            videoM: videoM,
-            videoD: videoD,
-            poster: poster,
-            btnText: "comercial showreel",
+            videoM: URL+"commercial"+ mobile,
+            videoD: URL+"commercial"+ desktop,
+            poster: URL+"commercial"+ poster,
+            btnText: "commercial showreel",
         },
         {
             id: 2,
             name: "music",
             url: "https://www.youtube.com/",
-            videoM: videoM,
-            videoD: videoD,
-            poster: poster,
+            videoM: URL+"music"+ mobile,
+            videoD: URL+"music"+ desktop,
+            poster: URL+"music"+ poster,
             btnText: "music video showreel",
         },
         {
@@ -61,9 +63,9 @@ export const useHomeCard = create(() => ({
             id: 6,
             name: "beauty",
             url: "https://www.youtube.com/",
-            videoM: videoM,
-            videoD: videoD,
-            poster: poster,
+            videoM: URL+"beauty"+ mobile,
+            videoD: URL+"beauty"+ desktop,
+            poster: URL+"beauty"+ poster,
             btnText: "beauty vfx",
         },
         {

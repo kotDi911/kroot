@@ -3,9 +3,10 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-auto-rows: 20rem;
+    //grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
     grid-template-areas:
-  "comercial comercial comercial comercial music music music music"
+  "commercial commercial commercial commercial music music music music"
   "service service service projects projects projects about about"
   "beauty beauty beauty beauty contacts contacts contacts contacts";
     gap: 1rem;

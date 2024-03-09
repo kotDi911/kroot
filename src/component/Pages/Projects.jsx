@@ -1,77 +1,59 @@
 import {useCards} from "../store/projects";
-import {useEffect, useRef, useState} from "react";
-import filterArrow from "../../assets/ico/filterArrow.svg"
+import {useEffect, useMemo, useRef, useState} from "react";
 import ProjectsCard from "../cards/ProjectsCard";
+import FilterBtn from "../cards/Projects/FilterBtn";
+import {Loader} from "../Loader";
+import ToggleFilterBtn from "../cards/Projects/ToggleFilterBtn";
 
-const filters = [
-    {name: "all"},
-    {name: "commercial"},
-    {name: "music video"},
-    {name: "beauty"},
-    {name: "animation"},
-    {name: "artwork"},
-    {name: "tv show"},
-]
-const FilterBtn = ({item, setFilter, filter, setIsToggle}) => {
-    let name = item;
-    if (!item) name = "ALL";
-    const handleToggle = () => {
-        setIsToggle && setIsToggle(false)
-        setFilter(name)
-    }
-    return (
-        <div className={`filter__btn gray ${name === filter && !setIsToggle ? "filter__btn-active" : ""}`}
-             onClick={handleToggle}
-        >
-            <span className="filter__bg btn-bg"></span>
-            <div className="filter__text">{name}</div>
-        </div>
-    )
-}
-const ToggleFilterBtn = ({filter, setFilter}) => {
-    const [isToggle, setIsToggle] = useState(false)
-    const handleToggle = () => {
-        setIsToggle(!isToggle)
-    }
-    return (
-        <div className="relative">
-            <div className="filter__btn filter__btn-toggle filter__btn-active gray" onClick={handleToggle}>
-                <span className="filter__bg btn-bg"></span>
-                <div className="filter__text">{filter}</div>
-                <img src={filterArrow} alt="filter arrow" className={`${isToggle ? "rotate" : ""} filter__img`}/>
-            </div>
-            {
-                isToggle &&
-                <div className="filter__flex col absolute">
-                    {filters.map((item, i) =>
-                        <FilterBtn
-                            key={i}
-                            item={item.name}
-                            filter={filter}
-                            setFilter={setFilter}
-                            setIsToggle={setIsToggle}
-                        />
-                    )}
-                </div>
-            }
-        </div>
-    )
-}
-
-const postsPerPage = 9;
+let postsPerPage = 9;
 let arrayForHoldingPosts = [];
 let filteredProjects = [];
-
+if (window.innerWidth <= 991) postsPerPage = 8;
+if (window.innerWidth <= 660) postsPerPage = 9;
 
 const Projects = () => {
-    const projects = useCards((store) => store.projects)
+    const {projects, fetchList, error, filters, setCurrentPage} = useCards((state) => ({
+        projects: state.projects,
+        error: state.error,
+        filters: state.filters,
+        fetchList: state.fetchList,
+        setCurrentPage: state.setCurrentPage,
+    }));
+
     const [filter, setFilter] = useState("all");
     const [postsToShow, setPostsToShow] = useState([]);
     const [next, setNext] = useState(9);
-    const [isActive, setIsActive] = useState(false);
+    const [scroll, setScroll] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
     const [isShow] = useState(window.innerWidth > 767);
-    const ref = useRef();
+    const ref = useRef(null)
 
+    const filterButtonsDesktop = useMemo(() => {
+        return (
+            filters.map((item, i) =>
+                <FilterBtn
+                    key={i}
+                    item={item.name}
+                    filter={filter}
+                    setFilter={setFilter}
+                />
+            )
+        )
+    }, [filter])
+
+    const card = useMemo(() => {
+        return (
+            postsToShow.map((item, i) =>
+                <ProjectsCard key={i} props={item} error={error}/>
+            )
+        )
+    }, [postsToShow])
+    const handleFilter = (filter) => {
+        setNext(9);
+        arrayForHoldingPosts = [];
+        filteredProjects = projects.filter(project => project.filter === filter || filter === "all");
+        loopWithSlice(0, window.innerHeight > 1200 ? 12 : postsPerPage)
+    }
     const loopWithSlice = (start, end) => {
         const slicedPosts = filteredProjects.slice(start, end);
         arrayForHoldingPosts = [...arrayForHoldingPosts, ...slicedPosts];
@@ -79,24 +61,46 @@ const Projects = () => {
     };
 
     useEffect(() => {
-        setNext(9);
-        arrayForHoldingPosts = [];
-        filteredProjects = projects.filter(project => project.filter === filter || filter === "all");
-        loopWithSlice(0, postsPerPage);
-        next + 1 <= filteredProjects.length ? setIsActive(true) : setIsActive(false)
+        handleFilter(filter)
+        const oToBeRead = document.getElementById("root");
+        setScroll(oToBeRead)
+    }, [])
+
+    useEffect(() => {
+        handleFilter(filter)
     }, [filter])
 
     useEffect(() => {
-        next + 1 <= filteredProjects.length ? setIsActive(true) : setIsActive(false)
-    }, [next])
+        const handleScroll = (e) => {
+            const el = ref.current
+            const documentHeight = e.target.documentElement.scrollHeight;
+            const documentScrollTop = e.target.documentElement.scrollTop;
+            if (projects.length >= next && (documentScrollTop + window.innerHeight +1) > documentHeight) {
+                setNext(next + postsPerPage)
+                loopWithSlice(next, next + postsPerPage)
+            }
+        };
 
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        }
+    }, [next, projects, fetchList]);
 
-    const handleShowMorePosts = () => {
-        loopWithSlice(next, next + postsPerPage);
-        setNext(next + postsPerPage);
-        next + postsPerPage <= filteredProjects.length ? setIsActive(true) : setIsActive(false)
-    };
-
+    useEffect(() => {
+        if (projects.length <= 0) {
+            setIsLoading(true);
+            fetchList()
+                .then(() => {
+                    setIsLoading(false);
+                })
+                .catch(() => {
+                    setIsLoading(false);
+                });
+        } else {
+            handleFilter(filter)
+        }
+    }, [fetchList, projects.length]);
 
     return (
         <article className="article projects">
@@ -105,14 +109,7 @@ const Projects = () => {
                 {
                     isShow ?
                         <div className="filter__grid mt-16">
-                            {filters.map((item, i) =>
-                                <FilterBtn
-                                    key={i}
-                                    item={item.name}
-                                    filter={filter}
-                                    setFilter={setFilter}
-                                />
-                            )}
+                            {filterButtonsDesktop}
                         </div>
                         :
                         <ToggleFilterBtn filter={filter} setFilter={setFilter}/>
@@ -120,19 +117,9 @@ const Projects = () => {
             </section>
             <section className="container-80">
                 <div className="projects__grid mt-32" ref={ref}>
-                    {
-                        postsToShow.map((item, i) =>
-                            <ProjectsCard key={i} props={item}/>
-                        )
-                    }
+                    {/*{!isLoading ? <Loader/> : <></>}*/}
+                    {card}
                 </div>
-                <div></div>
-                {isActive &&
-                    <div className="filter__btn gray mt-16 more-btn" onClick={handleShowMorePosts}>
-                        <span className="filter__bg btn-bg"></span>
-                        MORE
-                    </div>
-                }
             </section>
         </article>
     )

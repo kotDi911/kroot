@@ -2,6 +2,9 @@
   .footer.active {
     padding: 1.5rem 2.5rem;
   }
+  .about__main-img {
+    min-height: 22rem;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -9,7 +12,7 @@
     gap: 8px;
   }
   .gallery__card {
-    height: 45rem;
+    height: 34rem;
   }
   .logo {
     padding: 10px;
@@ -24,10 +27,15 @@
     min-height: 14rem;
   }
 }
+@media screen and (max-width: 1200px) {
+  .details__grid {
+    grid-auto-rows: 16rem;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .gallery__card {
-    height: 35rem;
+    height: 30rem;
   }
   .home__grid, .about__grid-cards{
     grid-auto-rows: 18rem;
@@ -57,8 +65,8 @@
     grid-auto-rows: 22rem;
     grid-template-areas:
             "projects"
-            "comercial"
-            "music";
+            "breakdown"
+            "official";
   }
   .about__grid-cardsP {
     grid-auto-rows: 22rem;
@@ -71,15 +79,14 @@
     "photo1"
     "text1";
   }
-  //.main__card {
-  //  height: 22rem;
-  //  min-height: 22rem;
-  //}
+  .about__main-img {
+    min-height: 18rem;
+  }
   .home {
     &__grid {
       grid-auto-rows: 22rem;
       grid-template-areas:
-  "comercial"
+  "commercial"
   "music"
   "service"
   "projects"
@@ -123,7 +130,7 @@
     gap: 0;
   }
   .gallery__card {
-    height: 32rem;
+    height: 28rem;
   }
   .article {
     padding: 0 2rem;
@@ -151,17 +158,13 @@
   .long-btn {
     padding: 1.5rem;
   }
-  //.main__card {
-  //  height: 18rem;
-  //  min-height: 18rem;
-  //}
   .home__grid, .details__grid, .about__grid-cards {
     grid-auto-rows: 20rem;
   }
   .about {
     &__text-cont {
       height: 100%;
-      padding: 2rem;
+      padding: 3rem;
       position: relative;
       z-index: 1;
 
@@ -173,7 +176,9 @@
         text-align: center;
       }
     }
-
+    &__main-img {
+      min-height: 14rem;
+    }
     &__img {
       position: absolute;
       height: auto;
@@ -195,7 +200,7 @@
     width: 30%;
   }
   .gallery__card {
-    height: 26rem;
+    height: 22rem;
   }
 }
 
@@ -214,7 +219,7 @@
     margin-left: 1.5rem;
   }
   .gallery__card {
-    height: 22rem;
+    height: 20rem;
   }
   .projects__grid {
     grid-template-columns: 1fr;
@@ -278,10 +283,11 @@
       flex-direction: column-reverse;
       padding-top: 2rem;
       border-radius: 25px;
+      min-height: 20rem;
     }
 
     &__text-cont {
-      padding-top: 1rem;
+      padding: 1rem 2rem 2rem;
     }
 
     & .h3 {
@@ -344,14 +350,16 @@
       }
     }
 
-    &__grid, .details__grid, .about__grid-cards {
+    &__grid{
       grid-auto-rows: 16rem;
     }
-
     &__social {
       bottom: 1.5rem;
       left: 1rem;
     }
+  }
+  .details__grid, .about__grid-cards {
+    grid-auto-rows: 16rem;
   }
   .services {
     &__link {

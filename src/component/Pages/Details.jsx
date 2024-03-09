@@ -1,85 +1,72 @@
 import {useLocation} from "react-router-dom";
-import Gallery from "../cards/Details/Gallery";
 import HomeCard from "../cards/HomeCard";
 import VideoCard from "../cards/VideoCard";
-import {LazyLoadImage} from "react-lazy-load-image-component";
-import {useState} from "react";
-
-const Title = ({title}) => {
-    const slice = title.indexOf("-");
-    return (
-        <h1 className="h1 black">
-            {slice < 0 ? title : (
-                <>
-                    {title.slice(0, slice)}
-                    <span className="gray">{title.slice(slice)}</span>
-                </>
-            )}
-        </h1>
-    )
-}
-const Images = ({images, name}) => {
-    const slice = name.indexOf("-");
-    const alt = name.slice(0, slice) + "details image"
-    const [style, setStyle] = useState({filter: "blur(.2rem)"})
-    return (
-        <div className="img-cont flex col mt-32">
-            {
-                images.map((img, i) =>
-                    <div className="w-100 h-100" style={style}>
-                        <LazyLoadImage key={i}
-                                       width="100%"
-                                       heihg="100%"
-                                       className="img img__main"
-                                       src={img.img}
-                                       alt={alt + "-" + (i + 1)}
-                                       placeholderSrc={img.poster}
-                                       onLoad={() => setStyle({filter: "none"})}
-                        />
-                    </div>
-                )
-            }
-        </div>
-    )
-}
-const Options = ({options}) => {
-    return (
-        <div className="flex col mt-32">
-            {options.map((option, i) =>
-                <div key={i} className="flex col mt-16">
-                    <p className="gray fs-14">{option.title}</p>
-                    <p className="regular black">{option.desc}</p>
-                </div>
-            )}
-        </div>
-    )
-}
+import Gallery from "../cards/Details/Gallery";
+import Title from "../cards/Details/Title";
+import Images from "../cards/Details/Images";
+import Options from "../cards/Details/Options";
 
 const Details = () => {
     const {state} = useLocation()
-
     const {
-        buttons,
+        folderUrl,
+        project_name,
         description,
-        descriptionImg,
-        galleryImg,
-        name,
+        main_imgs,
+        gallery_imgs,
+        buttons_url,
         options,
     } = state;
+    const getBtnVideo = () => {
+        return Object.entries(buttons_url).map((a) => (
+                {
+                    name: a[0],
+                    url: a[1].url,
+                    btnText: a[1].btn_text,
+                    videoM: folderUrl + "/video/" + a[0] + "_mobile.mp4",
+                    videoD: folderUrl + "/video/" + a[0] + "_desktop.mp4",
+                    poster: folderUrl + "/video/poster.mp4",
+                }
+            )
+        )
+    }
+
+    const getMainImages = () => {
+        let urls = []
+        let url = {}
+        for (let i = 0; i < main_imgs; i++) {
+            const img = folderUrl + "/images/main" + (i + 1) + ".jpg";
+            const poster = folderUrl + "/images/main" + (i + 1) + "poster.jpg"
+            const alt = project_name + " image" + (i + 1)
+            url = {img, poster, alt}
+            urls = [...urls, url]
+        }
+        return urls
+    }
+
+    const getDataArr = () => {
+        return Object.entries(options).map((a) => (
+            {
+                title: a[0],
+                desc: a[1]
+            })
+        )
+    }
+
     return (
         <article className="article details">
             <section className="container-80 p_top">
-                    <Title title={name}/>
-                    <p className="regular gray mt-16">{description}</p>
-                    <Images images={descriptionImg} name={name}/>
-                    <Gallery images={galleryImg}/>
-                    <Options options={options}/>
+                <Title title={project_name}/>
+                <p className="regular gray mt-16">{description}</p>
+                <Images getImages={getMainImages} name={project_name}/>
+                <Gallery images={gallery_imgs} path={folderUrl}/>
+                <Options data={getDataArr}/>
             </section>
             <section className="container-80">
-                    <div className="details__grid mt-112">
-                        <HomeCard props={{name: "projects", url: "projects", title: "Projects", btnText: "all projects"}}/>
-                        {buttons.map((card, i) => <VideoCard key={i} props={card}/>)}
-                    </div>
+                <div className="details__grid mt-112">
+                    <HomeCard props={{name: "projects", url: "projects", title: "Projects", btnText: "all projects"}}/>
+                    {getBtnVideo().map((card, i) => <VideoCard key={i} props={card}/>)}
+                </div>
             </section>
         </article>
     )
