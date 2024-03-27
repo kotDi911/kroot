@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.ac16f9d8.css",
-    "main.js": "/kroot/static/js/main.76f70b7b.js",
+    "main.css": "/kroot/static/css/main.8cce2031.css",
+    "main.js": "/kroot/static/js/main.32c0b2f6.js",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
     "static/media/Khalid_Satelite.png": "/kroot/static/media/Khalid_Satelite.ea03c5fdfe19677e377e.png",
     "static/media/Coldplay.png": "/kroot/static/media/Coldplay.a7c77b9f91d6225d684b.png",
@@ -25,24 +25,25 @@
     "static/media/vfx.svg": "/kroot/static/media/vfx.33e94cd66dfd50fb077a3cbd4348d159.svg",
     "static/media/LogoMini.svg": "/kroot/static/media/LogoMini.4834cf5dbf8fa6a279608d3f461b35ba.svg",
     "static/media/unreal.svg": "/kroot/static/media/unreal.a6c4ae8a442b541681c80f8376422982.svg",
+    "static/media/about.svg": "/kroot/static/media/about.bb2cca35afa5a11bf319e044cec2f939.svg",
     "static/media/mail.svg": "/kroot/static/media/mail.83df2293675fe18646018e1e29da16fb.svg",
     "static/media/insta.svg": "/kroot/static/media/insta.1f2ca33b4d64d5fe226741a73690d774.svg",
     "static/media/beauty.svg": "/kroot/static/media/beauty.6563b93a58996e1be5b99eeed8593dba.svg",
     "static/media/youtube.svg": "/kroot/static/media/youtube.0d5e0d931cd9a5cdb7766587458de70b.svg",
     "static/media/fb.svg": "/kroot/static/media/fb.96371725056f86fef0ecd075e473527c.svg",
+    "index.html": "/kroot/index.html",
     "static/media/phone.svg": "/kroot/static/media/phone.21a8f8d1ed050f3de439d60a6ed2caec.svg",
     "static/media/cgi.svg": "/kroot/static/media/cgi.2dfbf87a07d5a09391ca89c62f0dce2e.svg",
-    "index.html": "/kroot/index.html",
     "static/media/notDone.svg": "/kroot/static/media/notDone.a72e1bba1beb2b2c90ba25d2d1100630.svg",
     "static/media/done.svg": "/kroot/static/media/done.030b83cdc9c641773ed38794cf20effd.svg",
     "static/media/round.svg": "/kroot/static/media/round.6e7f9b734f73aece06e40819f21c10ed.svg",
     "static/media/filterArrow.svg": "/kroot/static/media/filterArrow.59a4aaa6e35bb2182dfde125a9e6588c.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.ac16f9d8.css.map": "/kroot/static/css/main.ac16f9d8.css.map",
-    "main.76f70b7b.js.map": "/kroot/static/js/main.76f70b7b.js.map"
+    "main.8cce2031.css.map": "/kroot/static/css/main.8cce2031.css.map",
+    "main.32c0b2f6.js.map": "/kroot/static/js/main.32c0b2f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac16f9d8.css",
-    "static/js/main.76f70b7b.js"
+    "static/css/main.8cce2031.css",
+    "static/js/main.32c0b2f6.js"
   ]
 }
