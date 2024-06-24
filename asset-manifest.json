@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kroot/static/css/main.8cce2031.css",
-    "main.js": "/kroot/static/js/main.37ea48dc.js",
+    "main.css": "/kroot/static/css/main.b08e5544.css",
+    "main.js": "/kroot/static/js/main.378b0e59.js",
     "static/media/g-kroot.mp4": "/kroot/static/media/g-kroot.31c4108dc1e4f9090959.mp4",
     "static/media/Khalid_Satelite.png": "/kroot/static/media/Khalid_Satelite.ea03c5fdfe19677e377e.png",
     "static/media/Coldplay.png": "/kroot/static/media/Coldplay.a7c77b9f91d6225d684b.png",
@@ -16,6 +16,8 @@
     "static/media/Justin_Bieber.png": "/kroot/static/media/Justin_Bieber.92e280dca7a5709673fd.png",
     "static/media/Billie_Eilish.png": "/kroot/static/media/Billie_Eilish.398e3e6821f454ba82b9.png",
     "static/media/Khalid.png": "/kroot/static/media/Khalid.867d42b9d79a08b462b2.png",
+    "static/media/no_video_desktop.mp4": "/kroot/static/media/no_video_desktop.5fb165b2fab896b5291b.mp4",
+    "static/media/no_video_mobile.mp4": "/kroot/static/media/no_video_mobile.bc00466b2a298db8556f.mp4",
     "static/media/Oksana_Gryanka.png": "/kroot/static/media/Oksana_Gryanka.e2c52288813837525b86.png",
     "static/media/Dimas_Nekrasov.png": "/kroot/static/media/Dimas_Nekrasov.9b78faa194ebbf8c47fc.png",
     "static/media/Tomash_Kuzmytskyi.png": "/kroot/static/media/Tomash_Kuzmytskyi.977721c32adfb82d4440.png",
@@ -39,11 +41,11 @@
     "static/media/round.svg": "/kroot/static/media/round.6e7f9b734f73aece06e40819f21c10ed.svg",
     "static/media/filterArrow.svg": "/kroot/static/media/filterArrow.59a4aaa6e35bb2182dfde125a9e6588c.svg",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
-    "main.8cce2031.css.map": "/kroot/static/css/main.8cce2031.css.map",
-    "main.37ea48dc.js.map": "/kroot/static/js/main.37ea48dc.js.map"
+    "main.b08e5544.css.map": "/kroot/static/css/main.b08e5544.css.map",
+    "main.378b0e59.js.map": "/kroot/static/js/main.378b0e59.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cce2031.css",
-    "static/js/main.37ea48dc.js"
+    "static/css/main.b08e5544.css",
+    "static/js/main.378b0e59.js"
   ]
 }
