@@ -8,7 +8,7 @@ const CardOptions = ({props}) => {
                     <div className="flex base">
                         <div className="round"></div>
                         <p className={`regular w-100 gray`}>
-                            {item.title && <span className="black">item.title + " "</span>}
+                            {item.title && <span className="black">{item.title} </span>}
                             {item.name && item.name}
                         </p>
                     </div>

@@ -17,21 +17,6 @@ export const useServiceCard = create(() => ({
                     text:"3D modeling",
                     url:"https://www.youtube.com/",
                 },
-                // {
-                //     id:2,
-                //     text:"Texturing",
-                //     url:"https://www.youtube.com/",
-                // },
-                // {
-                //     id:3,
-                //     text:"Assets",
-                //     url:"",
-                // },
-                // {
-                //     id:4,
-                //     text:"Rigging",
-                //     url:"",
-                // },
                 {
                     id:5,
                     text:"Animation",

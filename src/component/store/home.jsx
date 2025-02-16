@@ -11,7 +11,7 @@ export const useHomeCard = create(() => ({
         {
             id: 1,
             name: "commercial",
-            url: "https://www.youtube.com/",
+            url: "https://www.youtube.com/watch?v=m9zhPKXm1lc&ab_channel=TheKROOT",
             videoM: URL+"commercial"+ mobile,
             videoD: URL+"commercial"+ desktop,
             poster: URL+"commercial"+ poster,
@@ -20,7 +20,7 @@ export const useHomeCard = create(() => ({
         {
             id: 2,
             name: "music",
-            url: "https://www.youtube.com/",
+            url: "https://www.youtube.com/watch?v=5gbNqMXN_DU&t=4s&ab_channel=TheKROOT",
             videoM: URL+"music"+ mobile,
             videoD: URL+"music"+ desktop,
             poster: URL+"music"+ poster,
@@ -28,7 +28,7 @@ export const useHomeCard = create(() => ({
         },
         {
             id: 3,
-            name: "service",
+            name: "services",
             url: "services",
             title: "Services We",
             gray: "offer",
@@ -62,7 +62,7 @@ export const useHomeCard = create(() => ({
         {
             id: 6,
             name: "beauty",
-            url: "https://www.youtube.com/",
+            url: "https://www.youtube.com/watch?v=GXskclwDBCA&ab_channel=TheKROOT",
             videoM: URL+"beauty"+ mobile,
             videoD: URL+"beauty"+ desktop,
             poster: URL+"beauty"+ poster,

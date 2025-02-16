@@ -3,6 +3,7 @@ import GetInTouchForm from "../Form";
 import {useEffect, useState} from "react";
 import done from "../../assets/ico/done.svg"
 import notDone from "../../assets/ico/notDone.svg"
+import {Helmet} from "react-helmet-async";
 
 const GetInTouch = () => {
     const [isActive, setIsActive] = useState(false)
@@ -22,6 +23,12 @@ const GetInTouch = () => {
     }
     return (
         <article className="article get-in-touch">
+            <Helmet>
+                <title>Get in touch</title>
+                <meta content="Get in touch" property="og:title"/>
+                <meta content="Get in touch" property="twitter:title"/>
+                <meta name="description" content="Get in touch with The Kroot company"/>
+            </Helmet>
             <section className="container-48 relative">
                 <h1 className="h1">Get in <span className="gray">touch</span></h1>
                 <p className="regular gray">

@@ -1,4 +1,4 @@
-import {useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import Social from "../Social";
 import Button from "../Button";
 
@@ -6,22 +6,12 @@ const light = "#9ba1a0"
 
 const HomeCard = ({props}) => {
     const {name, url, title, gray, ico, text, btnText, social} = props;
-    const navigate = useNavigate();
-    const reg = /^\w+$/;
-
-    const GoToPage = () => {
-        let url
-        if(!url)  url = name
-        reg.test(url) ? navigate(`/${url}`) : window.open(url, "_blank")
-    }
 
     return (
         <div className={`${url === "generation_kroot" ? "g_kroot" : ""} main__card relative`}
              style={{gridArea: name ? name : ""}}
         >
-            <div className={`home__card flex col hover__card relative`}
-                 onClick={GoToPage}
-            >
+            <Link className={`home__card flex col hover__card relative`} to={`/${url}`}>
                 {
                     title || ico || text
                         ?
@@ -47,7 +37,7 @@ const HomeCard = ({props}) => {
                         <Button />
                     </div>
                 </div>
-            </div>
+            </Link>
             {social &&
                 <div className="home__social social flex absolute">
                     <Social props="light"/>

@@ -5,6 +5,7 @@ import J from "../../assets/Julia_Lusenko.png";
 import LongButton from "../LongButton";
 import TextCard from "../cards/Contacts/TextCard";
 import PhotoCard from "../cards/Contacts/PhotoCard";
+import {Helmet} from "react-helmet-async";
 
 const card1 = [
     {
@@ -21,6 +22,7 @@ const card1 = [
                 img: tel,
                 text: "323.386.32.35",
                 url: "",
+                // url: "tel: +13233863235",
             },
             {
                 img: mail,
@@ -72,6 +74,12 @@ const photo1 =[
 const Contacts = () => {
     return (
         <article className="article contacts">
+            <Helmet>
+                <title>Contacts</title>
+                <meta content="Contacts the Kroot" property="og:title"/>
+                <meta content="Contacts the Kroot" property="twitter:title"/>
+                <meta name="description" content="Contacts The Kroot company" />
+            </Helmet>
             <section className="container-64">
                 <div className="contacts__grid">
                     <TextCard props={card1} areaName="text"/>

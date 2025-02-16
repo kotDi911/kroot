@@ -5,6 +5,7 @@ import Gallery from "../cards/Details/Gallery";
 import Title from "../cards/Details/Title";
 import Images from "../cards/Details/Images";
 import Options from "../cards/Details/Options";
+import {Helmet} from "react-helmet-async";
 
 const Details = () => {
     const {state} = useLocation()
@@ -22,10 +23,9 @@ const Details = () => {
                 {
                     name: a[0],
                     url: a[1].url,
+                    video: a[1].video,
                     btnText: a[1].btn_text,
-                    videoM: folderUrl + "/video/" + a[0] + "_mobile.mp4",
-                    videoD: folderUrl + "/video/" + a[0] + "_desktop.mp4",
-                    poster: folderUrl + "/video/poster.mp4",
+                    poster: folderUrl + "/video/"+a[0]+"_"+"poster.jpg",
                 }
             )
         )
@@ -55,6 +55,12 @@ const Details = () => {
 
     return (
         <article className="article details">
+            <Helmet>
+                <title>Project {project_name}</title>
+                <meta content={`Project ${project_name}`} property="og:title"/>
+                <meta content={`Project ${project_name}`} property="twitter:title"/>
+                <meta name="description" content={`Project ${project_name}`} />
+            </Helmet>
             <section className="container-80 p_top">
                 <Title title={project_name}/>
                 <p className="regular gray mt-16">{description}</p>

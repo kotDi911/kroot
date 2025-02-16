@@ -1,4 +1,5 @@
 import { useRouteError } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 const ErrorPage = (err)=> {
     const error = useRouteError();
@@ -7,6 +8,9 @@ const ErrorPage = (err)=> {
 
     return (
         <div id="error-page" className="flex col center">
+            <Helmet>
+                <title>Error</title>
+            </Helmet>
             <h2 className="h2 black">Oops!</h2>
             <p className="h1 black">
                 <i>{error.status}</i>

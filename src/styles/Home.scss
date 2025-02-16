@@ -20,6 +20,7 @@
     border-radius: 25px;
     justify-content: flex-end;
     cursor: pointer;
+    color: $black;
 
     &-text-cont {
       left: 0;
@@ -37,7 +38,8 @@
     left: 1.5rem;
   }
 }
-.main__card{
+
+.main__card {
   min-height: 14rem;
 }
 
@@ -46,5 +48,9 @@
 }
 
 .main__card:hover .video {
-  opacity: .4;
+  opacity: .6;
+}
+
+.disabled-link {
+  pointer-events: none;
 }

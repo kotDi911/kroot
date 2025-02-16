@@ -1,11 +1,12 @@
-.nav{
-  &__cont{
+.nav {
+  &__cont {
     padding: 2rem;
     background: white;
     border-radius: 25px;
     margin: 2rem 0 1rem;
   }
-  &__btn{
+
+  &__btn {
     position: relative;
     width: 25%;
     border: 1px solid #dee2e5;
@@ -18,25 +19,29 @@
     color: $text;
   }
 }
-.career{
-  &__cards{
+
+.career {
+  &__cards {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-  &__card{
+
+  &__card {
     background: white;
     padding: 1rem 2rem;
     border-radius: 25px;
   }
 }
-.apps{
-  &__cont{
+
+.apps {
+  &__cont {
     margin-top: 2rem;
     padding: 2rem;
     background: white;
     border-radius: 25px;
   }
-  &__img{
+
+  &__img {
     width: 96px;
     height: 96px;
   }

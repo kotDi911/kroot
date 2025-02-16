@@ -7,45 +7,26 @@ import red from "../../assets/ico/apps/red.png"
 import cinema from "../../assets/ico/apps/cinema.png"
 import unreal from "../../assets/ico/apps/unreal.png"
 
-export const useCareer = create(() => ({
-    us:[
-        {
-            title: "2D animator",
-            desc: "Do you know how to work in traditional animation methods using all 12 principles.Great!!! Send please your portfolio immediately.",
-        }
-    ],
-    ua:[
-        {
-            title: "After Effects",
-            desc: "Composiitng Begginers APPLY NOW Composiitng Intermediat Advanced UP&UP",
-        },
-        {
-            title: "Matchmove artist",
-            desc: "We hiring people who know match move process. We want to see your best projects and match move reel.If you don’t have experience. Let us know about it and we will worry about you.",
-        },
-        {
-            title: "Compositing artist",
-            desc: "Please show us your demoreel (important: before and after). Compositing artist is a challenge. You can try!",
-        },
-        {
-            title: "3D animator",
-            desc: "Animation is a greatest job in the world! We want to work with great artists who on same page with us.Can’t wait to see your demo reel.",
-        },
-        {
-            title: "2D animator",
-            desc: "Do you know how to work in traditional animation methods using all 12 principles.Great!!! Send please your portfolio immediately.",
-        }
-    ],
-    eu:[
-        {
-            title: "Matchmove artist",
-            desc: "We hiring people who know match move process. We want to see your best projects and match move reel.If you don’t have experience. Let us know about it and we will worry about you.",
-        },
-        {
-            title: "Compositing artist",
-            desc: "Please show us your demoreel (important: before and after). Compositing artist is a challenge. You can try!",
-        },
-    ],
+export const useCareer = create((set, get) => ({
+    vacancy: [],
+    fetchVacancy: async () =>{
+      try{
+          const resVacancy = await fetch("https://qdz.guk.temporary.site/wp-api/wp-json/acf/v3/career");
+
+          if (!resVacancy.ok) throw new Response('Field...', {status: 404})
+          const data = await resVacancy.json();
+          const vac = data.map(res => res.acf)
+          set({vacancy: [vac]})
+          set({us: vac.filter(item => item.nav === "US" && item)})
+          set({ua: vac.filter(item => item.nav === "UA" && item)})
+          set({eu: vac.filter(item => item.nav === "EU" && item)})
+      }catch (err){
+
+      }
+    },
+    us: [],
+    ua: [],
+    eu: [],
     apps:[
         {
             name: "blender",

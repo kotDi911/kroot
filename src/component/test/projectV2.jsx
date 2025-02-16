@@ -20,10 +20,11 @@ export const useRecipe = create((set, get) => ({
         try {
             const { currentPage } = get();
             const { recipes } = get();
-            const res = await fetch(`https://qdz.guk.temporary.site/wp-json/acf/v3/project/?page=${currentPage}`);
+            const res = await fetch(`https://qdz.guk.temporary.site/wp-json/acf/v3/project/?per_page=12?page=${currentPage}`);
 
             if (!res.ok) throw new Error('Field...')
             const data = await res.json();
+            console.log(currentPage)
             const dataProjects = data.map(res => res.acf)
             if (dataProjects === null || dataProjects.length === 0) throw new Error('no data')
 

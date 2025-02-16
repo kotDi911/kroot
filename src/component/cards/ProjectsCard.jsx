@@ -1,11 +1,9 @@
 import {Link} from "react-router-dom";
 import Button from "../Button";
-import {useSize} from "../store/size";
 import {useUrl} from "../store/Urls";
 import {useMemo} from "react";
 
 const ProjectsCard = ({props}) => {
-    const size = useSize((store) => store.size)
     const projectsUrl = useUrl((store) => store.projectsUrl)
     const {
         path,
@@ -22,8 +20,7 @@ const ProjectsCard = ({props}) => {
         )
     },[])
     const folderUrl = projectsUrl+path
-    const videoM = `${folderUrl}/video/preview_mobile.mp4`;
-    const videoD = `${folderUrl}/video/preview_desktop.mp4`;
+    const video = `${folderUrl}/video/preview.mp4`;
     const poster = `${folderUrl}/video/poster.jpg`;
     const name = project_name.replace(/\s+/g, '').toLowerCase()
 
@@ -46,7 +43,7 @@ const ProjectsCard = ({props}) => {
                         <video
                             className="video"
                             poster={poster}
-                            src={size <= 550 ? videoM : videoD}
+                            src={video}
                             autoPlay
                             muted
                             loop

@@ -1,26 +1,30 @@
-.services{
-  & .text_details{
+.services {
+  & .text_details {
     text-align: center;
   }
-  &__grid{
+
+  &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
     padding-top: 2rem;
   }
-  &__card{
+
+  &__card {
     padding: 3rem 2.5rem;
     background: white;
     border-radius: 25px;
   }
-  &__link{
+
+  &__link {
     padding: 0 7px;
     border: 1px solid $text;
     border-radius: 25px;
     cursor: pointer;
     transition: .3s linear;
-    &:hover{
+
+    &:hover {
       background: $BG;
     }
   }

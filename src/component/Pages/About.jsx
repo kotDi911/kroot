@@ -4,11 +4,18 @@ import AboutTeam from "../cards/About/AboutTeam";
 import LongButton from "../LongButton";
 import HomeCard from "../cards/HomeCard";
 import {useAbout} from "../store/about";
+import {Helmet} from "react-helmet";
 
 const About = () => {
     const cards = useAbout((store) => store.cards)
     return (
         <article className="article about">
+            <Helmet>
+                <title>About us</title>
+                <meta content="About The Kroot company" property="og:title"/>
+                <meta content="About The Kroot company" property="twitter:title"/>
+                <meta name="description" content="About The Kroot company"/>
+            </Helmet>
             <section className="container-80">
                 <h1 className="h1 black">
                     About <span className="gray">us</span>

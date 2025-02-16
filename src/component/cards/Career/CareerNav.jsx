@@ -1,5 +1,5 @@
-import {NavLink} from "react-router-dom";
-import {useState} from "react";
+import {NavLink, useLocation} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 const links = [
     {
@@ -23,7 +23,24 @@ const links = [
 ]
 
 const CareerNav = () => {
-    const [desc, setDesc] = useState()
+    const {pathname} = useLocation();
+    const [desc, setDesc] = useState();
+
+    useEffect(()=>{
+        switch (pathname) {
+            case "/career/us":
+                links.filter(i => i.name === "US" && setDesc(i.desc));
+                break;
+            case "/career/ua":
+                links.filter(i => i.name === "UA" && setDesc(i.desc));
+                break;
+            case "/career/eu":
+                links.filter(i => i.name === "EU" && setDesc(i.desc));
+                break;
+            default:
+                break;
+        }
+    }, [pathname])
 
     return (
         <div className="nav__cont">

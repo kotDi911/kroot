@@ -11,7 +11,7 @@ const Images = ({getImages, name}) => {
         <div className="img-cont flex col mt-32">
             {
                 images.map((img, i) =>
-                    <div className="w-100 h-100" style={style} key={i}>
+                    <div className="w-100 h-100 images-cont" style={style} key={i}>
                         <LazyLoadImage width="100%"
                                        heihg="100%"
                                        className="img img__main"

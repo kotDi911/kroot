@@ -1,85 +1,176 @@
-.loader__cont{
+.loader__cont {
   display: flex;
   gap: 2rem;
   justify-content: center;
   align-items: center;
 }
-.spiner {
+
+.equalizer {
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    height: 55px;
+    align-items: center;
+  }
+}
+
+.round-logo {
+  border: 8px solid black;
   border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  background: $BG;
+  padding: 40%;
+}
 
-  &__cont {
-    width: 60px;
-    height: 60px;
-  }
+.round-box {
+  justify-content: center;
 
-  &__text {
-    color: $black;
-    font-size: 3rem;
-  }
-
-  &__wrap {
-    border-radius: 50%;
-    padding: .2rem;
-    background: linear-gradient(45deg, $black, $black 10%, transparent 45%, transparent 65%, $black 90%);
-    position: absolute;
-    &.w0{
-      left: 0;
-      bottom: 0;
-      width: 60px;
-      height: 60px;
-      animation: spin3 2s linear infinite;
-    }
-    &.w1{
-      left: 10px;
-      bottom: 10px;
-      width: 40px;
-      height: 40px;
-      rotate: -30deg;
-      animation: spin-r 2s linear infinite;
-    }
-    &.w2{
-      left: 20px;
-      bottom: 20px;
-      width: 20px;
-      height: 20px;
-      animation: spin1 2s linear infinite;
-      rotate: -180deg;
-    }
+  & > .round-logo:first-child {
+    margin-right: 8px;
   }
 }
 
-@keyframes spin1 {
-  0% {
-    transform: rotate(0deg);
+.line {
+  position: relative;
+  background-color: black;
+  border-radius: 50%;
+
+  &-1 {
+    width: 4px;
+    animation: a-line 0.25s infinite alternate;
   }
-  100% {
-    transform: rotate(360deg);
+
+  &-2 {
+    width: 10px;
+    animation: b-line 0.22s infinite alternate;
+  }
+
+  &-3 {
+    width: 8px;
+    animation: c-line 0.24s infinite alternate;
+  }
+
+  &-4 {
+    width: 6px;
+    animation: d-line 0.22s infinite alternate;
+  }
+
+  &-5 {
+    width: 4px;
+    animation: e-line 0.23s infinite alternate;
+  }
+
+  &-6 {
+    width: 6px;
+    animation: f-line 0.21s infinite alternate;
+  }
+
+  &-7 {
+    width: 4px;
+    animation: g-line 0.24s infinite alternate;
+  }
+
+  &-8 {
+    width: 14px;
+    animation: h-line 0.20s infinite alternate;
+  }
+
+  &-9 {
+    width: 6px;
+    animation: i-line 0.25s infinite alternate;
+  }
+
+  &-10 {
+    width: 4px;
+    animation: j-line 0.22s infinite alternate;
   }
 }
-@keyframes spin-r {
+
+@keyframes a-line {
   0% {
-    transform: rotate(720deg);
+    height: 0;
   }
   100% {
-    transform: rotate(0deg);
+    height: 10px;
   }
 }
-@keyframes spin2 {
+
+@keyframes b-line {
   0% {
-    transform: rotate(0deg);
+    height: 12px;
   }
   100% {
-    transform: rotate(720deg);
+    height: 30px;
   }
 }
-@keyframes spin3 {
+
+@keyframes c-line {
   0% {
-    transform: rotate(0deg);
+    height: 10px;
   }
   100% {
-    transform: rotate(1080deg);
+    height: 24px;
+  }
+}
+
+@keyframes d-line {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 16px;
+  }
+}
+
+@keyframes e-line {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 10px;
+  }
+}
+
+@keyframes f-line {
+  0% {
+    height: 10px;
+  }
+  100% {
+    height: 24px;
+  }
+}
+
+@keyframes g-line {
+  0% {
+    height: 6px;
+  }
+  100% {
+    height: 18px;
+  }
+}
+
+@keyframes h-line {
+  0% {
+    height: 12px;
+  }
+  100% {
+    height: 30px;
+  }
+}
+
+@keyframes i-line {
+  0% {
+    height: 10px;
+  }
+  100% {
+    height: 24px;
+  }
+}
+
+@keyframes j-line {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 10px;
   }
 }
