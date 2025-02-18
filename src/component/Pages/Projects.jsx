@@ -17,6 +17,7 @@ const url = "https://qdz.guk.temporary.site/wp-api/wp-json/acf/v3/project?per_pa
 const Projects = () => {
     const filters = useCards((store) => store.filters);
     const sortFunction = useCards((store) => store.sortFunction);
+    const setProjectsData = useCards((store) => store.setProjectsData);
     const [filter, setFilter] = useState("all");
     const [postsToShow, setPostsToShow] = useState([]);
     const [projects, setProjects] = useState([])
@@ -72,6 +73,8 @@ const Projects = () => {
             const slicedPosts = filteredProjects.slice(start, end);
             arrayForHoldingPosts = [...arrayForHoldingPosts, ...slicedPosts];
             setPostsToShow(arrayForHoldingPosts);
+            setProjectsData(arrayForHoldingPosts);
+            localStorage.setItem("projects", JSON.stringify(arrayForHoldingPosts))
         };
 
         const handleFilter = (filter) => {
@@ -162,10 +165,23 @@ const Projects = () => {
     return (
         <article className="article projects">
             <Helmet>
-                <title>Our projects</title>
+                <title>Our projects - The kroot</title>
                 <meta content="Our projects" property="og:title"/>
                 <meta content="Our projects" property="twitter:title"/>
                 <meta name="description" content="Project list The Kroot company"/>
+                <meta
+                    name="description"
+                    content="Explore the diverse range of projects by The Kroot, a company specializing in Unreal Engine, Animation, VFX, and more. Discover our latest work in TV shows, music videos, and commercials."
+                />
+                <meta
+                    name="keywords"
+                    content="Unreal Engine, VFX, Animation, Projects, The Kroot, TV shows, Commercials, Music videos"
+                />
+                <meta property="og:description" content="Explore the diverse range of projects by The Kroot, including work for TV shows, music videos, and commercials." />
+                <meta property="og:image" content="https://www.thekroot.com/logo512.png" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.thekroot.com/projects/" />
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <section className="container-80 relative p_top">
                 <h1 className="h1">Projects</h1>

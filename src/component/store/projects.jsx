@@ -15,7 +15,7 @@ export const useCards = create((set, get) => ({
         projects: [],
         currentPage: 1,
         setProjectsData: (data) => {
-            set((state) => ({projects: [...state.projects, ...data]}));
+            set((state) => ({projects: [...data]}));
         },
         sortFunction: (a, b) => {
             if (a.id <= 18) {

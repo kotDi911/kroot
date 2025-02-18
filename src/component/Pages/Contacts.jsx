@@ -75,10 +75,23 @@ const Contacts = () => {
     return (
         <article className="article contacts">
             <Helmet>
-                <title>Contacts</title>
+                <title>Contacts - The Kroot</title>
                 <meta content="Contacts the Kroot" property="og:title"/>
                 <meta content="Contacts the Kroot" property="twitter:title"/>
-                <meta name="description" content="Contacts The Kroot company" />
+                <meta
+                    name="description"
+                    content="Get in touch with The Kroot. Contact information for Tom Ash (Executive Producer) in Los Angeles and Julia Lusenko (Producer, CFO) in Ukraine."
+                />
+                <meta
+                    name="keywords"
+                    content="The Kroot, Contact, VFX, Animation, Executive Producer, Producer, CFO, Unreal Engine, Creative Services"
+                />
+
+                <meta property="og:description" content="Contact The Kroot team: Tom Ash (Executive Producer) in Los Angeles and Julia Lusenko (Producer, CFO) in Ukraine." />
+                <meta property="og:image" content="https://www.thekroot.com/logo512.png" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.thekroot.com/contacts/" />
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <section className="container-64">
                 <div className="contacts__grid">

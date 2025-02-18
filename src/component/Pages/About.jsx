@@ -11,10 +11,19 @@ const About = () => {
     return (
         <article className="article about">
             <Helmet>
-                <title>About us</title>
+                <title>About us - The Kroot</title>
                 <meta content="About The Kroot company" property="og:title"/>
                 <meta content="About The Kroot company" property="twitter:title"/>
                 <meta name="description" content="About The Kroot company"/>
+                <meta
+                    name="keywords"
+                    content="Unreal Engine, VFX, Animation, TV shows, Music videos, Commercials, Character Animation, Traditional Animation"
+                />
+                <meta property="og:description" content="About The Kroot company"/>
+                <meta property="og:image" content="https://www.thekroot.com/logo512.png" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.thekroot.com/about/" />
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <section className="container-80">
                 <h1 className="h1 black">

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import RouterApp from "./component/router/RouterApp";
 import {createBrowserRouter as Router, RouterProvider} from "react-router-dom";
-import Home, {loaderHome} from "./component/Pages/Home";
+import Home from "./component/Pages/Home";
 import About from "./component/Pages/About";
 import ErrorPage from "./component/Pages/ErrorPage";
 import Services from "./component/Pages/Services";
@@ -35,6 +35,7 @@ const router = Router([
     },
     {
         path: "/projects",
+        // element: <RouterApp props={<Projects/>}/>,
         children: [
             {
                 path: "",
@@ -42,6 +43,35 @@ const router = Router([
             },
             {
                 path: ":name",
+                // loader: ({ request }) =>
+                //     fetch('https://qdz.guk.temporary.site/wp-api/wp-json/acf/v3/projects', {
+                //         signal: request.signal,
+                //     }),
+                loader: ({params}) => {
+                    const projects = JSON.parse(localStorage.getItem("projects"))
+                    let state;
+                    const project = projects.filter( item => {
+                                    if(item.project_name.replace(/\s+/g, '').toLowerCase() === params.name){
+                                        state = item
+                                    }
+                                })
+                    return state;
+                },
+                // loader: (async ({request,params}) => {
+                //
+                //     const res = await fetch('https://qdz.guk.temporary.site/wp-api/wp-json/acf/v3/priority_project?per_page=18', {
+                //         signal: request.signal,
+                //     });
+                //     const data = await res.json();
+                //     const dataProjects = data.map(res => res.acf)
+                //     let d
+                //     const detail = dataProjects.filter( item => {
+                //         if(item.project_name.replace(/\s+/g, '').toLowerCase() === params.name){
+                //             d = item
+                //         }
+                //     })
+                //     return d;
+                // }),
                 element: <RouterApp props={<Details/>}/>,
             },
         ],

@@ -8,30 +8,26 @@ import {useEffect, useState} from "react";
 const VideoCard = ({props}) => {
     const size = useSize((store) => store.size);
     const {name, btnText, video, videoM, videoD, poster, url} = props;
-    const [mVideo, setMVideo] = useState("");
-    const [dVideo, setDVideo] = useState("");
+    const [mVideo, setMVideo] = useState(no_video_m);
+    const [dVideo, setDVideo] = useState(no_video_d);
+
     useEffect(() => {
         if (video) {
             setDVideo(video + "/" + name + "_desktop.mp4")
             setMVideo(video + "/" + name + "_mobile.mp4")
-        } else {
-            if (videoM && videoD) {
-                setDVideo(videoD)
-                setMVideo(videoM)
-            } else {
-                !url && setDVideo(no_video_d)
-                !url && setMVideo(no_video_m)
-            }
+        } else if (videoM && videoD) {
+            setDVideo(videoD);
+            setMVideo(videoM);
+        } else if (!url) {
+            // Если нет видео и ссылки, устанавливаем видео по умолчанию
+            setDVideo(no_video_d);
+            setMVideo(no_video_m);
         }
-    }, [])
-    // console.log(url)
-    // console.log(dVideo)
-    console.log(mVideo)
-    console.log(video, "video")
-
+    }, [video, videoM, videoD, name, url]);
 
     return (
-        <Link to={url === "" ? "/error" : url} target="_blank"
+        <Link to={url === "" ? "/error" : url}
+              target="_blank"
               className={`${url === "" ? "disabled-link" : ""} main__card flex end relative hover__card`}
               style={{gridArea: name ? name : ""}}
         >

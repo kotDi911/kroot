@@ -9,7 +9,8 @@ const GetInTouchForm = ({sentMail}) => {
         values,
         errors,
         touched,
-        handleBlur
+        handleBlur,
+        isSubmitting
     } = useFormik({
         initialValues: {
             firstName: "",
@@ -24,61 +25,57 @@ const GetInTouchForm = ({sentMail}) => {
                 .min(2, "First name must be min 2 letters")
                 .max(15, "First name must be max 15 letters")
                 .matches(/^[a-zA-Z -]+$/, "First name can only contain latin letters")
-                .required("First name is a required"),
+                .required("First name is required"),
             lastName: Yup.string()
                 .min(2, "Last name must be min 2 letters")
                 .max(15, "Last name must be max 15 letters")
                 .matches(/^[a-zA-Z -]+$/, "Last name can only contain latin letters")
-                .required("Last name is a required"),
+                .required("Last name is required"),
             email: Yup.string()
-                .email("Email must be a valid: user@exemple.com")
-                .required("Email is a required"),
+                .email("Email must be valid: user@exemple.com")
+                .required("Email is required"),
             phone: Yup.string()
-                .matches(/^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/, "Enter valid phone number. +1234567890"),
+                .matches(
+                    /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/,
+                    "Enter valid phone number. +1234567890"
+                ),
             company: Yup.string()
-                .matches(/^[\w -]+$/, "Company name can only contain: letters, numbers, space, and symbols:'-','_'"),
+                .matches(
+                    /^[\w -]+$/,
+                    "Company name can only contain: letters, numbers, space, and symbols:'-','_'"
+                ),
             message: Yup.string()
                 .max(500, "Max letter in message must be 500")
-                .matches(/^[\w.,?!\/\\&():;"' -]+$/, "You can use: letters, numbers and next symbols: .,?!\/\\&():;\"' -"),
+                .matches(
+                    /^[\w.,?!\/\\&():;"' -]+$/,
+                    "You can use: letters, numbers and next symbols: .,?!\/\\&():;\"' -"
+                ),
         }),
         onSubmit: async ({firstName, lastName, email, phone, company, message}, {resetForm}) => {
             try {
                 const data = new FormData()
-                data.append("firstName", `${firstName}`)
-                data.append("lastName", `${lastName}`)
-                data.append("email", `${email}`)
-                data.append("phone", `${phone}`)
-                data.append("company", `${company}`)
-                data.append("message", `${message}`)
+                data.append("firstName", firstName)
+                data.append("lastName", lastName)
+                data.append("email", email)
+                data.append("phone", phone)
+                data.append("company", company)
+                data.append("message", message)
 
-                // console.log(data)
                 const res = await fetch("send_mail.php", {
                     method: "POST",
                     body: data,
                 })
-                // response.then(res => {
                 if (res.ok) {
-                    // res.then(response => {
-                        res.json().then(data => {
-                            if (data.result === "success") {
-                                sentMail(data.status, data.result)
-                            } else {
-                                sentMail(data.status, data.result)
-                            }
-                            resetForm()
-                            console.log(data)
-                        })
-                    // })
+                    const data = await res.json();
+                    sentMail(data.status, data.result);
+                    resetForm();
                 } else {
-                    //page 404
                     alert(res.status + " " + res.statusText)
-                    //sentMail(res.status, res.result)
                 }
                 console.log("res", res)
                 console.log("status msg", res.status, "result msg", res.statusText)
-                // })
             } catch (err) {
-                console.log(err)
+                console.error(err)
             }
         }
     })
@@ -148,7 +145,9 @@ const GetInTouchForm = ({sentMail}) => {
             <div className="relative">
                 {touched.message && errors.message ? (<span className="input__err">{errors.message}</span>) : null}
             </div>
-            <button className="submit" type="submit">Submit</button>
+            <button className="submit" type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Submit"}
+            </button>
         </form>
     )
 }

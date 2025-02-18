@@ -13,6 +13,11 @@ const Generation = () => {
                 <meta content="Generation Kroot" property="og:title"/>
                 <meta content="Generation Kroot" property="twitter:title"/>
                 <meta name="description" content="Generation Kroot"/>
+                <meta property="og:description" content="Generation Kroot" />
+                <meta property="og:image" content="https://www.thekroot.com/logo512.png" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.thekroot.com/generation_kroot/" />
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <PreviewSection/>
             <KrootSection/>

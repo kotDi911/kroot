@@ -14,11 +14,12 @@ const ProjectsCard = ({props}) => {
         options,
         buttons_url,
     } = props;
-    const button = useMemo(()=>{
-        return(
-            <Button color={true}/>
-        )
-    },[])
+    // console.log(props)
+    // const button = useMemo(()=>{
+    //     return(
+    //         <Button color={true}/>
+    //     )
+    // },[])
     const folderUrl = projectsUrl+path
     const video = `${folderUrl}/video/preview.mp4`;
     const poster = `${folderUrl}/video/poster.jpg`;
@@ -38,6 +39,7 @@ const ProjectsCard = ({props}) => {
                               options,
                           }
                       }
+                      aria-label={`Go to project ${project_name}`}
                 >
                     <div className="video-cont">
                         <video
@@ -57,7 +59,8 @@ const ProjectsCard = ({props}) => {
                             <div className="flex center projects__text">
                                 <span className="fs-20 white">{project_name.toUpperCase()}</span>
                             </div>
-                            {button}
+                            {/*{button}*/}
+                            <Button color={true}/>
                         </div>
                     </div>
                 </Link>

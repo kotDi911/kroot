@@ -28,6 +28,11 @@ const GetInTouch = () => {
                 <meta content="Get in touch" property="og:title"/>
                 <meta content="Get in touch" property="twitter:title"/>
                 <meta name="description" content="Get in touch with The Kroot company"/>
+                <meta property="og:description" content="Get in touch with The Kroot company" />
+                <meta property="og:image" content="https://www.thekroot.com/logo512.png" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.thekroot.com/get_in_touch/" />
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <section className="container-48 relative">
                 <h1 className="h1">Get in <span className="gray">touch</span></h1>
