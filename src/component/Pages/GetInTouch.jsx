@@ -1,6 +1,6 @@
 import Social from "../Social";
 import GetInTouchForm from "../Form";
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import done from "../../assets/ico/done.svg"
 import notDone from "../../assets/ico/notDone.svg"
 import {Helmet} from "react-helmet-async";
@@ -9,18 +9,22 @@ const GetInTouch = () => {
     const [isActive, setIsActive] = useState(false)
     const [message, setMessage] = useState("")
     const [doneImg, setDoneImg] = useState(done)
+
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsActive(false)
-        }, 2000);
-        return () => clearTimeout(timer);
+        if (isActive) {
+            const timer = setTimeout(() => {
+                setIsActive(false);
+            }, 2000);
+            return () => clearTimeout(timer);
+        }
     }, [isActive]);
 
-    const sentMail = (msg, res) => {
-        setIsActive(true)
-        setMessage(msg)
-        res === "success" ? setDoneImg(done) : setDoneImg(notDone)
-    }
+    const sentMail = useCallback((msg, res) => {
+        setIsActive(true);
+        setMessage(msg);
+        setDoneImg(res === "success" ? done : notDone);
+    }, []);
+
     return (
         <article className="article get-in-touch">
             <Helmet>

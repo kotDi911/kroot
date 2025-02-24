@@ -1,40 +1,34 @@
 import {ReactCompareSlider, ReactCompareSliderImage} from "react-compare-slider";
+import {useMemo} from "react";
 
 const Pagination = ({currentPage, handleSetPage, images, path}) => {
+
     const dots = () => {
-        let ul = [];
-        let li;
-        for (let i = 0; i <= images - 1; i++) {
-            li = <div className="carousel__dot-cont" onClick={() => handleSetPage(i)} key={i}>
-                <div className={`${currentPage === i ? "dot-active" : ""} carousel__dot`}></div>
+        return Array.from({ length: images }).map((_, i) => (
+            <div className="carousel__dot-cont" onClick={() => handleSetPage(i)} key={i}>
+                <div className={`${currentPage === i ? "dot-active" : ""} carousel__dot`} />
             </div>
-
-            ul = [...ul, li]
-        }
-        return ul
-    }
-
-    const getGalleryImages = () => {
-        let urls = []
-        let url = {}
-        for (let i = 0; i < images; i++) {
-            const before = path + "/images/gallery/before" + (i + 1) + ".jpg";
-            const beforePoster = path + "/images/gallery/before_poster" + (i + 1) + ".jpg"
-            const altBefore = "Before image" + (i + 1)
-            const after = path + "/images/gallery/after" + (i + 1) + ".jpg"
-            const afterPoster = path + "/images/gallery/after_poster" + (i + 1) + ".jpg"
-            const altAfter ="After image" + (i + 1)
-            url = {before, beforePoster, altBefore, after, afterPoster, altAfter}
-            urls = [...urls, url]
-        }
-        return urls
-    }
+        ));
+    };
+    const galleryImages = useMemo(() => {
+        return Array.from({ length: images }).map((_, i) => {
+            const before = `${path}/images/gallery/before${i + 1}.jpg`;
+            const beforePoster = `${path}/images/gallery/before_poster${i + 1}.jpg`;
+            const altBefore = `Before image ${i + 1}`;
+            const after = `${path}/images/gallery/after${i + 1}.jpg`;
+            const afterPoster = `${path}/images/gallery/after_poster${i + 1}.jpg`;
+            const altAfter = `After image ${i + 1}`;
+            return { before, beforePoster, altBefore, after, afterPoster, altAfter };
+        });
+    }, [images, path]);
 
     return (
         <div className="carousel relative">
             <div className="carousel__list relative">
                 <div className="carousel__item relative">
-                    {getGalleryImages().map((item, i) => i === currentPage &&
+                    {galleryImages.map((item, i) => i === currentPage
+                        &&
+                        // ?
                         <ReactCompareSlider
                             key={i}
                             className="gallery__card slide"
@@ -47,7 +41,9 @@ const Pagination = ({currentPage, handleSetPage, images, path}) => {
                             handle={<></>}
                             style={{width: "100%"}}
                         />
-                    )}
+                    )
+                    // : null
+                    }
                 </div>
             </div>
             <div className="carousel__dots flex absolute w-100">

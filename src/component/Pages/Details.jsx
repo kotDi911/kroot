@@ -1,4 +1,3 @@
-import {useLocation} from "react-router-dom";
 import HomeCard from "../cards/HomeCard";
 import VideoCard from "../cards/VideoCard";
 import Gallery from "../cards/Details/Gallery";
@@ -11,7 +10,6 @@ import {useUrl} from "../store/Urls";
 import {useMemo} from "react";
 
 const Details = () => {
-    // const {state} = useLocation()
     const projectsUrl = useUrl((store) => store.projectsUrl)
     const project = useLoaderData();
 

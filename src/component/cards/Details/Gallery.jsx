@@ -1,49 +1,30 @@
-import {useEffect, useMemo, useState} from "react";
+import {useEffect, useState} from "react";
 import Pagination from "../../Pagination";
 
 const Gallery = ({images, path}) => {
     const [currentPage, setCurrentPage] = useState(0);
     const [pause, setPause] = useState(true);
-    const [count, setCount] = useState(0);
-
-    const play = () => setTimeout(() => {
-        setCurrentPage((prevCurrentPage) => {
-            if (prevCurrentPage >= images - 1) {
-                return 0;
-            } else {
-                return prevCurrentPage + 1;
-            }
-        });
-    }, 0);
 
     useEffect(() => {
-        const timeout = setInterval(() => {
-            setCount((prevCount) => prevCount +1);
-        }, 2000);
+        if (pause){
+            const timeout = setTimeout(() => {
+                setCurrentPage((prevCurrentPage) =>
+                    prevCurrentPage >= images - 1 ? 0 : prevCurrentPage + 1
+                );
+            }, 2000); // Задержка 2 секунды
+            return () => clearTimeout(timeout); // Очистка таймера при каждом рендере
+        }
+    }, [pause, currentPage, images]);
 
-        return () => clearInterval(timeout)
-    }, []);
-
-    useEffect(() => {
-        pause && play()
-        return () => clearTimeout(play)
-    }, [count]);
 
     const previousPage = () => {
-        if (currentPage >= 1) {
-            setCurrentPage(currentPage - 1)
-        } else {
-            setCurrentPage(images - 1);
-        }
+        setCurrentPage((prev) => (prev > 0 ? prev - 1 : images - 1));
     };
 
     const nextPage = () => {
-        if (currentPage >= images - 1) {
-            setCurrentPage(0)
-        } else {
-            setCurrentPage(currentPage + 1);
-        }
+        setCurrentPage((prev) => (prev >= images - 1 ? 0 : prev + 1));
     };
+
     const handleSetPage = (page) => {
         setCurrentPage(page)
     }
