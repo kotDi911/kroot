@@ -7,17 +7,17 @@ const social = [
     {
         id: 1,
         name: "instagramm",
-        url: "https://www.instagram.com/"
+        url: "https://www.instagram.com/thekroot.vfx/"
     },
     {
         id: 2,
         name: "facebook",
-        url: "https://www.facebook.com/"
+        url: "https://www.facebook.com/thekroot/"
     },
     {
         id: 3,
         name: "youtube",
-        url: "https://www.youtube.com/"
+        url: "https://www.youtube.com/@thekroot"
     },
 ]
 const Social =({props})=>{

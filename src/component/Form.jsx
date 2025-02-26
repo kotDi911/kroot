@@ -72,8 +72,6 @@ const GetInTouchForm = ({sentMail}) => {
                 } else {
                     alert(res.status + " " + res.statusText)
                 }
-                console.log("res", res)
-                console.log("status msg", res.status, "result msg", res.statusText)
             } catch (err) {
                 console.error(err)
             }

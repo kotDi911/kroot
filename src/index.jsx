@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import RouterApp from "./component/router/RouterApp";
-import {createBrowserRouter as Router, RouterProvider} from "react-router-dom";
+import {createBrowserRouter as Router, Navigate, RouterProvider} from "react-router-dom";
 import Home from "./component/Pages/Home";
 import About from "./component/Pages/About";
 import ErrorPage from "./component/Pages/ErrorPage";
@@ -20,7 +20,6 @@ const router = Router([
     {
         path: "/",
         element: <RouterApp props={<Home/>}/>,
-        // loader: loaderHome,
         errorElement: <RouterApp props={<ErrorPage/>}/>,
     },
     {
@@ -35,7 +34,6 @@ const router = Router([
     },
     {
         path: "/projects",
-        // element: <RouterApp props={<Projects/>}/>,
         children: [
             {
                 path: "",
@@ -43,10 +41,6 @@ const router = Router([
             },
             {
                 path: ":name",
-                // loader: ({ request }) =>
-                //     fetch('https://qdz.guk.temporary.site/wp-api/wp-json/acf/v3/projects', {
-                //         signal: request.signal,
-                //     }),
                 loader: ({params}) => {
                     const projects = JSON.parse(localStorage.getItem("projects"))
                     let state;
@@ -57,21 +51,6 @@ const router = Router([
                                 })
                     return state;
                 },
-                // loader: (async ({request,params}) => {
-                //
-                //     const res = await fetch('https://qdz.guk.temporary.site/wp-api/wp-json/acf/v3/priority_project?per_page=18', {
-                //         signal: request.signal,
-                //     });
-                //     const data = await res.json();
-                //     const dataProjects = data.map(res => res.acf)
-                //     let d
-                //     const detail = dataProjects.filter( item => {
-                //         if(item.project_name.replace(/\s+/g, '').toLowerCase() === params.name){
-                //             d = item
-                //         }
-                //     })
-                //     return d;
-                // }),
                 element: <RouterApp props={<Details/>}/>,
             },
         ],
@@ -103,15 +82,15 @@ const router = Router([
         element: <RouterApp props={<GetInTouch/>}/>,
         errorElement: <RouterApp props={<ErrorPage/>}/>,
     },
-    // {
-    //     path: "/error",
-    //     errorElement: <RouterApp props={<ErrorPage/>}/>,
-    // },
-    // {
-    //     path: "*",
-    //     element: <Navigate to='/' replace/>,
-    //     errorElement: <RouterApp props={<ErrorPage/>}/>,
-    // }
+    {
+        path: "/error",
+        element: <RouterApp props={<ErrorPage/>}/>,
+    },
+    {
+        path: "*",
+        element: <Navigate to='/error' replace/>,
+        errorElement: <RouterApp props={<ErrorPage/>}/>,
+    }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

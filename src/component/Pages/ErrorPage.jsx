@@ -1,25 +1,30 @@
-import { useRouteError } from "react-router-dom";
+import {useNavigate, useRouteError} from "react-router-dom";
 import {Helmet} from "react-helmet";
+import React, {useEffect} from "react";
 
-const ErrorPage = (err)=> {
+const ErrorPage = () => {
     const error = useRouteError();
-    console.error(err);
+    const navigate = useNavigate();
     console.error(error);
+    useEffect(()=>{
+        !error && navigate("/");
+    })
 
     return (
-        <div id="error-page" className="flex col center">
-            <Helmet>
-                <title>Error</title>
-            </Helmet>
-            <h2 className="h2 black">Oops!</h2>
-            <p className="h1 black">
-                <i>{error.status}</i>
-            </p>
-            <p className="regular black">Sorry, an unexpected error has occurred.</p>
-            <p className="regular black">
-                <i>{error.statusText || error.message}</i>
-            </p>
-        </div>
+        error &&
+            <div id="error-page" className="flex col center">
+                <Helmet>
+                    <title>Error</title>
+                </Helmet>
+                <h2 className="h2 black">Oops!</h2>
+                <p className="h1 black">
+                    <i>{error.status}</i>
+                </p>
+                <p className="regular black">Sorry, an unexpected error has occurred.</p>
+                <p className="regular black">
+                    <i>{error.statusText || error.message}</i>
+                </p>
+            </div>
     );
 }
 export default ErrorPage

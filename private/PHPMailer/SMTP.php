@@ -131,17 +131,17 @@ class SMTP
      * Options:
      * * `echo` Output plain-text as-is, appropriate for CLI
      * * `html` Output escaped, line breaks converted to `<br>`, appropriate for browser output
-     * * `error_log` Output to error log as configured in php.ini
+     * * `error_log` Output to error log as configured in PHPMailer.ini
      * Alternatively, you can provide a callable expecting two params: a message string and the debug level:
      *
-     * ```php
+     * ```PHPMailer
      * $smtp->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
      * ```
      *
      * Alternatively, you can pass in an instance of a PSR-3 compatible logger, though only `debug`
      * level output is used:
      *
-     * ```php
+     * ```PHPMailer
      * $mail->Debugoutput = new myPsr3Logger;
      * ```
      *
@@ -638,7 +638,7 @@ class SMTP
         //The following borrowed from
         //http://php.net/manual/en/function.mhash.php#27225
 
-        //RFC 2104 HMAC implementation for php.
+        //RFC 2104 HMAC implementation for PHPMailer.
         //Creates an md5 HMAC.
         //Eliminates the need to install mhash to compute a HMAC
         //by Lance Rushing
@@ -1016,7 +1016,7 @@ class SMTP
             //Cut off error code from each response line
             $detail = preg_replace(
                 "/{$code}[ -]" .
-                ($code_ex ? str_replace('.', '\\.', $code_ex) . ' ' : '') . '/m',
+                ($code_ex ? str_replace('.', '\\.', $code_ex) . ' SMTP.php' : '') . '/m',
                 '',
                 $this->last_reply
             );

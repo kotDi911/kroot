@@ -15,7 +15,7 @@ export const useServiceCard = create(() => ({
                 {
                     id:1,
                     text:"3D modeling",
-                    url:"https://www.youtube.com/",
+                    url:"",
                 },
                 {
                     id:5,
@@ -25,7 +25,7 @@ export const useServiceCard = create(() => ({
                 {
                     id:6,
                     text:"Particular simulation",
-                    url:"https://www.youtube.com/",
+                    url:"",
                 },
                 {
                     id:7,
@@ -48,7 +48,7 @@ export const useServiceCard = create(() => ({
                 {
                     id:2,
                     text:"Retouch face",
-                    url:"https://www.youtube.com/",
+                    url:"",
                 },
                 {
                     id:3,
@@ -58,7 +58,7 @@ export const useServiceCard = create(() => ({
                 {
                     id:4,
                     text:"From old to young",
-                    url:"https://www.youtube.com/",
+                    url:"",
                 },
             ]
         },
@@ -71,17 +71,17 @@ export const useServiceCard = create(() => ({
                 {
                     id:1,
                     text:"Rotoscoping",
-                    url:"https://www.youtube.com/",
+                    url:"https://www.youtube.com/watch?v=6e5FLdlb_-k&ab_channel=TheKROOT",
                 },
                 {
                     id:2,
                     text:"Matchmove",
-                    url:"https://www.youtube.com/",
+                    url:"https://www.youtube.com/watch?v=PjRnq9_Emhs&ab_channel=TheKROOT",
                 },
                 {
                     id:3,
                     text:"Clean up",
-                    url:"",
+                    url:"https://www.youtube.com/watch?v=cedH5onBiWA&ab_channel=TheKROOT",
                 },
                 {
                     id:4,
@@ -104,7 +104,7 @@ export const useServiceCard = create(() => ({
                 {
                     id:2,
                     text:"Virtual production",
-                    url:"https://www.youtube.com/",
+                    url:"",
                 },
                 {
                     id:3,

@@ -1,52 +1,52 @@
-import {useOutletContext} from "react-router";
+import {useParams} from "react-router";
 import CareerCard from "./CareerCard";
 import {useCareer} from "../../store/career";
 import {useEffect, useState} from "react";
-import {useLocation} from "react-router-dom";
+import {Loader} from "../../Loader";
 
 const CareerCards = () => {
-    const {pathname} = useLocation();
+    const { name } = useParams();
     const fetchVacancy = useCareer((store) => store.fetchVacancy);
     const vacancy = useCareer((store) => store.vacancy);
     const us = useCareer((store) => store.us);
     const ua = useCareer((store) => store.ua);
     const eu = useCareer((store) => store.eu);
     const [cards, setCards] = useState([]);
+    const [loading, setLoading] = useState(false);
 
-    useEffect(()=> {
-        if(vacancy.length <= 0){
-            fetchVacancy().then(() => {
-            })
+    useEffect(() => {
+        if (vacancy.length === 0) {
+            setLoading(true);
+            fetchVacancy().finally(() => setLoading(false));
         }
-        handleFilter()
-    }, [fetchVacancy, vacancy])
+    }, [name, vacancy, fetchVacancy]);
 
-
-    useEffect(()=>{
-       handleFilter()
-    }, [pathname])
-
-    const handleFilter =() =>{
-        switch (pathname) {
-            case "/career/us":
+    useEffect(() => {
+        switch (name) {
+            case "us":
                 setCards(us);
                 break;
-            case "/career/ua":
+            case "ua":
                 setCards(ua);
                 break;
-            case "/career/eu":
+            case "eu":
                 setCards(eu);
                 break;
             default:
+                setCards([]);
                 break;
         }
-    }
+    }, [name, us, ua, eu]);
 
     return (
         <div className="career__cards">
-            {
-                cards.map((card, i) => <CareerCard key={i} props={card}/>)
-            }
+            {loading ? (
+                <Loader/>
+            ) : cards.length > 0 ? (
+                cards.map((card, i) => <CareerCard key={i} {...card} />) // Передаем данные в CareerCard
+            ) : (
+                <CareerCard err={"No vacancies available."}/>
+            )}
         </div>
     )
 }

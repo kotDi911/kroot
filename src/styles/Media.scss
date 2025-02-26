@@ -40,6 +40,9 @@
   .home__grid, .about__grid-cards{
     grid-auto-rows: 18rem;
   }
+  .images-cont {
+    padding: 1.5rem 1rem;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -309,6 +312,12 @@
     width: .65rem;
     height: .65rem;
   }
+  .images-cont {
+    padding: 1rem 0.8rem;
+  }
+  .img__main{
+    min-height: 14rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -396,6 +405,12 @@
   }
   .gallery__card {
     height: 14rem;
+  }
+  .images-cont {
+    padding: 0.8rem 0.8rem;
+  }
+  .img__main{
+    min-height: 10rem;
   }
 }
 

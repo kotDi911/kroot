@@ -19,10 +19,10 @@ const GetInTouch = () => {
         }
     }, [isActive]);
 
-    const sentMail = useCallback((msg, res) => {
+    const sentMail = useCallback((status, msg) => {
         setIsActive(true);
         setMessage(msg);
-        setDoneImg(res === "success" ? done : notDone);
+        setDoneImg(status === "success" ? done : notDone);
     }, []);
 
     return (

@@ -16,12 +16,14 @@ export const useCareer = create((set, get) => ({
           if (!resVacancy.ok) throw new Response('Field...', {status: 404})
           const data = await resVacancy.json();
           const vac = data.map(res => res.acf)
-          set({vacancy: [vac]})
-          set({us: vac.filter(item => item.nav === "US" && item)})
-          set({ua: vac.filter(item => item.nav === "UA" && item)})
-          set({eu: vac.filter(item => item.nav === "EU" && item)})
+          set({
+              vacancy: vac,
+              us: vac.filter((item) => item.nav === "US"),
+              ua: vac.filter((item) => item.nav === "UA"),
+              eu: vac.filter((item) => item.nav === "EU"),
+          });
       }catch (err){
-
+          console.error('Error fetching vacancies:', err);
       }
     },
     us: [],
