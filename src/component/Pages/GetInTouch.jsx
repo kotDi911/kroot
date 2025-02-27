@@ -3,8 +3,8 @@ import GetInTouchForm from "../Form";
 import {useCallback, useEffect, useState} from "react";
 import {Helmet} from "react-helmet-async";
 
-const done = "/assets/icon/done.svg"
-const notDone = "/assets/icon/notDone.svg"
+const done = process.env.PUBLIC_URL + "/assets/icon/done.svg"
+const notDone = process.env.PUBLIC_URL + "/assets/icon/notDone.svg"
 
 const GetInTouch = () => {
     const [isActive, setIsActive] = useState(false)

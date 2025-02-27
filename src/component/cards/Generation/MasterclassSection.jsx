@@ -4,7 +4,7 @@ import {useGeneration} from "../../store/generation";
 import TextP from "../TextP";
 
 const registration = "https://forms.gle/Dshcz75zEU3vJ9f17";
-const khalid = "/assets/g_kroot/Khalid_Satelite.png";
+const khalid = process.env.PUBLIC_URL + "/assets/g_kroot/Khalid_Satelite.png";
 
 const MasterclassSection = () => {
     const masterclassCards = useGeneration((store) => store.masterclassCards);

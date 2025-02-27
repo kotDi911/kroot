@@ -2,8 +2,8 @@ import Social from "../../Social";
 import {useEffect, useState} from "react";
 
 const team = process.env.PUBLIC_URL + "/assets/images/team/team.jpg";
-const team2 = "/assets/images/team/team5x6.jpg";
-const team3 = "/assets/images/team/team3x10.jpg";
+const team2 = process.env.PUBLIC_URL + "/assets/images/team/team5x6.jpg";
+const team3 = process.env.PUBLIC_URL + "/assets/images/team/team3x10.jpg";
 
 const AboutTeam = () => {
     const width = window.innerWidth;

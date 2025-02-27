@@ -3,12 +3,12 @@ import TextCard from "../cards/Contacts/TextCard";
 import PhotoCard from "../cards/Contacts/PhotoCard";
 import {Helmet} from "react-helmet-async";
 
-const tel = "/assets/icon/social/phone.svg";
-const mail = "/assets/icon/social/mail.svg";
-const T = "/assets/images/team/Tomash_Kuzmytskyi.png";
-const J = "/assets/images/team/Julia_Lusenko.png";
-const telAnatoliy = "/assets/images/contacts/anatoliy.svg";
-const telJulia = "/assets/images/contacts/julia.svg";
+const tel = process.env.PUBLIC_URL + "/assets/icon/social/phone.svg";
+const mail = process.env.PUBLIC_URL + "/assets/icon/social/mail.svg";
+const T = process.env.PUBLIC_URL + "/assets/images/team/Tomash_Kuzmytskyi.png";
+const J = process.env.PUBLIC_URL + "/assets/images/team/Julia_Lusenko.png";
+const telAnatoliy = process.env.PUBLIC_URL + "/assets/images/contacts/anatoliy.svg";
+const telJulia = process.env.PUBLIC_URL + "/assets/images/contacts/julia.svg";
 
 const card1 = [
     {

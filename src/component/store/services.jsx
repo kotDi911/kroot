@@ -1,8 +1,8 @@
 import {create} from 'zustand'
-const cgi = "/assets/icon/services/cgi_icon.png";
-const beauty = "/assets/icon/services/beauty_icon.png";
-const vfx = "/assets/icon/services/vfx_icon.png";
-const unreal = "/assets/icon/services/ue_icon.png";
+const cgi = process.env.PUBLIC_URL + "/assets/icon/services/cgi_icon.png";
+const beauty = process.env.PUBLIC_URL + "/assets/icon/services/beauty_icon.png";
+const vfx = process.env.PUBLIC_URL + "/assets/icon/services/vfx_icon.png";
+const unreal = process.env.PUBLIC_URL + "/assets/icon/services/ue_icon.png";
 
 export const useServiceCard = create(() => ({
     services: [

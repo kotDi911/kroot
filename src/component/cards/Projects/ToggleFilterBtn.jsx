@@ -2,7 +2,7 @@ import {useState} from "react";
 import FilterBtn from "./FilterBtn";
 import {useCards} from "../../store/projects";
 
-const filterArrow = "/assets/icon/filterArrow.svg";
+const filterArrow = process.env.PUBLIC_URL + "/assets/icon/filterArrow.svg";
 
 const ToggleFilterBtn = ({filter, setFilter}) => {
     const filters = useCards((store) => store.filters)

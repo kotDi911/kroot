@@ -2,7 +2,7 @@ import {Link, useLocation} from "react-router-dom";
 import Social from "./Social";
 import {useEffect, useState} from "react";
 
-const logo = "/assets/icon/LogoMini.svg"
+const logo = process.env.PUBLIC_URL + "/assets/icon/LogoMini.svg"
 const links = [
     {name: "home"},
     {name: "about"},

@@ -1,17 +1,17 @@
 import {create} from 'zustand'
-const coldplay = "/assets/g_kroot/links/Coldplay.png";
-const justin = "/assets/g_kroot/links/Justin_Bieber.png";
-const post = "/assets/g_kroot/links/Post_Malone.png";
-const billie = "/assets/g_kroot/links/Billie_Eilish.png";
-const khalid = "/assets/g_kroot/links/Khalid.png";
-const french = "/assets/g_kroot/links/French_Montana.png";
-const russ = "/assets/g_kroot/links/RUSS.png";
-const travis = "/assets/g_kroot/links/Travis_Scott.png";
-const tomash = "/assets/images/team/Tomash_Kuzmytskyi.png"
-const julia = "/assets/images/team/Julia_Lusenko.png"
-const dmytro = "/assets/images/team/Dimas_Nekrasov.png"
-const oksana = "/assets/images/team/Oksana_Gryanka.png"
-const sergiy = "/assets/images/team/Sergii_Kravchenko.png"
+const coldplay = process.env.PUBLIC_URL + "/assets/g_kroot/links/Coldplay.png";
+const justin = process.env.PUBLIC_URL + "/assets/g_kroot/links/Justin_Bieber.png";
+const post = process.env.PUBLIC_URL + "/assets/g_kroot/links/Post_Malone.png";
+const billie = process.env.PUBLIC_URL + "/assets/g_kroot/links/Billie_Eilish.png";
+const khalid = process.env.PUBLIC_URL + "/assets/g_kroot/links/Khalid.png";
+const french = process.env.PUBLIC_URL + "/assets/g_kroot/links/French_Montana.png";
+const russ = process.env.PUBLIC_URL + "/assets/g_kroot/links/RUSS.png";
+const travis = process.env.PUBLIC_URL + "/assets/g_kroot/links/Travis_Scott.png";
+const tomash = process.env.PUBLIC_URL + "/assets/images/team/Tomash_Kuzmytskyi.png"
+const julia = process.env.PUBLIC_URL + "/assets/images/team/Julia_Lusenko.png"
+const dmytro = process.env.PUBLIC_URL + "/assets/images/team/Dimas_Nekrasov.png"
+const oksana = process.env.PUBLIC_URL + "/assets/images/team/Oksana_Gryanka.png"
+const sergiy = process.env.PUBLIC_URL + "/assets/images/team/Sergii_Kravchenko.png"
 
 const URL = "https://forms.gle/";
 export const useGeneration = create(() => ({

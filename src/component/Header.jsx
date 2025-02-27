@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 
-const logo = "/assets/icon/Logo.svg";
+const logo = process.env.PUBLIC_URL + "/assets/icon/Logo.svg";
 
 const Header = ({path}) => {
     const [isActive, setIsActive] = useState(path === "/projects" && true)

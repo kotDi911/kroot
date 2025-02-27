@@ -4,7 +4,7 @@ import {useGeneration} from "../../store/generation";
 import TextP from "../TextP";
 
 const imdb = "https://www.imdb.com/name/nm6282617/?ref_=nv_sr_srsg_0";
-const mtv = "/assets/images/mtv.jpg";
+const mtv = process.env.PUBLIC_URL +"/assets/images/mtv.jpg";
 
 const KrootSection = () => {
     const linksCards = useGeneration((store) => store.linksCards);

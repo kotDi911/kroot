@@ -1,12 +1,12 @@
 import {create} from 'zustand'
 
-const blender = "/assets/icon/apps/blender.png"
-const ae = "/assets/icon/apps/ae.png"
-const max = "/assets/icon/apps/max.png"
-const pf = "/assets/icon/apps/pf.png"
-const red = "/assets/icon/apps/red.png"
-const cinema = "/assets/icon/apps/cinema.png"
-const unreal = "/assets/icon/apps/unreal.png"
+const blender = process.env.PUBLIC_URL + "/assets/icon/apps/blender.png"
+const ae = process.env.PUBLIC_URL + "/assets/icon/apps/ae.png"
+const max = process.env.PUBLIC_URL + "/assets/icon/apps/max.png"
+const pf = process.env.PUBLIC_URL + "/assets/icon/apps/pf.png"
+const red = process.env.PUBLIC_URL + "/assets/icon/apps/red.png"
+const cinema = process.env.PUBLIC_URL + "/assets/icon/apps/cinema.png"
+const unreal = process.env.PUBLIC_URL + "/assets/icon/apps/unreal.png"
 
 export const useCareer = create((set, get) => ({
     vacancy: [],

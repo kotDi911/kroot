@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-const round = "/assets/icon/round.svg"
+const round = process.env.PUBLIC_URL + "/assets/icon/round.svg"
 
 const ServicesOptions = ({props}) => {
     const {text, url} = props;
