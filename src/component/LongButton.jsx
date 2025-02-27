@@ -15,7 +15,7 @@ const LongButton = ({text, url, style, className}) => {
             className={`${className ? className : ""} flex long-btn hover__card`}
             style={{gridArea: style}}
         >
-            <p className="fs-20 gray">{text.toUpperCase()}</p>
+            <p className="long-btn-text">{text.toUpperCase()}</p>
             <Button/>
         </Link>
     )

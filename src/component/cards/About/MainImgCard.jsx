@@ -1,4 +1,4 @@
-import mtv from "../../../assets/mtv.jpg";
+const mtv = "/assets/images/mtv.jpg";
 
 const MainImgCard = () => {
     return(

@@ -1,16 +1,15 @@
 import {create} from 'zustand'
-import cgi from "../../assets/ico/services/cgi.svg";
-import beauty from "../../assets/ico/services/beauty.svg";
-import vfx from "../../assets/ico/services/vfx.svg";
-import unreal from "../../assets/ico/services/unreal.svg";
+const cgi = "/assets/icon/services/cgi_icon.png";
+const beauty = "/assets/icon/services/beauty_icon.png";
+const vfx = "/assets/icon/services/vfx_icon.png";
+const unreal = "/assets/icon/services/ue_icon.png";
 
 export const useServiceCard = create(() => ({
     services: [
         {
             ico: cgi,
             title:"CGI",
-            desc:"You can compare it to magic! Georges Mélíés also wantedto create illusions. \n" +
-                "He was able to succeed! You’re Rad!",
+            desc:"Hollywood-grade CGI at your fingertips.",
             options: [
                 {
                     id:1,
@@ -37,14 +36,13 @@ export const useServiceCard = create(() => ({
         {
             ico: beauty,
             title:"Beauty",
-            desc:"This is the first thing a project starts with. \n" +
-                "Let's go. You’re Rad!",
+            desc:"Flawless beauty retouching for any project.",
             options: [
-                {
-                    id:1,
-                    text:"Clean up",
-                    url: "",
-                },
+                // {
+                //     id:1,
+                //     text:"Clean up",
+                //     url: "",
+                // },
                 {
                     id:2,
                     text:"Retouch face",
@@ -65,8 +63,7 @@ export const useServiceCard = create(() => ({
         {
             ico: vfx,
             title:"VFX",
-            desc:"Bouncing ball, Anticipation, Squash and Scratch .\n" +
-                "Do we need to list all of the 12 principles for you ?  You’re Rad!",
+            desc:"Seamless VFX integration – from rotoscoping to compositing.",
             options: [
                 {
                     id:1,
@@ -93,8 +90,7 @@ export const useServiceCard = create(() => ({
         {
             ico: unreal,
             title:"Unreal Engine",
-            desc:"Everything in Hollywood that is covered in gloom is a secret!\n" +
-                "It also consists of a beauty-retouch. You’re Rad!",
+            desc:"Unreal Engine-powered environments and cinematics.",
             options: [
                 {
                     id:1,

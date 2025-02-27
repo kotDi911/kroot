@@ -7,7 +7,7 @@ const AboutCardsGrid = () => {
     const numbers = useAbout((store) => store.numbers)
     const options = useAbout((store) => store.options)
     return(
-        <div className="about__grid mt-16">
+        <div className="about__grid mt-16 mb-16">
             <div className="about__card" style={{gridArea: "nominations"}}>
                 <h3 className="h3 black">Nominations</h3>
                 <CardOptions props={nominations}/>

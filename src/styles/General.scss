@@ -3,6 +3,7 @@ $text: #9ba1a0;
 $BG: #ebf1f5;
 $border: #dee2e5;
 $hover: rgba(222, 226, 229, 0.3);
+$darkgray: rgb(100, 100, 101);
 $active: rgba(222, 226, 229, 0.7);
 
 * {
@@ -206,6 +207,12 @@ a.active {
 .gray {
   color: $text;
 }
+.dark-gray {
+  color: $darkgray;
+}
+.dark-gray-bg {
+  background: $darkgray;
+}
 
 .bg {
   background: $BG;
@@ -253,7 +260,7 @@ a.active {
 }
 
 .ico-img {
-  width: max-content;
+  width: 100%;
 }
 
 .img {
@@ -349,6 +356,11 @@ a.active {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  &-text{
+    font-size: 42px;
+    font-weight: bold;
+    color: $black;
+  }
   & > .btn{
     margin-left: 0;
   }

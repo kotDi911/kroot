@@ -8,9 +8,9 @@ const ServicesCard = ({props}) => {
                 <div className="ico">
                     <img className="ico-img" src={ico} alt="icon"/>
                 </div>
-                <h3 className="h3 mt-16">{title}</h3>
+                {/*<h3 className="h3 mt-16">{title}</h3>*/}
             </div>
-            <p className="regular gray mt-16 mb-8">
+            <p className="regular black mt-16 mb-8">
                 {desc}
             </p>
             <div className="flex col">

@@ -31,8 +31,8 @@ const About = () => {
                 </h1>
                 <MainImgCard/>
                 <AboutCardsGrid/>
-                <AboutTeam/>
-                <LongButton text="join the kroot" url="career"/>
+                {/*<AboutTeam/>*/}
+                <LongButton text="join our team" url="career"/>
                 <div className="about__grid-cards mt-112">
                     {cards.map((card, i) => <HomeCard key={i} props={card}/>)}
                 </div>

@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 import Button from "../Button";
 import {useUrl} from "../store/Urls";
-import {useMemo} from "react";
 
 const ProjectsCard = ({props}) => {
     const projectsUrl = useUrl((store) => store.projectsUrl)
@@ -14,12 +13,7 @@ const ProjectsCard = ({props}) => {
         options,
         buttons_url,
     } = props;
-    // console.log(props)
-    // const button = useMemo(()=>{
-    //     return(
-    //         <Button color={true}/>
-    //     )
-    // },[])
+
     const folderUrl = projectsUrl+path
     const video = `${folderUrl}/video/preview.mp4`;
     const poster = `${folderUrl}/video/poster.jpg`;
@@ -59,7 +53,6 @@ const ProjectsCard = ({props}) => {
                             <div className="flex center projects__text">
                                 <span className="fs-20 white">{project_name.toUpperCase()}</span>
                             </div>
-                            {/*{button}*/}
                             <Button color={true}/>
                         </div>
                     </div>

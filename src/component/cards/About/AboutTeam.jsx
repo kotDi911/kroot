@@ -1,8 +1,9 @@
-import team from "../../../assets/team.jpg";
-import team2 from "../../../assets/team5x6.jpg";
-import team3 from "../../../assets/team3x10.jpg";
 import Social from "../../Social";
 import {useEffect, useState} from "react";
+
+const team = process.env.PUBLIC_URL + "/assets/images/team/team.jpg";
+const team2 = "/assets/images/team/team5x6.jpg";
+const team3 = "/assets/images/team/team3x10.jpg";
 
 const AboutTeam = () => {
     const width = window.innerWidth;

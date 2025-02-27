@@ -21,10 +21,9 @@ const Services = () => {
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <section className="container-64">
-                <h1 className="h1 black">Services</h1>
+                <h1 className="h1 black">Our VFX Solutions</h1>
                 <p className="text_details regular gray">
-                    We bring creativity to life, enhance visual appeal, and ensure a flawless execution
-                    of visual elements from start to finish
+                    High-speed, high-quality VFX solutions – 24/7
                 </p>
                 <div className="services__grid">
                     {services.map((item, i) => <ServicesCard key={i} props={item}/>)}

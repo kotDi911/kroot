@@ -1,10 +1,10 @@
 import {Link} from "react-router-dom";
-import mtv from "../../../assets/mtv.jpg";
 import LongButton from "../../LongButton";
 import {useGeneration} from "../../store/generation";
 import TextP from "../TextP";
 
 const imdb = "https://www.imdb.com/name/nm6282617/?ref_=nv_sr_srsg_0";
+const mtv = "/assets/images/mtv.jpg";
 
 const KrootSection = () => {
     const linksCards = useGeneration((store) => store.linksCards);

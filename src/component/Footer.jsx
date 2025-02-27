@@ -1,9 +1,8 @@
 import {Link, useLocation} from "react-router-dom";
-import logo from "../assets/ico/LogoMini.svg"
-
 import Social from "./Social";
 import {useEffect, useState} from "react";
 
+const logo = "/assets/icon/LogoMini.svg"
 const links = [
     {name: "home"},
     {name: "about"},

@@ -18,7 +18,7 @@ const HomeCard = ({props}) => {
                         <div className="home__card-title flex col">
                             {title && <h3 className={`title ${name === "contacts" ? "fs-56" : "h3"}`}>{title} <span
                                 className="gray">{gray}</span></h3>}
-                            {ico && <div className="ico-img"><img className="img" src={ico} alt="icon"/></div>}
+                            {ico && <div style={{width: "max-content"}}><img className="ico-img" src={ico} alt="icon"/></div>}
                             {text && <p className="gray mt-16">{text}</p>}
                         </div>
                         :

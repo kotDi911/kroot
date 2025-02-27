@@ -10,12 +10,12 @@ const links = [
     {
         name: "UA",
         path: "/ua",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci, assumenda corporis et facere in maxime molestiae nam optio veritatis."
+        desc: "After joining our team, you will change your perception of life and will start thinking differently. We teach you how to create and how to be better! You're Rad! Attend to our courses Generation Kroot"
     },
     {
         name: "EU",
         path: "/eu",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci, assumenda corporis et facere in maxime molestiae nam optio veritatis."
+        desc: "After joining our team, you will change your perception of life and will start thinking differently. We teach you how to create and how to be better! You're Rad! Attend to our courses Generation Kroot"
     }
 ];
 

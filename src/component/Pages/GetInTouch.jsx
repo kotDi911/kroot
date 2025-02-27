@@ -1,9 +1,10 @@
 import Social from "../Social";
 import GetInTouchForm from "../Form";
 import {useCallback, useEffect, useState} from "react";
-import done from "../../assets/ico/done.svg"
-import notDone from "../../assets/ico/notDone.svg"
 import {Helmet} from "react-helmet-async";
+
+const done = "/assets/icon/done.svg"
+const notDone = "/assets/icon/notDone.svg"
 
 const GetInTouch = () => {
     const [isActive, setIsActive] = useState(false)

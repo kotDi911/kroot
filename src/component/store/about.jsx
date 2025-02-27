@@ -13,7 +13,11 @@ export const useAbout = create(() => ({
         {
             title: "MTV AWARDS WINNER BEST VISUAL EFFECT",
             name: "– Justine Bieber - Where Are U Now (2015)"
-        }
+        },
+        // {
+        //     title: "",
+        //     name: ""
+        // },
     ],
     numbers: [
         {

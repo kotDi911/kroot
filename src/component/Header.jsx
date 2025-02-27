@@ -1,6 +1,7 @@
-import {Link, useLocation} from "react-router-dom";
-import logo from "../assets/ico/Logo.svg";
+import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
+
+const logo = "/assets/icon/Logo.svg";
 
 const Header = ({path}) => {
     const [isActive, setIsActive] = useState(path === "/projects" && true)

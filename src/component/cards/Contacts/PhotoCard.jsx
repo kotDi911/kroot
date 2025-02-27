@@ -6,11 +6,11 @@ const PhotoCard = ({props}) => {
                     <div className="contacts__logo">
                         <img className="img" src={item.img} alt="profile"/>
                     </div>
-                    <div className="round__text gray regular">
-                        {item.text.split("").map((char, j)=>
-                            <span key={j} className="round__span" style={{transform: `rotate(${j*5.8}deg)`}}>{char}</span>
-                        )}
-                    </div>
+                    {/*<div className="round__text gray regular">*/}
+                    {/*    {item.text.split("").map((char, j)=>*/}
+                    {/*        <span key={j} className="round__span" style={{transform: `rotate(${j*5.8}deg)`}}>{char}</span>*/}
+                    {/*    )}*/}
+                    {/*</div>*/}
                 </div>
             </div>
         )

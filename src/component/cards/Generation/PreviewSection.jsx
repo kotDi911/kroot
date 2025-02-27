@@ -1,19 +1,6 @@
-import videoPreview from "../../../assets/video/g-kroot.mp4";
+const videoPreview = "/assets/g_kroot/video/g-kroot.mp4";
 
-// const video = "https://qdz.guk.temporary.site/images/reels/music.gif"
 const PreviewSection = () => {
-    /*fetch(video)
-        .then(res => res.json())
-        .then(
-            (result) => {
-                console.log(result)
-                result.map(title => console.log(title.title))
-            },
-            (error) => {
-               console.log(error)
-            }
-        )
-*/
     return (
         <section className="container-80">
             <h1 className="h1 black">

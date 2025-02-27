@@ -1,28 +1,29 @@
-import tel from "../../assets/ico/social/phone.svg";
-import mail from "../../assets/ico/social/mail.svg";
-import T from "../../assets/Tomash_Kuzmytskyi.png";
-import J from "../../assets/Julia_Lusenko.png";
 import LongButton from "../LongButton";
 import TextCard from "../cards/Contacts/TextCard";
 import PhotoCard from "../cards/Contacts/PhotoCard";
 import {Helmet} from "react-helmet-async";
 
+const tel = "/assets/icon/social/phone.svg";
+const mail = "/assets/icon/social/mail.svg";
+const T = "/assets/images/team/Tomash_Kuzmytskyi.png";
+const J = "/assets/images/team/Julia_Lusenko.png";
+const telAnatoliy = "/assets/images/contacts/anatoliy.svg";
+const telJulia = "/assets/images/contacts/julia.svg";
+
 const card1 = [
     {
         title: "Contacts",
-        text: "U.S Los Angeles",
+        text: "Los Angeles U.S",
         options: [
-            {text: "Tom Ash"},
-            {text: "VFX"},
-            {text: "Executive Producer"},
-            {text: "Creative"},
+            {text: "Anatolii Kuzmytskyi"},
+            {text: "Executive Producer / Creative"},
         ],
         contacts: [
             {
                 img: tel,
-                text: "323.386.32.35",
+                img2: telAnatoliy,
+                // text: "323.386.32.35",
                 url: "",
-                // url: "tel: +13233863235",
             },
             {
                 img: mail,
@@ -35,17 +36,17 @@ const card1 = [
 const card2 = [
     {
         title: "Contacts",
-        text: "Europe / Ukraine",
+        text: "Ukraine / Europe",
         options: [
             {text: "Julia Lusenko"},
-            {text: "Producer"},
-            {text: "CFO"},
+            {text: "Executive Producer"},
         ],
         contacts: [
             {
                 img: tel,
-                text: "067.799.54.84",
-                url: "tel: +380677995484",
+                img2: telJulia,
+                // text: "067.799.54.84",
+                // url: "tel: +380677995484",
             },
             {
                 img: mail,
@@ -97,7 +98,7 @@ const Contacts = () => {
                 <div className="contacts__grid">
                     <TextCard props={card1} areaName="text"/>
                     <PhotoCard props={photo}/>
-                    <LongButton text="Get in touch" url="get_in_touch" style="button"/>
+                    <LongButton text="START YOUR PROJECT" url="get_in_touch" style="button"/>
                     <PhotoCard props={photo1}/>
                     <TextCard props={card2} areaName="text1"/>
                 </div>

@@ -1,6 +1,6 @@
 import {create} from 'zustand'
-import about from "../../assets/ico/about.svg";
 
+const about = "/assets/icon/about.svg";
 const URL = "https://qdz.guk.temporary.site/home/";
 const mobile = "_mobile.mp4";
 const desktop = "_desktop.mp4";
@@ -31,7 +31,7 @@ export const useHomeCard = create(() => ({
             name: "services",
             url: "services",
             title: "Services We",
-            gray: "offer",
+            gray: "Offer",
             ico: null,
             text: null,
             btnText: "Our services",
@@ -42,10 +42,10 @@ export const useHomeCard = create(() => ({
             name: "projects",
             url: "projects",
             title: "Our",
-            gray: "projects",
+            gray: "Projects",
             ico: null,
             text: null,
-            btnText: "all projects",
+            btnText: "portfolio",
             social: null
         },
         {

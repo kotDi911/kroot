@@ -1,7 +1,8 @@
 import {useState} from "react";
-import filterArrow from "../../../assets/ico/filterArrow.svg";
 import FilterBtn from "./FilterBtn";
 import {useCards} from "../../store/projects";
+
+const filterArrow = "/assets/icon/filterArrow.svg";
 
 const ToggleFilterBtn = ({filter, setFilter}) => {
     const filters = useCards((store) => store.filters)

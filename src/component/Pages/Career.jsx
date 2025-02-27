@@ -21,10 +21,10 @@ const Career = () => {
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <section className="container-64">
-                <h1 className="h1 black">Career</h1>
+                <h1 className="h1 black">CAREERS</h1>
                 <CareerNav/>
                 <Outlet/>
-                <LongButton text="Get in touch" url="get_in_touch"/>
+                <LongButton text="START YOUR PROJECT" url="get_in_touch"/>
                 <AppsCard/>
             </section>
         </article>

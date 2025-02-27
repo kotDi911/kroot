@@ -1,11 +1,12 @@
 import {create} from 'zustand'
-import blender from "../../assets/ico/apps/blender.png"
-import ae from "../../assets/ico/apps/ae.png"
-import max from "../../assets/ico/apps/max.png"
-import pf from "../../assets/ico/apps/pf.png"
-import red from "../../assets/ico/apps/red.png"
-import cinema from "../../assets/ico/apps/cinema.png"
-import unreal from "../../assets/ico/apps/unreal.png"
+
+const blender = "/assets/icon/apps/blender.png"
+const ae = "/assets/icon/apps/ae.png"
+const max = "/assets/icon/apps/max.png"
+const pf = "/assets/icon/apps/pf.png"
+const red = "/assets/icon/apps/red.png"
+const cinema = "/assets/icon/apps/cinema.png"
+const unreal = "/assets/icon/apps/unreal.png"
 
 export const useCareer = create((set, get) => ({
     vacancy: [],

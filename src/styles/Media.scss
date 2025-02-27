@@ -205,6 +205,9 @@
   .gallery__card {
     height: 22rem;
   }
+  .long-btn-text {
+    font-size: 38px;
+  }
 }
 
 @media screen and (max-width: 660px) {
@@ -226,6 +229,9 @@
   }
   .projects__grid {
     grid-template-columns: 1fr;
+  }
+  .long-btn-text {
+    font-size: 36px;
   }
 }
 
@@ -318,6 +324,9 @@
   .img__main{
     min-height: 14rem;
   }
+  .long-btn-text {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -372,7 +381,6 @@
   }
   .services {
     &__link {
-      padding: 0 10px;
       text-align: center;
     }
 
@@ -411,6 +419,9 @@
   }
   .img__main{
     min-height: 10rem;
+  }
+  .long-btn-text {
+    font-size: 26px;
   }
 }
 

@@ -1,9 +1,10 @@
 import {useSize} from "../store/size";
 import {Link} from "react-router-dom";
 import Button from "../Button";
-import no_video_d from "../../assets/video/no_video_desktop.mp4"
-import no_video_m from "../../assets/video/no_video_mobile.mp4"
 import {useEffect, useState} from "react";
+
+const no_video_d = "/video/no_video_desktop.mp4"
+const no_video_m = "/video/no_video_mobile.mp4"
 
 const VideoCard = ({props}) => {
     const size = useSize((store) => store.size);

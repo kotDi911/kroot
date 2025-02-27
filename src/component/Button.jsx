@@ -1,9 +1,11 @@
-import {ReactComponent as Arrow} from "../assets/ico/arrow.svg";
+// import {ReactComponent as Arrow} from "../../public/assets/icon/arrow.svg";
+
+const arrow = "/assets/icon/arrow.svg";
 
 const Button = ({color}) => {
     return (
         <div className={`btn ${color ? "bg" : ""}`}>
-            <Arrow className="arrow btn-img"/>
+            <img src={arrow} className="arrow btn-img"/>
             <span className={`btn-bg ${color && "white-bg"}`}/>
         </div>
     )
