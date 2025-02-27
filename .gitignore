@@ -5,7 +5,8 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/public/sitemap.xml
+/public/robots.txt
 # testing
 /coverage
 
