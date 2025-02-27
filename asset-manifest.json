@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/kroot/static/css/main.dac4856d.css",
-    "main.js": "/kroot/static/js/main.3e698739.js",
+    "main.js": "/kroot/static/js/main.8d10e81b.js",
     "static/media/insta.svg": "/kroot/static/media/insta.1f2ca33b4d64d5fe226741a73690d774.svg",
     "static/media/youtube.svg": "/kroot/static/media/youtube.0d5e0d931cd9a5cdb7766587458de70b.svg",
     "static/media/fb.svg": "/kroot/static/media/fb.96371725056f86fef0ecd075e473527c.svg",
     "index.html": "/kroot/index.html",
     "static/media/arrow.svg": "/kroot/static/media/arrow.12db161eb50a52c1252b6d62445cd49d.svg",
     "main.dac4856d.css.map": "/kroot/static/css/main.dac4856d.css.map",
-    "main.3e698739.js.map": "/kroot/static/js/main.3e698739.js.map"
+    "main.8d10e81b.js.map": "/kroot/static/js/main.8d10e81b.js.map"
   },
   "entrypoints": [
     "static/css/main.dac4856d.css",
-    "static/js/main.3e698739.js"
+    "static/js/main.8d10e81b.js"
   ]
 }
