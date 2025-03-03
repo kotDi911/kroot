@@ -24,7 +24,7 @@ const Career = () => {
                 <h1 className="h1 black">CAREERS</h1>
                 <CareerNav/>
                 <Outlet/>
-                <LongButton text="START YOUR PROJECT" url="get_in_touch"/>
+                {/*<LongButton text="START YOUR PROJECT" url="get_in_touch"/>*/}
                 <AppsCard/>
             </section>
         </article>

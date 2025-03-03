@@ -1,7 +1,7 @@
 {
-  "name": "kroot",
-  "homepage": "https://kotdi911.github.io/kroot",
-  "version": "0.1.0",
+  "name": "thekroot",
+  "homepage": "https://thekroot.com",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

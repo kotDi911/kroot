@@ -3,8 +3,8 @@ import {Link} from "react-router-dom";
 import Button from "../Button";
 import {useEffect, useState} from "react";
 
-const no_video_d = process.env.PUBLIC_URL + "/video/no_video_desktop.mp4"
-const no_video_m = process.env.PUBLIC_URL + "/video/no_video_mobile.mp4"
+const no_video_d = process.env.PUBLIC_URL + "/assets/video/no_video_desktop.mp4"
+const no_video_m = process.env.PUBLIC_URL + "/assets/video/no_video_mobile.mp4"
 
 const VideoCard = ({props}) => {
     const size = useSize((store) => store.size);

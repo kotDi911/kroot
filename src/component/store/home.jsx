@@ -1,7 +1,7 @@
 import {create} from 'zustand'
 
 const about = process.env.PUBLIC_URL + "/assets/icon/about.svg";
-const URL = "https://qdz.guk.temporary.site/home/";
+const URL = "https://thekroot.com/home/";
 const mobile = "_mobile.mp4";
 const desktop = "_desktop.mp4";
 const poster = "_poster.jpg";

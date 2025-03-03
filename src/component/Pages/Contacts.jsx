@@ -7,7 +7,7 @@ const tel = process.env.PUBLIC_URL + "/assets/icon/social/phone.svg";
 const mail = process.env.PUBLIC_URL + "/assets/icon/social/mail.svg";
 const T = process.env.PUBLIC_URL + "/assets/images/team/Tomash_Kuzmytskyi.png";
 const J = process.env.PUBLIC_URL + "/assets/images/team/Julia_Lusenko.png";
-const telAnatoliy = process.env.PUBLIC_URL + "/assets/images/contacts/anatoliy.svg";
+const telAnatoly = process.env.PUBLIC_URL + "/assets/images/contacts/anatoly.svg";
 const telJulia = process.env.PUBLIC_URL + "/assets/images/contacts/julia.svg";
 
 const card1 = [
@@ -15,13 +15,13 @@ const card1 = [
         title: "Contacts",
         text: "Los Angeles U.S",
         options: [
-            {text: "Anatolii Kuzmytskyi"},
+            {text: "Anatoly Kuzmytskyi"},
             {text: "Executive Producer / Creative"},
         ],
         contacts: [
             {
                 img: tel,
-                img2: telAnatoliy,
+                img2: telAnatoly,
                 // text: "323.386.32.35",
                 url: "",
             },

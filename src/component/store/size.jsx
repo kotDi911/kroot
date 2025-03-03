@@ -1,11 +1,7 @@
 import {create} from 'zustand'
 
-export const useSize = create((get,set) => ({
+export const useSize = create(() => ({
     size: window.innerWidth,
     arr: [],
     isActive: false,
-    setIsActive: () =>{
-      const {isActive}  = get();
-    },
-    pos: (position)=> [...this.arr,position]
 }))

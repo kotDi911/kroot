@@ -1,4 +1,4 @@
-const mtv = "/assets/images/mtv.jpg";
+const mtv = process.env.PUBLIC_URL + "/assets/images/mtv.jpg";
 
 const MainImgCard = () => {
     return(

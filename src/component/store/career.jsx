@@ -12,7 +12,7 @@ export const useCareer = create((set, get) => ({
     vacancy: [],
     fetchVacancy: async () =>{
       try{
-          const resVacancy = await fetch("https://qdz.guk.temporary.site/wp-api/wp-json/acf/v3/career");
+          const resVacancy = await fetch( "https://api.thekroot.com/wp-json/acf/v3/career");
 
           if (!resVacancy.ok) throw new Response('Field...', {status: 404})
           const data = await resVacancy.json();

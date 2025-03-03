@@ -26,48 +26,43 @@ const Details = () => {
     const folderUrl = projectsUrl+path
 
     const getBtnVideo = useMemo(() => {
-        return buttons_url ? Object.entries(buttons_url).map((a) => (
-            {
-                name: a[0],
-                url: a[1].url,
-                video: a[1].video,
-                btnText: a[1].btn_text,
-                poster: folderUrl + "/video/" + a[0] + "_poster.jpg",
-            }
-        )) : [
-            {
-                name: "breakdown",
-                url: "",
-                video: "",
-                btnText: "VFX Breakdown",
-                poster: "",
-            },
-            {
-                name: "Official video",
-                url: "",
-                video: "",
-                btnText: "Official video",
-                poster: "",
-            }
-        ];
+        return buttons_url
+            ? Object.entries(buttons_url).map(([name, { url, video, btn_text }]) => ({
+                name,
+                url,
+                video,
+                btnText: btn_text,
+                poster: `${folderUrl}/video/${name}_poster.jpg`,
+            }))
+            : [
+                {
+                    name: "breakdown",
+                    url: "",
+                    video: "",
+                    btnText: "VFX Breakdown",
+                    poster: "",
+                },
+                {
+                    name: "Official video",
+                    url: "",
+                    video: "",
+                    btnText: "Official video",
+                    poster: "",
+                },
+            ];
     }, [buttons_url, folderUrl]);
 
     const getMainImages = useMemo(() => {
-        let urls = [];
-        for (let i = 0; i < main_imgs; i++) {
-            const img = folderUrl + "/images/main" + (i + 1) + ".jpg";
-            const poster = folderUrl + "/images/main" + (i + 1) + "poster.jpg";
-            const alt = project_name + " image" + (i + 1);
-            urls.push({ img, poster, alt });
-        }
-        return urls;
+        return Array.from({ length: main_imgs }, (_, i) => {
+            const img = `${folderUrl}/images/main${i + 1}.jpg`;
+            const poster = `${folderUrl}/images/main${i + 1}poster.jpg`;
+            const alt = `${project_name} image${i + 1}`;
+            return { img, poster, alt };
+        });
     }, [main_imgs, folderUrl, project_name]);
 
     const getDataArr = useMemo(() => {
-        return Object.entries(options).map((a) => ({
-            title: a[0],
-            desc: a[1]
-        }));
+        return Object.entries(options).map(([title, desc]) => ({ title, desc }));
     }, [options]);
 
     return (
