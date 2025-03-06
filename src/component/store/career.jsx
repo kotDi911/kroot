@@ -1,63 +1,47 @@
-import {create} from 'zustand'
+import { create } from 'zustand';
 
-const blender = process.env.PUBLIC_URL + "/assets/icon/apps/blender.png"
-const ae = process.env.PUBLIC_URL + "/assets/icon/apps/ae.png"
-const max = process.env.PUBLIC_URL + "/assets/icon/apps/max.png"
-const pf = process.env.PUBLIC_URL + "/assets/icon/apps/pf.png"
-const red = process.env.PUBLIC_URL + "/assets/icon/apps/red.png"
-const cinema = process.env.PUBLIC_URL + "/assets/icon/apps/cinema.png"
-const unreal = process.env.PUBLIC_URL + "/assets/icon/apps/unreal.png"
+const getAppImagePath = (name) => process.env.PUBLIC_URL + `/assets/icon/apps/${name}.png`;
 
 export const useCareer = create((set, get) => ({
     vacancy: [],
-    fetchVacancy: async () =>{
-      try{
-          const resVacancy = await fetch( "https://api.thekroot.com/wp-json/acf/v3/career");
-
-          if (!resVacancy.ok) throw new Response('Field...', {status: 404})
-          const data = await resVacancy.json();
-          const vac = data.map(res => res.acf)
-          set({
-              vacancy: vac,
-              us: vac.filter((item) => item.nav === "US"),
-              ua: vac.filter((item) => item.nav === "UA"),
-              eu: vac.filter((item) => item.nav === "EU"),
-          });
-      }catch (err){
-          console.error('Error fetching vacancies:', err);
-      }
-    },
     us: [],
     ua: [],
     eu: [],
-    apps:[
-        {
-            name: "blender",
-            img: blender,
-        },
-        {
-            name: "Maya 3D max",
-            img: max,
-        },
-        {
-            name: "Cinema 4D",
-            img: cinema,
-        },
-        {
-            name: "Redshift",
-            img: red,
-        },
-        {
-            name: "PF Track",
-            img: pf,
-        },
-        {
-            name: "After Effect",
-            img: ae,
-        },
-        {
-            name: "Unreal Engine",
-            img: unreal,
-        },
-    ]
+    error: null,
+    apps: [
+        { name: "blender", img: getAppImagePath("blender") },
+        { name: "Maya 3D max", img: getAppImagePath("max") },
+        { name: "Cinema 4D", img: getAppImagePath("cinema") },
+        { name: "Redshift", img: getAppImagePath("red") },
+        { name: "PF Track", img: getAppImagePath("pf") },
+        { name: "After Effect", img: getAppImagePath("ae") },
+        { name: "Unreal Engine", img: getAppImagePath("unreal") },
+    ],
+
+    fetchVacancy: async () => {
+        try {
+            const resVacancy = await fetch("https://api.thekroot.com/wp-json/acf/v3/career");
+            if (!resVacancy.ok) throw new Response("Failed to fetch vacancies.", {status: 404, statusText: "Failed to fetch vacancies."})
+
+            const data = await resVacancy.json();
+            if (!data || data.length === 0) throw new Response("No vacancies found.", {status: 404, statusText: "No vacancies found."})
+
+            const vac = data.map(res => res.acf);
+            const us = vac.filter((item) => item.nav === "US");
+            const ua = vac.filter((item) => item.nav === "UA");
+            const eu = vac.filter((item) => item.nav === "EU");
+
+            set({
+                vacancy: vac,
+                us,
+                ua,
+                eu,
+                error: null,
+            });
+        } catch (err) {
+            set({error: {status: err.status, msg: err.statusText}})
+            console.error('Error fetching vacancies:', err.statusText, err.status);
+            // set({ vacancy: [], us: [], ua: [], eu: [] }); // Сбросить данные в случае ошибки
+        }
+    },
 }));

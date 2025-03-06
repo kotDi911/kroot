@@ -1,5 +1,6 @@
 import {create} from 'zustand'
 
+let g_kroot = process.env.PUBLIC_URL + "/assets/g_kroot/video/g-kroot.mp4";
 export const useAbout = create(() => ({
     nominations: [
         {
@@ -60,6 +61,7 @@ export const useAbout = create(() => ({
             title: "Generation",
             gray: "Kroot",
             btnText: "generation kroot",
+            src: g_kroot,
         },
     ]
 }));

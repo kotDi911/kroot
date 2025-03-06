@@ -17,7 +17,7 @@ const ProjectsCard = ({props}) => {
     const folderUrl = projectsUrl+path
     const video = `${folderUrl}/video/preview.mp4`;
     const poster = `${folderUrl}/video/poster.jpg`;
-    const name = project_name.replace(/\s+/g, '').toLowerCase()
+    const name = project_name.replace(/[^a-zA-Z0-9&']+/g, '_').toLowerCase()
 
     return (
                 <Link to={`/projects/${name}`}

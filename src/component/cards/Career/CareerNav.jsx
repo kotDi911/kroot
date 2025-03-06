@@ -1,34 +1,36 @@
-import { NavLink, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {NavLink, useLocation} from "react-router-dom";
+import {useEffect} from "react";
 
 const links = [
     {
         name: "US",
         path: "/us",
-        desc: "After joining our team, you will change your perception of life and will start thinking differently. We teach you how to create and how to be better! You're Rad! Attend to our courses Generation Kroot"
     },
     {
         name: "UA",
         path: "/ua",
-        desc: "After joining our team, you will change your perception of life and will start thinking differently. We teach you how to create and how to be better! You're Rad! Attend to our courses Generation Kroot"
     },
     {
         name: "EU",
         path: "/eu",
-        desc: "After joining our team, you will change your perception of life and will start thinking differently. We teach you how to create and how to be better! You're Rad! Attend to our courses Generation Kroot"
     }
 ];
 
-const CareerNav = () => {
-    const { pathname } = useLocation();
-    const [desc, setDesc] = useState("");
+const desc = "Once you become a part of our team, you will discover" +
+    " a new perspective on the world and begin to think differently." +
+    " We teach not only creation but also self-improvement! " +
+    "You are unique! Join our 'Generation Kroot' courses and start your path to success!"
 
-    useEffect(() => {
-        const currentLink = links.find(link => pathname.includes(link.path));
-        if (currentLink) {
-            setDesc(currentLink.desc);
-        }
-    }, [pathname]);
+
+const CareerNav = () => {
+    // const {pathname} = useLocation();
+
+    // useEffect(() => {
+    //     const currentLink = links.find(link => pathname.includes(link.path));
+    //     if (currentLink) {
+    //         setDesc(currentLink.desc);
+    //     }
+    // }, [pathname]);
 
     return (
         <div className="nav__cont">
@@ -37,10 +39,10 @@ const CareerNav = () => {
                 {links.map((link, i) => (
                     <NavLink
                         to={`/career${link.path}`}
-                        className={({ isActive }) => isActive ? "nav__btn active" : "nav__btn"}
+                        className={({isActive}) => isActive ? "nav__btn active" : "nav__btn"}
                         key={i}
                     >
-                        <span className="btn-bg" />
+                        <span className="btn-bg"/>
                         {link.name}
                     </NavLink>
                 ))}

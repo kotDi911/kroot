@@ -5,12 +5,13 @@ import {useEffect, useState} from "react";
 import {Loader} from "../../Loader";
 
 const CareerCards = () => {
-    const { name } = useParams();
+    const {name} = useParams();
     const fetchVacancy = useCareer((store) => store.fetchVacancy);
     const vacancy = useCareer((store) => store.vacancy);
     const us = useCareer((store) => store.us);
     const ua = useCareer((store) => store.ua);
     const eu = useCareer((store) => store.eu);
+    const error = useCareer((store) => store.error);
     const [cards, setCards] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -19,7 +20,7 @@ const CareerCards = () => {
             setLoading(true);
             fetchVacancy().finally(() => setLoading(false));
         }
-    }, [name, vacancy, fetchVacancy]);
+    }, [vacancy, fetchVacancy]);
 
     useEffect(() => {
         switch (name) {
@@ -40,13 +41,14 @@ const CareerCards = () => {
 
     return (
         <div className="career__cards">
-            {loading ? (
+            {loading ?
                 <Loader/>
-            ) : cards.length > 0 ? (
-                cards.map((card, i) => <CareerCard key={i} {...card} />) // Передаем данные в CareerCard
-            ) : (
-                <CareerCard err={"No vacancies available."}/>
-            )}
+                :
+                error ?
+                    <CareerCard err={error.msg}/>
+                    :
+                    cards.length > 0 && cards.map((card, i) => <CareerCard key={i} {...card} />)
+            }
         </div>
     )
 }

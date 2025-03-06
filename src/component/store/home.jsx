@@ -1,10 +1,16 @@
-import {create} from 'zustand'
+import { create } from 'zustand';
 
 const about = process.env.PUBLIC_URL + "/assets/icon/about.svg";
-const URL = "https://thekroot.com/home/";
+const URL = process.env.PUBLIC_URL + "/assets/video/showreel/";
 const mobile = "_mobile.mp4";
 const desktop = "_desktop.mp4";
 const poster = "_poster.jpg";
+
+const generateMediaURL = (name) => ({
+    videoM: `${URL}${name}${mobile}`,
+    videoD: `${URL}${name}${desktop}`,
+    poster: `${URL}${name}${poster}`,
+});
 
 export const useHomeCard = create(() => ({
     data: [
@@ -12,18 +18,14 @@ export const useHomeCard = create(() => ({
             id: 1,
             name: "commercial",
             url: "https://www.youtube.com/watch?v=m9zhPKXm1lc&ab_channel=TheKROOT",
-            videoM: URL+"commercial"+ mobile,
-            videoD: URL+"commercial"+ desktop,
-            poster: URL+"commercial"+ poster,
+            ...generateMediaURL("commercial"),
             btnText: "commercial showreel",
         },
         {
             id: 2,
             name: "music",
             url: "https://www.youtube.com/watch?v=5gbNqMXN_DU&t=4s&ab_channel=TheKROOT",
-            videoM: URL+"music"+ mobile,
-            videoD: URL+"music"+ desktop,
-            poster: URL+"music"+ poster,
+            ...generateMediaURL("music"),
             btnText: "music video showreel",
         },
         {
@@ -35,7 +37,7 @@ export const useHomeCard = create(() => ({
             ico: null,
             text: null,
             btnText: "Our services",
-            social: null
+            social: null,
         },
         {
             id: 4,
@@ -46,7 +48,7 @@ export const useHomeCard = create(() => ({
             ico: null,
             text: null,
             btnText: "portfolio",
-            social: null
+            social: null,
         },
         {
             id: 5,
@@ -55,17 +57,15 @@ export const useHomeCard = create(() => ({
             title: null,
             gray: null,
             ico: about,
-            text: "We are dreamers and creative team who love any arts and animaiton.",
+            text: "We are dreamers and creative team who love any arts and animation.",
             btnText: "About us",
-            social: null
+            social: null,
         },
         {
             id: 6,
             name: "beauty",
             url: "https://www.youtube.com/watch?v=GXskclwDBCA&ab_channel=TheKROOT",
-            videoM: URL+"beauty"+ mobile,
-            videoD: URL+"beauty"+ desktop,
-            poster: URL+"beauty"+ poster,
+            ...generateMediaURL("beauty"),
             btnText: "beauty vfx",
         },
         {

@@ -1,10 +1,11 @@
 import MainImgCard from "../cards/About/MainImgCard";
 import AboutCardsGrid from "../cards/About/AboutCardsGrid";
-import AboutTeam from "../cards/About/AboutTeam";
 import LongButton from "../LongButton";
 import HomeCard from "../cards/HomeCard";
 import {useAbout} from "../store/about";
 import {Helmet} from "react-helmet";
+import Button from "../Button";
+import {Link} from "react-router-dom";
 
 const About = () => {
     const cards = useAbout((store) => store.cards)
@@ -20,10 +21,10 @@ const About = () => {
                     content="Unreal Engine, VFX, Animation, TV shows, Music videos, Commercials, Character Animation, Traditional Animation"
                 />
                 <meta property="og:description" content="About The Kroot company"/>
-                <meta property="og:image" content="https://www.thekroot.com/logo512.png" />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.thekroot.com/about/" />
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="og:image" content="https://www.thekroot.com/logo512.png"/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://www.thekroot.com/about/"/>
+                <meta name="twitter:card" content="summary_large_image"/>
             </Helmet>
             <section className="container-80">
                 <h1 className="h1 black">
@@ -34,7 +35,38 @@ const About = () => {
                 {/*<AboutTeam/>*/}
                 <LongButton text="join our team" url="career"/>
                 <div className="about__grid-cards mt-112">
-                    {cards.map((card, i) => <HomeCard key={i} props={card}/>)}
+                    {cards.map((card, i) =>
+                        // <HomeCard key={i} props={card}/>)
+                        !card.src ? <HomeCard key={i} props={card}/>
+                            :
+                            <Link to={`/${card.url}`}
+                                  // target="_blank"
+                                  className={`main__card flex end relative hover__card`} // disabled-link
+                                  // style={{gridArea: name ? name : ""}}
+                            >
+                                <div className="video-cont">
+                                    <video
+                                        className="video"
+                                        // poster={poster}
+                                        src={card.src}
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        controls={false}
+                                        preload="none"
+                                    />
+                                </div>
+                                <div className="absolute w-100">
+                                    <div className="flex end space-b projects__btn">
+                                        <div className="flex center projects__text">
+                                            <span className="fs-20 white">{card.btnText.toUpperCase()}</span>
+                                        </div>
+                                        <Button color={true}/>
+                                    </div>
+                                </div>
+                            </Link>)
+                    }
                 </div>
             </section>
         </article>

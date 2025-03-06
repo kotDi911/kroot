@@ -10,8 +10,7 @@ const Home = () => {
     const cards = useMemo(() => {
         return (
             data.map((item) => item.poster ?
-                <VideoCard key={item.id}
-                           props={item}/>
+                <VideoCard key={item.id} props={item}/>
                 :
                 <HomeCard key={item.id} props={item}/>)
         )

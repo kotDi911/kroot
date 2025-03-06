@@ -14,13 +14,12 @@ const VideoCard = ({props}) => {
 
     useEffect(() => {
         if (video) {
-            setDVideo(video + "/" + name + "_desktop.mp4")
-            setMVideo(video + "/" + name + "_mobile.mp4")
+            setDVideo(video + name + "_desktop.mp4")
+            setMVideo(video + name + "_mobile.mp4")
         } else if (videoM && videoD) {
             setDVideo(videoD);
             setMVideo(videoM);
         } else if (!url) {
-            // Если нет видео и ссылки, устанавливаем видео по умолчанию
             setDVideo(no_video_d);
             setMVideo(no_video_m);
         }

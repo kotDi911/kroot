@@ -41,15 +41,42 @@ const router = Router([
             },
             {
                 path: ":name",
-                loader: ({params}) => {
-                    const projects = JSON.parse(localStorage.getItem("projects"))
-                    let state;
-                    const project = projects.filter( item => {
-                                    if(item.project_name.replace(/\s+/g, '').toLowerCase() === params.name){
-                                        state = item
-                                    }
-                                })
-                    return state;
+                loader: async ({params}) => {
+                    const url1 = "https://api.thekroot.com/wp-json/wp/v2/priority_project?slug=";
+                    const url2 = "https://api.thekroot.com/wp-json/wp/v2/project?slug=";
+                    const projects = JSON.parse(localStorage.getItem("projects"));
+
+                    const fetchData = async (url) => {
+                        try {
+                            const res = await fetch(url + params.name.replace(/_/g, '-'));
+                            if (!res.ok) throw new Error('Failed to fetch data');
+                            const result = await res.json();
+                            if (result.length === 0) throw new Error('Project not found');
+                            let data = {}
+                            result.find(item => data = item.acf);
+                            return data;
+                        } catch (err) {
+                            console.error(err);
+                            return null;
+                        }
+                    };
+
+                    if (projects) {
+                        const foundProject = projects.find(item =>
+                            item.project_name.replace(/[^a-zA-Z0-9&']+/g, '_').toLowerCase() === params.name
+                        );
+                        if (foundProject) {
+                            return {...foundProject, error: null};
+                        }
+                    } else {
+                        const projectFromApi = await fetchData(url1) || await fetchData(url2);
+
+                        if (projectFromApi) {
+                            return {...projectFromApi, error: null};
+                        } else {
+                            return {error: "No project found"};
+                        }
+                    }
                 },
                 element: <RouterApp props={<Details/>}/>,
             },
