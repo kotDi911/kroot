@@ -5,7 +5,7 @@ import React, {useEffect} from "react";
 const ErrorPage = () => {
     const error = useRouteError();
     const navigate = useNavigate();
-    console.error(error);
+
     useEffect(()=>{
         !error && navigate("/");
     })
@@ -20,10 +20,14 @@ const ErrorPage = () => {
                 <p className="h1 black">
                     <i>{error.status}</i>
                 </p>
-                <p className="regular black">Sorry, an unexpected error has occurred.</p>
-                <p className="regular black">
-                    <i>{error.statusText || error.message}</i>
-                </p>
+                {
+                    !error.statusText ?
+                        <p className="regular black">Sorry, an unexpected error has occurred.</p>
+                        :
+                        <p className="regular black">
+                            <i>{error.statusText || error.message}</i>
+                        </p>
+                }
             </div>
     );
 }

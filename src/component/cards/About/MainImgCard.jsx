@@ -2,7 +2,7 @@ const mtv = process.env.PUBLIC_URL + "/assets/images/mtv.jpg";
 
 const MainImgCard = () => {
     return(
-        <div className="about__main-img relative">
+        <div className="about__main-img relative mb-32">
             <div className="about__text-cont flex col white space-b">
                 <h3 className="h3">MTV Award Winning</h3>
                 <p className="regular text-center">

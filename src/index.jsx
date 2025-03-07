@@ -45,10 +45,12 @@ const router = Router([
                     const url1 = "https://api.thekroot.com/wp-json/wp/v2/priority_project?slug=";
                     const url2 = "https://api.thekroot.com/wp-json/wp/v2/project?slug=";
                     const projects = JSON.parse(localStorage.getItem("projects"));
-
                     const fetchData = async (url) => {
                         try {
-                            const res = await fetch(url + params.name.replace(/_/g, '-'));
+                            const res = await fetch(
+                                url + params.name.replace(/[&'\s_]+/g, '-')
+                                    .replace(/-+/g, '-')
+                            );
                             if (!res.ok) throw new Error('Failed to fetch data');
                             const result = await res.json();
                             if (result.length === 0) throw new Error('Project not found');
@@ -56,7 +58,6 @@ const router = Router([
                             result.find(item => data = item.acf);
                             return data;
                         } catch (err) {
-                            console.error(err);
                             return null;
                         }
                     };
@@ -68,17 +69,20 @@ const router = Router([
                         if (foundProject) {
                             return {...foundProject, error: null};
                         }
-                    } else {
+                    }
+                    try {
                         const projectFromApi = await fetchData(url1) || await fetchData(url2);
-
                         if (projectFromApi) {
-                            return {...projectFromApi, error: null};
+                            return projectFromApi;
                         } else {
-                            return {error: "No project found"};
+                            throw new Response('No project found', {status: "404", statusText: "No project found"});
                         }
+                    } catch (err) {
+                        throw new Response(err.statusText, {status: err.status, statusText: err.statusText});
                     }
                 },
                 element: <RouterApp props={<Details/>}/>,
+                errorElement: <RouterApp props={<ErrorPage/>}/>,
             },
         ],
         errorElement: <RouterApp props={<ErrorPage/>}/>,

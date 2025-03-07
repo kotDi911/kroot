@@ -5,6 +5,10 @@ import {Helmet} from "react-helmet-async";
 
 const done = process.env.PUBLIC_URL + "/assets/icon/done.svg"
 const notDone = process.env.PUBLIC_URL + "/assets/icon/notDone.svg"
+const descForm = "We are ready to help you bring your project to life. \n" +
+    "                    Fill out the form below, and our manager will get in touch\n" +
+    "                    with you to discuss all the details and offer optimal solutions. \n" +
+    "                    We are confident that together we can achieve excellent results!"
 
 const GetInTouch = () => {
     const [isActive, setIsActive] = useState(false)
@@ -41,10 +45,7 @@ const GetInTouch = () => {
             </Helmet>
             <section className="container-48 relative">
                 <h1 className="h1">Get in <span className="gray">touch</span></h1>
-                <p className="regular gray">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique.
-                </p>
+                <p className="regular gray">{descForm}</p>
                 <div className="form__cont">
                     <div className="form__social flex">
                         <Social props="light"/>

@@ -3,14 +3,13 @@ import {Link} from "react-router-dom";
 import Button from "../Button";
 import {useEffect, useState} from "react";
 
-const no_video_d = process.env.PUBLIC_URL + "/assets/video/no_video_desktop.mp4"
-const no_video_m = process.env.PUBLIC_URL + "/assets/video/no_video_mobile.mp4"
-
 const VideoCard = ({props}) => {
     const size = useSize((store) => store.size);
     const {name, btnText, video, videoM, videoD, poster, url} = props;
-    const [mVideo, setMVideo] = useState(no_video_m);
-    const [dVideo, setDVideo] = useState(no_video_d);
+    const [mVideo, setMVideo] = useState(null);
+    const [dVideo, setDVideo] = useState(null);
+    const [text, setText] = useState(btnText);
+    const errText = "this project does not have " + btnText + " or is in the making"
 
     useEffect(() => {
         if (video) {
@@ -20,8 +19,7 @@ const VideoCard = ({props}) => {
             setDVideo(videoD);
             setMVideo(videoM);
         } else if (!url) {
-            setDVideo(no_video_d);
-            setMVideo(no_video_m);
+            setText(errText)
         }
     }, [video, videoM, videoD, name, url]);
 
@@ -47,7 +45,7 @@ const VideoCard = ({props}) => {
             <div className="absolute w-100">
                 <div className="flex end space-b projects__btn">
                     <div className="flex center projects__text">
-                        <span className="fs-20 white">{btnText.toUpperCase()}</span>
+                        <span className="fs-20 white">{text.toUpperCase()}</span>
                     </div>
                     <Button color={true}/>
                 </div>

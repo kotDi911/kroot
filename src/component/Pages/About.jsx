@@ -7,6 +7,8 @@ import {Helmet} from "react-helmet";
 import Button from "../Button";
 import {Link} from "react-router-dom";
 
+const map = process.env.PUBLIC_URL + "/assets/images/vector-world-map.png"
+
 const About = () => {
     const cards = useAbout((store) => store.cards)
     return (
@@ -32,17 +34,19 @@ const About = () => {
                 </h1>
                 <MainImgCard/>
                 <AboutCardsGrid/>
+                {/*<img className="img mb-52 mt-32" src={map} alt=""/>*/}
                 {/*<AboutTeam/>*/}
                 <LongButton text="join our team" url="career"/>
                 <div className="about__grid-cards mt-112">
                     {cards.map((card, i) =>
                         // <HomeCard key={i} props={card}/>)
-                        !card.src ? <HomeCard key={i} props={card}/>
+                        !card.src ?
+                            <HomeCard key={i} props={card}/>
                             :
-                            <Link to={`/${card.url}`}
-                                  // target="_blank"
+                            <Link key={i} to={`/${card.url}`}
+                                // target="_blank"
                                   className={`main__card flex end relative hover__card`} // disabled-link
-                                  // style={{gridArea: name ? name : ""}}
+                                // style={{gridArea: name ? name : ""}}
                             >
                                 <div className="video-cont">
                                     <video

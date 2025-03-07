@@ -57,7 +57,7 @@
   }
   .about__grid, .about__grid-cards, .home__grid, .contacts__grid, .services__grid, .details__grid, .generation__grid-cards {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 2rem;
   }
   .services-row {
     flex-direction: row;
@@ -141,6 +141,9 @@
   .carousel__dot {
     width: .75rem;
     height: .75rem;
+  }
+  .mt-112{
+    margin-top: 90px;
   }
 }
 
@@ -326,6 +329,9 @@
   }
   .long-btn-text {
     font-size: 30px;
+  }
+  .mt-112{
+    margin-top: 70px;
   }
 }
 

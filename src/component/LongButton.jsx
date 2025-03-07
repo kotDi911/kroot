@@ -7,7 +7,7 @@ const LongButton = ({text, url, style, className}) => {
     const reg = /^\w+$/;
     useEffect(() => {
         reg.test(url) ? setBlank(false) : setBlank(true)
-    }, [])
+    }, [url])
     return (
         <Link
             to={blank ? url : `/${url}`}

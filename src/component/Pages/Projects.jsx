@@ -7,11 +7,11 @@ import ToggleFilterBtn from "../cards/Projects/ToggleFilterBtn";
 import {Helmet} from "react-helmet-async";
 import {useUrl} from "../store/Urls";
 
-let postsPerPage = 9;
 let arrayForHoldingPosts = [];
 let filteredProjects = [];
-if (window.innerWidth <= 991) postsPerPage = 8;
-if (window.innerWidth <= 660) postsPerPage = 9;
+export const LoaderProjects = () => {
+
+}
 
 const Projects = () => {
     const {URL, URL_PRIORITY} =
@@ -21,15 +21,24 @@ const Projects = () => {
     const filters = useCards((store) => store.filters);
     const sortFunction = useCards((store) => store.sortFunction);
     const setProjectsData = useCards((store) => store.setProjectsData);
+
     const [filter, setFilter] = useState("all");
-    const [postsToShow, setPostsToShow] = useState([]);
     const [projects, setProjects] = useState([])
+    const [postsToShow, setPostsToShow] = useState([]);
+
+    const perPage = () => {
+        return window.innerWidth <= 660 ? 9 : window.innerWidth <= 991 ? 8 : 9;
+    }
+
+    const [postsPerPage] = useState(perPage());
     const [currentPage, setCurrentPage] = useState(1)
     const [scrollPage, setScrollPage] = useState(1)
     const [next, setNext] = useState(postsPerPage);
+
     const [isLoading, setIsLoading] = useState(false);
     const [isShow] = useState(window.innerWidth > 767);
     const [error, setError] = useState(false)
+
 
     const filterButtonsDesktop = useMemo(() => {
         return (
@@ -180,11 +189,12 @@ const Projects = () => {
                     name="keywords"
                     content="Unreal Engine, VFX, Animation, Projects, The Kroot, TV shows, Commercials, Music videos"
                 />
-                <meta property="og:description" content="Explore the diverse range of projects by The Kroot, including work for TV shows, music videos, and commercials." />
-                <meta property="og:image" content="https://www.thekroot.com/logo512.png" />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.thekroot.com/projects/" />
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="og:description"
+                      content="Explore the diverse range of projects by The Kroot, including work for TV shows, music videos, and commercials."/>
+                <meta property="og:image" content="https://www.thekroot.com/logo512.png"/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://www.thekroot.com/projects/"/>
+                <meta name="twitter:card" content="summary_large_image"/>
             </Helmet>
             <section className="container-80 relative p_top">
                 <h1 className="h1">Projects</h1>

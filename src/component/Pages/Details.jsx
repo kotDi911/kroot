@@ -12,6 +12,7 @@ import {useMemo} from "react";
 const Details = () => {
     const projectsUrl = useUrl((store) => store.projectsUrl)
     const project = useLoaderData();
+
     const {
         project_name,
         description,
@@ -20,10 +21,8 @@ const Details = () => {
         buttons_url,
         options,
         path,
-        error,
     } = project;
 
-    console.log(buttons_url)
     const folderUrl = projectsUrl + path
     const getBtnVideo = useMemo(() => {
         return buttons_url
@@ -51,6 +50,7 @@ const Details = () => {
                 },
             ];
     }, [buttons_url, folderUrl]);
+
     const getMainImages = useMemo(() => {
         return Array.from({length: main_imgs}, (_, i) => {
             const img = `${folderUrl}/images/main${i + 1}.jpg`;
@@ -66,32 +66,25 @@ const Details = () => {
 
     return (
         <article className="article details">
-            {!error ?
-                <Helmet>
-                    <title>Project {project_name}</title>
-                    <meta content={`Project ${project_name}`} property="og:title"/>
-                    <meta content={`Project ${project_name}`} property="twitter:title"/>
-                    <meta name="description" content={`Project ${project_name}`}/>
-                </Helmet>
-                : null
-            }
-            {!error ? <>
-                    <section className="container-80 p_top">
-                        <Title title={project_name}/>
-                        <p className="regular gray mt-16">{description}</p>
-                        <Images getImages={getMainImages} name={project_name}/>
-                        <Gallery images={gallery_imgs} path={folderUrl}/>
-                        <Options data={getDataArr}/>
-                    </section>
-                    <section className="container-80">
-                        <div className="details__grid mt-112">
-                            <HomeCard props={{name: "projects", url: "projects", title: "Projects", btnText: "all projects"}}/>
-                            {getBtnVideo.map((card, i) => <VideoCard key={i} props={card}/>)}
-                        </div>
-                    </section>
-                </>
-                : <p>{error}</p>
-            }
+            <Helmet>
+                <title>Project {project_name}</title>
+                <meta content={`Project ${project_name}`} property="og:title"/>
+                <meta content={`Project ${project_name}`} property="twitter:title"/>
+                <meta name="description" content={`Project ${project_name}`}/>
+            </Helmet>
+            <section className="container-80">
+                <Title title={project_name}/>
+                <p className="regular gray mt-16">{description}</p>
+                <Images getImages={getMainImages} name={project_name}/>
+                <Gallery images={gallery_imgs} path={folderUrl}/>
+                <Options data={getDataArr}/>
+            </section>
+            <section className="container-80">
+                <div className="details__grid mt-112">
+                    <HomeCard props={{name: "projects", url: "projects", title: "Projects", btnText: "all projects"}}/>
+                    {getBtnVideo.map((card, i) => <VideoCard key={i} props={card}/>)}
+                </div>
+            </section>
         </article>
     )
 }
