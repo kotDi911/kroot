@@ -39,9 +39,9 @@ const TextCard = ({props, areaName}) => {
                     {item.options.map((option, i) => <p key={i} className="regular gray mt-16">{option.text}</p>)}
                 </div>
                 <div className="flex mt-16 contacts__cont">
-                    {item.contacts.map((contact, i) => (
+                    {item.contacts ? item.contacts.map((contact, i) => (
                      <ContactInfo key={i} props={contact}/>
-                    ))}
+                    )) : <></>}
                 </div>
             </div>
         )

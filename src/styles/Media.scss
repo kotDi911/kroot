@@ -55,7 +55,7 @@
         "numbers"
         "options";
   }
-  .about__grid, .about__grid-cards, .home__grid, .contacts__grid, .services__grid, .details__grid, .generation__grid-cards {
+  .about__grid, .about__grid-cards, .home__grid, .services__grid, .details__grid, .generation__grid-cards {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
@@ -74,13 +74,13 @@
   .about__grid-cardsP {
     grid-auto-rows: 22rem;
   }
-  .contacts__grid {
-    grid-template-areas:
-    "photo"
-    "text"
-    "button"
-    "photo1"
-    "text1";
+  .contacts__ {
+    &text{
+      width: 100%;
+    }
+    &grid-card {
+      flex-direction: column-reverse;
+    }
   }
   .about__main-img {
     min-height: 18rem;

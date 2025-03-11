@@ -9,11 +9,9 @@ import {useUrl} from "../store/Urls";
 
 let arrayForHoldingPosts = [];
 let filteredProjects = [];
-export const LoaderProjects = () => {
-
-}
 
 const Projects = () => {
+    const savedProjects = localStorage.getItem("backBtnData");
     const {URL, URL_PRIORITY} =
         useUrl((store) => ({
             URL: store.API_PROJECTS, URL_PRIORITY: store.API_PRIORITY_PROJECTS
@@ -24,13 +22,10 @@ const Projects = () => {
 
     const [filter, setFilter] = useState("all");
     const [projects, setProjects] = useState([])
+    const [firstLoad, setFirstLoad] = useState(!savedProjects);
     const [postsToShow, setPostsToShow] = useState([]);
 
-    const perPage = () => {
-        return window.innerWidth <= 660 ? 9 : window.innerWidth <= 991 ? 8 : 9;
-    }
-
-    const [postsPerPage] = useState(perPage());
+    const postsPerPage = window.innerWidth <= 660 ? 9 : window.innerWidth <= 991 ? 8 : 9;
     const [currentPage, setCurrentPage] = useState(1)
     const [scrollPage, setScrollPage] = useState(1)
     const [next, setNext] = useState(postsPerPage);
@@ -61,26 +56,54 @@ const Projects = () => {
         )
     }, [postsToShow])
 
-    const fetchData = async () => {
-        await fetch(URL + currentPage)
-            .then(res => {
-                return res.json();
-            })
-            .then(res => {
-                const dataProjects = res.map(data => data.acf)
-                setProjects([...projects, ...dataProjects])
-                setIsLoading(false)
-                setCurrentPage(currentPage + 1)
-                setScrollPage(scrollPage + 1)
-            })
-            .catch(err => {
-                setIsLoading(false)
-                setError(err)
-            })
+    // FETCH DATA
+    const fetchData = async (url) => {
+        try {
+            const res = await fetch(url);
+            if (res.status === 500) throw new Response("Error: ", {status: "500", statusText: "No more projects"});
+            if (!res.ok) throw new Response("Error: ", {status: "404", statusText: "Failed to fetch data"});
+            const data = await res.json();
+            const dataProjects = data.map((item) => item.acf);
+
+            if (dataProjects.length === 0) throw new Response("Error: ", {
+                status: "404",
+                statusText: "No projects found"
+            });
+            return dataProjects;
+        } catch (err) {
+            throw new Response(err.statusText, {status: err.status, statusText: err.statusText})
+        }
     }
 
+    // FIRST LOADING
     useEffect(() => {
+        setIsLoading(true);
+        if (firstLoad) {
+            fetchData(URL_PRIORITY)
+                .then(res => setProjects(res.sort(sortFunction)))
+                .catch(err => console.error("Error: ", err.statusText, err.status))
+                .finally(() => {
+                        setFirstLoad(false)
+                        setIsLoading(false)
+                    }
+                )
+        } else {
+            if (projects.length <= 9) {
+                fetchData(URL + currentPage)
+                    .then(res => {
+                        setProjects([...projects, ...res])
+                        // setCurrentPage(prevState => prevState + 1)
+                    })
+                    .catch(err => {
+                        console.error("Error", err.statusText, err.status)
+                        setError(err)
+                    })
+                    .finally(() => setIsLoading(false))
+            }
+        }
+    }, [projects.length])
 
+    useEffect(() => {
         const loopWithSlice = (start, end) => {
             const slicedPosts = filteredProjects.slice(start, end);
             arrayForHoldingPosts = [...arrayForHoldingPosts, ...slicedPosts];
@@ -89,18 +112,34 @@ const Projects = () => {
             localStorage.setItem("projects", JSON.stringify(arrayForHoldingPosts))
         };
 
-        const handleFilter = (filter) => {
+        const handleFilter = async (filter) => {
             arrayForHoldingPosts = [];
             filteredProjects = projects.filter(project => project.filter === filter || filter === "all");
             loopWithSlice(0, window.innerHeight > 1200 ? 9 + next : next)
+
+            if (postsToShow.length < 9 && !error && filter !== "all") {
+                try {
+                    setIsLoading(true)
+                    const filtered = await fetchData(URL + currentPage);
+                    setProjects([...projects, ...filtered])
+                    setCurrentPage(currentPage + 1)
+                    setScrollPage(scrollPage + 1)
+                    setIsLoading(false);
+                } catch (err) {
+                    throw new Response("Error: ", {status: err.status, statusText: err.statusText})
+                }
+            }
         }
-        handleFilter(filter)
-    }, [filter, projects.length, next])
+        handleFilter(filter).catch(err => {
+            console.error("Error: ", err.status, err.statusText);
+            setError(err);
+            setIsLoading(false);
+        })
+    }, [filter, projects.length, next, postsToShow.length])
 
     useEffect(() => {
         setScrollPage(1)
         setNext(postsPerPage)
-        // setError(false)
     }, [filter])
 
     useEffect(() => {
@@ -109,11 +148,30 @@ const Projects = () => {
             const documentScrollTop = e.target.documentElement.scrollTop;
 
             if (documentHeight - (documentScrollTop + window.innerHeight) <= 1 && projects.length >= 9) {
-                if (scrollPage === currentPage && !error) {
+                if (!isLoading && scrollPage === currentPage && !error) {
                     setIsLoading(true)
-                    await fetchData()
+                    try {
+                        await fetchData(URL + currentPage)
+                            .then(res => {
+                                setProjects([...projects, ...res])
+                                setCurrentPage(currentPage + 1)
+                                setScrollPage(scrollPage + 1)
+                                setNext(next + postsPerPage)
+                            })
+                            .catch(err => {
+                                console.error("Error: ", err.status, err.statusText)
+                                setError(err)
+                            })
+                            .finally(() => setIsLoading(false))
+                    } catch (err) {
+                        console.error(err)
+                    } finally {
+                        setIsLoading(false)
+                    }
                 }
-                setNext(next + postsPerPage)
+                if(scrollPage !== currentPage){
+                    setNext(next + postsPerPage)
+                }
             }
         };
 
@@ -123,61 +181,10 @@ const Projects = () => {
         }
     }, [projects.length, next, error]);
 
-    useEffect(() => {
-        const fetchPriorityList = async () => {
-            try {
-                let arr = [];
-                const resPriority = await fetch(URL_PRIORITY);
-                if (!resPriority.ok) throw new Response('Field...', {status: 404})
-                const res = await fetch(URL + currentPage);
-                const data = await resPriority.json();
-                const data1 = await res.json();
-                if (data === null || data.length === 0) throw new Response('Field...', {status: 404})
-                const dataProjects = data.map(res => res.acf)
-                const data1Projects = data1.map(res => res.acf)
-                const sortProjects = dataProjects.sort(sortFunction)
-                arr = [...sortProjects, ...data1Projects]
-                setProjects(arr);
-                setCurrentPage(currentPage + 1)
-                setScrollPage(scrollPage + 1)
-            } catch (error) {
-                console.error(error)
-            }
-        }
-        if (projects.length <= 0) {
-            setIsLoading(true);
-            fetchPriorityList()
-                .then(() => {
-                    setIsLoading(false);
-                })
-                .catch(() => {
-                    setIsLoading(false);
-                });
-        }
-
-    }, []);
-
-    useEffect(() => {
-        const fetchFilter = async () => {
-            await fetchData()
-        }
-
-        if (postsToShow.length < 9 && !error && filter !== "all") {
-            fetchFilter()
-                .then(() => {
-                    setIsLoading(false);
-                })
-                .catch(() => {
-                    setIsLoading(false);
-                });
-        }
-    }, [filter, postsToShow])
-
-
     return (
         <article className="article projects">
             <Helmet>
-                <title>Our projects - The kroot</title>
+                <title>Our projects - The Kroot</title>
                 <meta content="Our projects" property="og:title"/>
                 <meta content="Our projects" property="twitter:title"/>
                 <meta name="description" content="Project list The Kroot company"/>
@@ -208,9 +215,7 @@ const Projects = () => {
                 }
             </section>
             <section className="container-80">
-                <div className="projects__grid mt-32">
-                    {card}
-                </div>
+                <div className="projects__grid mt-32">{card}</div>
                 {isLoading ? <Loader/> : <></>}
             </section>
         </article>
