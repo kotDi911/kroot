@@ -6,7 +6,7 @@ import {Helmet} from "react-helmet";
 
 const Career = () => {
     return (
-        <article className="article career">
+        <main className="main career">
             <Helmet>
                 <title>Career - The Kroot</title>
                 <meta name="description" content="Career opportunities at The Kroot" />
@@ -27,7 +27,7 @@ const Career = () => {
                 {/*<LongButton text="START YOUR PROJECT" url="get_in_touch"/>*/}
                 <AppsCard/>
             </section>
-        </article>
+        </main>
     )
 }
 export default Career

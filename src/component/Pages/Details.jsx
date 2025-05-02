@@ -65,7 +65,7 @@ const Details = () => {
     }, [options]);
 
     return (
-        <article className="article details">
+        <main className="main details">
             <Helmet>
                 <title>Project {project_name}</title>
                 <meta content={`Project ${project_name}`} property="og:title"/>
@@ -85,7 +85,7 @@ const Details = () => {
                     {getBtnVideo.map((card, i) => <VideoCard key={i} props={card}/>)}
                 </div>
             </section>
-        </article>
+        </main>
     )
 }
 export default Details

@@ -5,7 +5,7 @@ import CarouselServices from "../cards/Services/CarouselServices";
 const Services1 = () => {
     const services = useServiceCard((store) => store.services)
     return (
-        <article className="article services">
+        <main className="main services">
             <Helmet>
                 <title>Services - The Kroot</title>
                 <meta content="Services - The Kroot" property="og:title"/>
@@ -68,7 +68,7 @@ const Services1 = () => {
                 {/*    {services.map((item, i) => <ServicesCard key={i} props={item}/>)}*/}
                 {/*</div>*/}
             </section>
-        </article>
+        </main>
     )
 }
 export default Services1

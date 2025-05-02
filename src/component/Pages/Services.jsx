@@ -4,7 +4,7 @@ import {Helmet} from "react-helmet-async";
 const Services = () => {
     const services = useServiceCard((store) => store.services)
     return (
-        <article className="article services">
+        <main className="main services">
             <Helmet>
                 <title>Services - The Kroot</title>
                 <meta content="Services - The Kroot" property="og:title" />
@@ -29,7 +29,7 @@ const Services = () => {
                     {services.map((item, i) => <ServicesCard key={i} props={item}/>)}
                 </div>
             </section>
-        </article>
+        </main>
     )
 }
 export default Services

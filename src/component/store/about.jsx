@@ -4,7 +4,7 @@ let g_kroot = process.env.PUBLIC_URL + "/assets/g_kroot/video/g-kroot.mp4";
 export const useAbout = create(() => ({
     nominations: [
         {
-            title: "RED ROK FILM FESTIVAL BEST VISUAL EFFECT",
+            title: "RED ROCK FILM FESTIVAL BEST VISUAL EFFECT",
             name: "– The Ghost of Los Angeles (2023)"
         },
         {
@@ -37,7 +37,7 @@ export const useAbout = create(() => ({
             desc: "artist"
         },
         {
-            black: "3",
+            black: "4",
             gray: null,
             desc: "won nomination"
         }

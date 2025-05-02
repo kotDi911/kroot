@@ -7,7 +7,7 @@ import {Helmet} from "react-helmet";
 
 const Generation = () => {
     return (
-        <article className="article generation">
+        <main className="main generation">
             <Helmet>
                 <title>Generation Kroot</title>
                 <meta content="Generation Kroot" property="og:title"/>
@@ -24,7 +24,7 @@ const Generation = () => {
             <MasterclassSection/>
             <WorkshopSection/>
             <SupervisorsSection/>
-        </article>
+        </main>
     )
 }
 export default Generation

@@ -35,7 +35,7 @@ const TextCard = ({props, areaName}) => {
         props.map((item, i) =>
             <div key={i} className="contacts__text flex col space-b" style={{gridArea: areaName}}>
                 <h3 className="h3 black mb-8">{item.text}</h3>
-                <div className="flex col">
+                <div className="flex col mb-16">
                     {item.options.map((option, i) => <p key={i} className="regular gray mt-16">{option.text}</p>)}
                 </div>
                 <div className="flex mt-16 contacts__cont">

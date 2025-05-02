@@ -17,7 +17,7 @@ const Home = () => {
     }, [data])
 
     return (
-        <article className="article home">
+        <main className="main home">
             <Helmet>
                 <title>The Kroot - VFX and animation</title>
                 <meta content="The Kroot" property="og:title"/>
@@ -41,7 +41,7 @@ const Home = () => {
                     {cards}
                 </div>
             </section>
-        </article>
+        </main>
     )
 }
 export default Home

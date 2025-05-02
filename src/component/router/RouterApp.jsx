@@ -9,19 +9,17 @@ const RouterApp = ({props}) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [pathname]);
-    const header = useMemo(()=> {
-        return(<Header path={pathname}/>)
-    },[pathname])
-    const footer = useMemo(()=> {
-        return(<Footer/>)
-    },[])
+    const header = useMemo(() => {
+        return (<Header path={pathname}/>)
+    }, [pathname])
+    const footer = useMemo(() => {
+        return (<Footer/>)
+    }, [])
 
     return (
         <>
             {header}
-            <main>
-                {props}
-            </main>
+            {props}
             {footer}
         </>
     );

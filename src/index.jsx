@@ -17,6 +17,7 @@ import GetInTouch from "./component/Pages/GetInTouch";
 import {HelmetProvider} from "react-helmet-async";
 import {loaderDetails} from "./component/loaders/LoaderDetails";
 import Services1 from "./component/Pages/Services1";
+import Services2 from "./component/Pages/Services2";
 
 const router = Router([
     {
@@ -31,7 +32,7 @@ const router = Router([
     },
     {
         path: "/services",
-        element: <RouterApp props={<Services/>}/>,
+        element: <RouterApp props={<Services2/>}/>,
         errorElement: <RouterApp props={<ErrorPage/>}/>,
     },
     {

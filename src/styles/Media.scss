@@ -31,6 +31,9 @@
   .details__grid {
     grid-auto-rows: 16rem;
   }
+  .fs-56{
+    font-size: 52px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -48,6 +51,9 @@
       font-size: 18px;
     }
   }
+  .fs-56{
+    font-size: 50px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -56,18 +62,22 @@
   }
   .about__grid {
     grid-template-areas:
-        "nominations"
         "numbers"
         "options";
   }
-  .about__grid, .about__grid-cards, .home__grid, .services__grid, .details__grid, .generation__grid-cards {
+  .about__grid, .about__grid-cards, .home__grid, .details__grid, .generation__grid-cards {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .services-row {
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
+  .services {
+    &__grid{
+      grid-template-columns: 1fr;
+    }
+    &-row {
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+    }
   }
   .details__grid {
     grid-auto-rows: 22rem;
@@ -80,6 +90,10 @@
     grid-auto-rows: 22rem;
   }
   .contacts__ {
+    &photo{
+      align-self: center;
+      width: 50vw;
+    }
     &text{
       width: 100%;
     }
@@ -98,7 +112,7 @@
   "music"
   "services"
   "projects"
-  "about"
+  "get_in_touch"
   "beauty"
   "contacts";
     }
@@ -140,7 +154,7 @@
   .gallery__card {
     height: 28rem;
   }
-  .article {
+  .main {
     padding: 0 2rem;
   }
   .carousel__dot {
@@ -235,6 +249,11 @@
   .gallery__card {
     height: 20rem;
   }
+  .contacts__photo{
+      align-self: center;
+      width: 100%;
+
+  }
   .projects__grid {
     grid-template-columns: 1fr;
   }
@@ -258,6 +277,9 @@
   .h3 {
     font-size: 36px;
   }
+  .fs-56{
+    font-size: 48px;
+  }
   .nav {
     justify-content: space-between;
 
@@ -279,7 +301,7 @@
   .home__grid, .details__grid, .about__grid-cards {
     grid-auto-rows: 18rem;
   }
-  .contacts__text, .contacts .contacts__photo {
+  .contacts__text, .contacts {
     padding: 1.5rem 1rem;
   }
   .contacts__text > div:last-child {
@@ -355,7 +377,7 @@
   .h3 {
     font-size: 32px;
   }
-  .article {
+  .main {
     padding: 0 1.25rem;
   }
   .apps__cont, .career__card {
@@ -371,9 +393,6 @@
   }
   .mark {
     margin-right: 0.5rem;
-  }
-  .services__card {
-    padding: 1.5rem 1rem;
   }
   .home {
     &__card {
@@ -396,10 +415,12 @@
     grid-auto-rows: 16rem;
   }
   .services {
+    &__card {
+      padding: 1rem;
+    }
     &__link {
       text-align: center;
     }
-
     &-row {
       flex-direction: column;
       align-items: start;
@@ -451,5 +472,8 @@
   }
   .gallery__card {
     height: 12rem;
+  }
+  .long-btn-text {
+    font-size: 22px;
   }
 }

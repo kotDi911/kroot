@@ -1,22 +1,21 @@
+import {Helmet} from "react-helmet-async";
 import MainImgCard from "../cards/About/MainImgCard";
 import Skills from "../cards/About/Skills";
 import LongButton from "../LongButton";
 import HomeCard from "../cards/HomeCard";
-import {useAbout} from "../store/about";
-import {Helmet} from "react-helmet";
-import Button from "../Button";
 import {Link} from "react-router-dom";
-import {useState} from "react";
+import Button from "../Button";
+import {useAbout} from "../store/about";
+import Nominations from "../cards/About/Nominations";
+import OurServices from "../cards/About/OurServices";
 
 const map = process.env.PUBLIC_URL + "/assets/images/vector-world-map.png";
-const red_d = process.env.PUBLIC_URL + "/assets/images/red_rock_d.jpg";
-const red_m = process.env.PUBLIC_URL + "/assets/images/red_rock_m.jpg";
 
-const About = () => {
+const Services1 = () => {
     const cards = useAbout((store) => store.cards)
-    const [redImg] = useState(window.innerWidth >= 545 ? red_d : red_m)
+
     return (
-        <main className="main about">
+        <main className="main services">
             <Helmet>
                 <title>About - The Kroot</title>
                 <meta content="About The Kroot company" property="og:title"/>
@@ -33,15 +32,20 @@ const About = () => {
                 <meta property="og:url" content="https://www.thekroot.com/about/"/>
                 <meta name="twitter:card" content="summary_large_image"/>
             </Helmet>
-            <section className="container-80">
-                <h1 className="h1 black">
-                    About <span className="gray">us</span>
-                </h1>
-                <MainImgCard/>
-                <img className="img" src={redImg} style={{borderRadius: "25px"}} alt="Winner Red Rock"/>
-                <Skills/>
+            <MainImgCard/>
+            <Nominations/>
+            <OurServices/>
+            <Skills/>
+            <section className="container-64">
+                <h2 className="h2 text-center black">
+                    Locations
+                </h2>
                 <img className="img mb-52 mt-32" src={map} alt=""/>
-                {/*<AboutTeam/>*/}
+            </section>
+            {/*<section className="container-64">*/}
+            {/*    <AboutTeam/>*/}
+            {/*</section>*/}
+            <section className="container-64">
                 <LongButton text="join our team" url="career"/>
                 <div className="about__grid-cards mt-112">
                     {cards.map((card, i) =>
@@ -82,4 +86,4 @@ const About = () => {
         </main>
     )
 }
-export default About
+export default Services1

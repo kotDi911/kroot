@@ -182,7 +182,7 @@ const Projects = () => {
     }, [projects.length, next, error]);
 
     return (
-        <article className="article projects">
+        <main className="main projects">
             <Helmet>
                 <title>Our projects - The Kroot</title>
                 <meta content="Our projects" property="og:title"/>
@@ -218,7 +218,7 @@ const Projects = () => {
                 <div className="projects__grid mt-32">{card}</div>
                 {isLoading ? <Loader/> : <></>}
             </section>
-        </article>
+        </main>
     )
 }
 export default Projects

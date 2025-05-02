@@ -31,7 +31,7 @@ const GetInTouch = () => {
     }, []);
 
     return (
-        <article className="article get-in-touch">
+        <main className="main get-in-touch">
             <Helmet>
                 <title>Get in touch</title>
                 <meta content="Get in touch" property="og:title"/>
@@ -57,7 +57,7 @@ const GetInTouch = () => {
                 <img className="mr-16" src={doneImg} alt="ok" width="24px" height="24px"/>
                 <p className="popup__text fs-20">{message}</p>
             </div>
-        </article>
+        </main>
     )
 }
 export default GetInTouch

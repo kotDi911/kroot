@@ -5,7 +5,7 @@ import Button from "../Button";
 const light = "#9ba1a0"
 
 const HomeCard = ({props}) => {
-    const {name, url, title, gray, ico, text, btnText, social} = props;
+    const {name, url, title, gray, btnText, social} = props;
 
     return (
         <div className={`${url === "generation_kroot" ? "g_kroot" : ""} main__card relative`}
@@ -13,28 +13,35 @@ const HomeCard = ({props}) => {
         >
             <Link className={`home__card flex col hover__card relative`} to={`/${url}`}>
                 {
-                    title || ico || text
+                    name !== "get_in_touch"
                         ?
                         <div className="home__card-title flex col">
-                            {title && <h3 className={`title ${name === "contacts" ? "fs-56" : "h3"}`}>{title} <span
-                                className="gray">{gray}</span></h3>}
-                            {ico && <div style={{width: "max-content"}}><img className="ico-img" src={ico} alt="icon"/></div>}
-                            {text && <p className="gray mt-16">{text}</p>}
+                            {
+                                title && <h3 className={`title ${name === "contacts" ? "fs-56" : "h3"}`}>
+                                    {title} <span className="gray">{gray}</span>
+                                </h3>
+                            }
                         </div>
                         :
-                        <></>
+                        <div className="home__card-title flex col" style={{textAlign: "center"}}>
+                            {
+                                title && <h3 className={`title fs-56`}>
+                                    {title} <span className="gray">{gray}</span>
+                                </h3>
+                            }
+                        </div>
                 }
                 <div className="w-100 absolute home__card-text-cont" style={{justifyContent: social ? "flex-end" : ""}}>
-                    <div className={`flex end ${ social? "space-end":"space-b"}`}>
+                    <div className={`flex end ${social ? "space-end" : "space-b"}`}>
                         {btnText &&
                             <div className="flex center">
-                               <div className="dot"/>
+                                <div className="dot"/>
                                 <div className="small" style={{color: light}}>
                                     {btnText.toUpperCase()}
                                 </div>
                             </div>
                         }
-                        <Button />
+                        <Button/>
                     </div>
                 </div>
             </Link>

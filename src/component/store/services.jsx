@@ -7,62 +7,8 @@ const unreal = process.env.PUBLIC_URL + "/assets/icon/services/ue_icon.png";
 export const useServiceCard = create(() => ({
     services: [
         {
-            ico: cgi,
-            title:"CGI",
-            desc:"Hollywood-grade CGI at your fingertips.",
-            options: [
-                {
-                    id:1,
-                    text:"3D modeling",
-                    url:"",
-                },
-                {
-                    id:5,
-                    text:"Animation",
-                    url:"",
-                },
-                {
-                    id:6,
-                    text:"Particular simulation",
-                    url:"",
-                },
-                {
-                    id:7,
-                    text:"Rendering",
-                    url:"",
-                },
-            ]
-        },
-        {
-            ico: beauty,
-            title:"Beauty",
-            desc:"Flawless beauty retouching for any project.",
-            options: [
-                // {
-                //     id:1,
-                //     text:"Clean up",
-                //     url: "",
-                // },
-                {
-                    id:2,
-                    text:"Retouch face",
-                    url:"",
-                },
-                {
-                    id:3,
-                    text:"Change shape of the body",
-                    url:"",
-                },
-                {
-                    id:4,
-                    text:"From old to young",
-                    url:"",
-                },
-            ]
-        },
-        {
             ico: vfx,
-            title:"VFX",
+            title:"VFX / CGI",
             desc:"Seamless VFX integration – from rotoscoping to compositing.",
             options: [
                 {
@@ -83,6 +29,48 @@ export const useServiceCard = create(() => ({
                 {
                     id:4,
                     text:"Compositing",
+                    url:"",
+                },
+                {
+                    id:5,
+                    text:"3D modeling",
+                    url:"",
+                },
+                {
+                    id:6,
+                    text:"Animation",
+                    url:"",
+                },
+                {
+                    id:7,
+                    text:"Particular simulation",
+                    url:"",
+                },
+                {
+                    id:8,
+                    text:"Rendering",
+                    url:"",
+                },
+            ]
+        },
+        {
+            ico: beauty,
+            title:"Beauty Retouch",
+            desc:"Flawless beauty retouching for any project.",
+            options: [
+                {
+                    id:2,
+                    text:"Retouch face",
+                    url:"",
+                },
+                {
+                    id:3,
+                    text:"Change shape of the body",
+                    url:"",
+                },
+                {
+                    id:4,
+                    text:"From old to young",
                     url:"",
                 },
             ]
@@ -113,6 +101,33 @@ export const useServiceCard = create(() => ({
                     url:"",
                 },
             ]
-        }
+        },
+        {
+            ico: cgi,
+            title:"AI",
+            desc:"Hollywood-grade AI at your fingertips.",
+            options: [
+                {
+                    id:1,
+                    text:"3D modeling",
+                    url:"",
+                },
+                {
+                    id:5,
+                    text:"Animation",
+                    url:"",
+                },
+                {
+                    id:6,
+                    text:"Particular simulation",
+                    url:"",
+                },
+                {
+                    id:7,
+                    text:"Rendering",
+                    url:"",
+                },
+            ]
+        },
     ]
 }));

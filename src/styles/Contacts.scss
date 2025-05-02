@@ -9,43 +9,28 @@
       gap: 2rem;
       margin-bottom: 2rem
     }
-  //  display: grid;
-  //  grid-template-columns: repeat(4, 1fr);
-  //  gap: 1rem;
-  //  grid-template-areas:
-  //"text text text photo"
-  //"button button button button"
-  //"photo0 text0 text0 text0"
-  //"text1 text1 text1 photo1"
-  //"photo2 text2 text2 text2"
-  //"text3 text3 text3 photo3 "
-  //;
   }
 
   &__text, .contacts__photo {
     background: white;
-    padding: 2.5rem 2rem;
     border-radius: 25px;
   }
-
   &__text {
-    width: 75%;
+    padding: 2.5rem 2rem;
+    width: 65%;
   }
 
   &__photo {
+    width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  &__logo {
-    position: absolute;
-    width: 100%;
-    //height: 200px;
-    background-size: cover;
-    //border-radius: 50%;
+    &-img{
+      border-radius: 25px;
+    }
   }
 }
+
 .img__tel{
   cursor: auto;
 }
@@ -69,39 +54,5 @@
   & .btn-bg {
     width: 100%;
     height: 100%;
-  }
-}
-
-.round {
-  &__text {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    animation: rotateText 10s linear infinite;
-
-    &-cont {
-      position: relative;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-
-  &__span {
-    position: absolute;
-    left: 50%;
-    transform-origin: 0 130px;
-  }
-}
-
-@keyframes rotateText {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }

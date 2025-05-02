@@ -3,44 +3,109 @@ import {create} from 'zustand'
 const tel = process.env.PUBLIC_URL + "/assets/icon/social/phone.svg";
 const mail = process.env.PUBLIC_URL + "/assets/icon/social/mail.svg";
 const Anatoly = process.env.PUBLIC_URL + "/assets/images/team/Anatoly.jpg";
+const Billy = process.env.PUBLIC_URL + "/assets/images/team/Billy.jpg";
+const Kash = process.env.PUBLIC_URL + "/assets/images/team/Kash.jpg";
 const Julia = process.env.PUBLIC_URL + "/assets/images/team/Julia.jpg";
 const Alex = process.env.PUBLIC_URL + "/assets/images/team/Alex.jpg";
 const Artem = process.env.PUBLIC_URL + "/assets/images/team/Artem.jpg";
 const Alena = process.env.PUBLIC_URL + "/assets/images/team/Alena.jpg";
-const telAnatoly = process.env.PUBLIC_URL + "/assets/images/contacts/anatoly.svg";
-const telJulia = process.env.PUBLIC_URL + "/assets/images/contacts/julia.svg";
+const telAnatoly = process.env.PUBLIC_URL + "/assets/images/contacts/anatoly.png";
+const telBilly = process.env.PUBLIC_URL + "/assets/images/contacts/billy.png";
+const telKash = process.env.PUBLIC_URL + "/assets/images/contacts/kash.png";
+const telJulia = process.env.PUBLIC_URL + "/assets/images/contacts/julia.png";
 
 export const useContacts = create(() => ({
-
-    card: [
+    cards: [
         {
-            title: "Contacts",
-            text: "Los Angeles U.S",
-            options: [
-                {text: "Anatoly Kuzmytskyi"},
-                {text: "Executive Producer / Creative"},
-            ],
-            contacts: [
+            card: [
                 {
-                    img: tel,
-                    img2: telAnatoly,
-                    url: "",
-                },
-                {
-                    img: mail,
-                    text: "tomash@thekroot.com",
-                    url: "mailto:tomash@thekroot.com",
+                    title: "Contacts",
+                    text: "Los Angeles U.S",
+                    options: [
+                        {text: "Anatoly Kuzmytskyi"},
+                        {text: "Executive Producer / Creative"},
+                    ],
+                    contacts: [
+                        {
+                            img: tel,
+                            img2: telAnatoly,
+                            url: "",
+                        },
+                        {
+                            img: mail,
+                            text: "tomash@thekroot.com",
+                            url: "mailto:tomash@thekroot.com",
+                        }
+                    ],
                 }
             ],
-        }
-    ],
-    photo: [
+            photo: [
+                {
+                    area: "photo",
+                    img: Anatoly,
+                }
+            ],
+        },
         {
-            area: "photo",
-            img: Anatoly,
-        }
-    ],
-    other: [
+            card: [
+                {
+                    title: "Contacts",
+                    text: "Los Angeles U.S",
+                    options: [
+                        {text: "Billy Ray"},
+                        {text: "Business Development"},
+                    ],
+                    contacts: [
+                        {
+                            img: tel,
+                            img2: telBilly,
+                            url: "",
+                        },
+                        {
+                            img: mail,
+                            text: "billy@thekroot.com",
+                            url: "mailto:billy@thekroot.com",
+                        }
+                    ],
+                }
+            ],
+            photo: [
+                {
+                    area: "photo",
+                    img: Billy,
+                }
+            ],
+        },
+        // {
+        //     card: [
+        //         {
+        //             title: "Contacts",
+        //             text: "Los Angeles U.S",
+        //             options: [
+        //                 {text: "Kash Band"},
+        //                 {text: "Project Manager"},
+        //             ],
+        //             contacts: [
+        //                 {
+        //                     img: tel,
+        //                     img2: telKash,
+        //                     url: "",
+        //                 },
+        //                 {
+        //                     img: mail,
+        //                     text: "kash@thekroot.com",
+        //                     url: "mailto:kash@thekroot.com",
+        //                 }
+        //             ],
+        //         }
+        //     ],
+        //     photo: [
+        //         {
+        //             area: "photo",
+        //             img: Anatoly,
+        //         }
+        //     ],
+        // },
         {
             card: [
                 {

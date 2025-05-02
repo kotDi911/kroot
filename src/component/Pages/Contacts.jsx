@@ -1,25 +1,22 @@
-import LongButton from "../LongButton";
 import TextCard from "../cards/Contacts/TextCard";
 import PhotoCard from "../cards/Contacts/PhotoCard";
 import {Helmet} from "react-helmet-async";
 import {useContacts} from "../store/contactsData";
 
-const RenderCard = ({count, item}) => {
+const RenderCard = ({item}) => {
     return (
         <div className="contacts__grid-card">
-                    <TextCard props={item.card} areaName={"text" + count}/>
+                    <TextCard props={item.card}/>
                     <PhotoCard props={item.photo}/>
         </div>
     )
 }
 
 const Contacts = () => {
-    const card = useContacts((store) => store.card)
-    const photo = useContacts((store) => store.photo)
-    const other = useContacts((store) => store.other)
+    const cards = useContacts((store) => store.cards)
 
     return (
-        <article className="article contacts">
+        <main className="main contacts">
             <Helmet>
                 <title>Contacts - The Kroot</title>
                 <meta content="Contacts the Kroot" property="og:title"/>
@@ -41,19 +38,12 @@ const Contacts = () => {
             </Helmet>
             <section className="container-64">
                 <div className="contacts__grid">
-                    <div className="contacts__grid-card">
-                        <TextCard props={card} areaName={"text"}/>
-                        <PhotoCard props={photo}/>
-                    </div>
-                </div>
-                <LongButton text="START YOUR PROJECT" url="get_in_touch" style="button"/>
-                <div className="contacts__grid">
-                    {other.map((item, i) =>
-                        <RenderCard key={i} count={i} item={item}/>
+                    {cards.map((item, i) =>
+                        <RenderCard key={i} item={item}/>
                     )}
                 </div>
             </section>
-        </article>
+        </main>
     )
 }
 export default Contacts

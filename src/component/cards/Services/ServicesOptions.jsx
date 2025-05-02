@@ -9,7 +9,7 @@ const ServicesOptions = ({props}) => {
               <img className="mark" alt="mark" src={round}/>
               <p className="regular gray">{text}</p>
           </div>
-          {url && <Link className="services__link regular dark-gray-bg white" to={url} target="_blank"> &#9654; watch reel</Link>}
+          {url && <Link className="services__link regular white" to={url} target="_blank"> &#9654; watch reel</Link>}
       </div>
   )
 }
