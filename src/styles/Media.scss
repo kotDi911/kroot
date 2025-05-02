@@ -43,6 +43,11 @@
   .images-cont {
     padding: 1.5rem 1rem;
   }
+  .label {
+    &__before, &__after {
+      font-size: 18px;
+    }
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -236,6 +241,11 @@
   .long-btn-text {
     font-size: 36px;
   }
+  .label {
+    &__before, &__after {
+      font-size: 16px;
+    }
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -405,7 +415,6 @@
   .filter__btn {
     width: 55%;
   }
-
   .career__card {
     flex-direction: column;
 
@@ -428,6 +437,11 @@
   }
   .long-btn-text {
     font-size: 26px;
+  }
+  .label {
+    &__before, &__after {
+      font-size: 14px;
+    }
   }
 }
 

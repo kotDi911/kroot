@@ -24,7 +24,7 @@ export const useHomeCard = create(() => ({
         {
             id: 2,
             name: "music",
-            url: "https://www.youtube.com/watch?v=5gbNqMXN_DU&t=4s&ab_channel=TheKROOT",
+            url: "https://www.youtube.com/watch?v=0kva06IWbYw&ab_channel=TheKROOT",
             ...generateMediaURL("music"),
             btnText: "music video showreel",
         },

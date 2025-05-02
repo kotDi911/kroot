@@ -71,59 +71,119 @@ export const useContacts = create(() => ({
                 }
             ],
         },
-        {
-            card: [
-                {
-                    title: "Contacts",
-                    text: "Ukraine / Europe",
-                    options: [
-                        {text: "Alexander Fedirko"},
-                        {text: "Producer"},
-                    ],
-                }
-            ],
-            photo: [
-                {
-                    area: "photo1",
-                    img: Alex,
-                }
-            ],
-        },
-        {
-            card: [
-                {
-                    title: "Contacts",
-                    text: "Kazakhstan / Europe",
-                    options: [
-                        {text: "Korkishko Artem"},
-                        {text: "VFX Supervisor"},
-                    ],
-                }
-            ],
-            photo: [
-                {
-                    area: "photo2",
-                    img: Artem,
-                }
-            ],
-        },
-        {
-            card: [
-                {
-                    title: "Contacts",
-                    text: "Poiland / Europe",
-                    options: [
-                        {text: "Alena Kozlova"},
-                        {text: "3D Supervisor"},
-                    ],
-                }
-            ],
-            photo: [
-                {
-                    area: "photo3",
-                    img: Alena,
-                }
-            ],
-        },
+        // {
+        //     card: [
+        //         {
+        //             title: "Contacts",
+        //             text: "",
+        //             options: [
+        //                 {text: ""},
+        //                 {text: ""},
+        //             ],
+        //             contacts: [
+        //                 {
+        //                     img: tel,
+        //                     img2: null,
+        //                     url: "",
+        //                 },
+        //                 {
+        //                     img: mail,
+        //                     text: " office@thekroot.com",
+        //                     url: "mailto: office@thekroot.com",
+        //                 }
+        //             ],
+        //         }
+        //     ],
+        //     photo: [
+        //         {
+        //             area: "photo0",
+        //             img: null,
+        //         }
+        //     ],
+        // },
+        // {
+        //     card: [
+        //         {
+        //             title: "Contacts",
+        //             text: "",
+        //             options: [
+        //                 {text: ""},
+        //                 {text: ""},
+        //             ],
+        //             contacts: [
+        //                 {
+        //                     img: tel,
+        //                     img2: null,
+        //                     url: "",
+        //                 },
+        //                 {
+        //                     img: mail,
+        //                     text: "Kash@thekroot.com",
+        //                     url: "mailto:Kash@thekroot.com",
+        //                 }
+        //             ],
+        //         }
+        //     ],
+        //     photo: [
+        //         {
+        //             area: "photo0",
+        //             img: null,
+        //         }
+        //     ],
+        // },
+        // {
+        //     card: [
+        //         {
+        //             title: "Contacts",
+        //             text: "Ukraine / Europe",
+        //             options: [
+        //                 {text: "Alexander Fedirko"},
+        //                 {text: "Producer"},
+        //             ],
+        //         }
+        //     ],
+        //     photo: [
+        //         {
+        //             area: "photo1",
+        //             img: Alex,
+        //         }
+        //     ],
+        // },
+        // {
+        //     card: [
+        //         {
+        //             title: "Contacts",
+        //             text: "Kazakhstan / Europe",
+        //             options: [
+        //                 {text: "Korkishko Artem"},
+        //                 {text: "VFX Supervisor"},
+        //             ],
+        //         }
+        //     ],
+        //     photo: [
+        //         {
+        //             area: "photo2",
+        //             img: Artem,
+        //         }
+        //     ],
+        // },
+        // {
+        //     card: [
+        //         {
+        //             title: "Contacts",
+        //             text: "Poiland / Europe",
+        //             options: [
+        //                 {text: "Alena Kozlova"},
+        //                 {text: "3D Supervisor"},
+        //             ],
+        //         }
+        //     ],
+        //     photo: [
+        //         {
+        //             area: "photo3",
+        //             img: Alena,
+        //         }
+        //     ],
+        // },
     ],
 }));

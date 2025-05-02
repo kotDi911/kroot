@@ -47,4 +47,9 @@
     height: 100%;
     border-radius: 12px;
   }
+  &__card {
+    &-text{
+      width: 70%;
+    }
+  }
 }

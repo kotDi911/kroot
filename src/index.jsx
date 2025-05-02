@@ -16,6 +16,7 @@ import Generation from "./component/Pages/Generation";
 import GetInTouch from "./component/Pages/GetInTouch";
 import {HelmetProvider} from "react-helmet-async";
 import {loaderDetails} from "./component/loaders/LoaderDetails";
+import Services1 from "./component/Pages/Services1";
 
 const router = Router([
     {

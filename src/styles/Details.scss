@@ -52,8 +52,66 @@
   background: rgba(222, 235, 233, 0.9);
   z-index: 2;
 }
-.images-cont{
+
+.images-cont {
   background: #fff;
   border-radius: 25px;
   padding: 2rem 1.5rem;
+}
+
+.buttons__board {
+  font-size: 20px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+
+  &-pos {
+
+  }
+
+  &-style {
+
+  }
+}
+
+.board__button {
+  font-size: 20px;
+  background: white;
+  border: 2px solid black;
+  color: black;
+  text-align: center;
+  width: 50px;
+  border-radius: 25px;
+  margin-left: 15px;
+
+  &:hover {
+    background: rgba(0, 171, 0, 0.7);
+    color: white;
+    transition: .3s;
+  }
+}
+
+.label {
+  &__before, &__after {
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    width: 100px;
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 20px;
+    padding: 3px;
+    bottom: 5px;
+    background: rgba(100, 100, 101, 0.7);
+    color: white;
+  }
+
+  &__before {
+    left: 3%;
+  }
+
+  &__after {
+    right: 3%;
+  }
 }

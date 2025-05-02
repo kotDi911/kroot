@@ -6,11 +6,15 @@ import {useAbout} from "../store/about";
 import {Helmet} from "react-helmet";
 import Button from "../Button";
 import {Link} from "react-router-dom";
+import {useState} from "react";
 
-const map = process.env.PUBLIC_URL + "/assets/images/vector-world-map.png"
+const map = process.env.PUBLIC_URL + "/assets/images/vector-world-map.png";
+const red_d = process.env.PUBLIC_URL + "/assets/images/red_rock_d.jpg";
+const red_m = process.env.PUBLIC_URL + "/assets/images/red_rock_m.jpg";
 
 const About = () => {
     const cards = useAbout((store) => store.cards)
+    const [redImg] = useState(window.innerWidth >= 545 ? red_d : red_m)
     return (
         <article className="article about">
             <Helmet>
@@ -33,8 +37,9 @@ const About = () => {
                     About <span className="gray">us</span>
                 </h1>
                 <MainImgCard/>
+                <img className="img" src={redImg} style={{borderRadius: "25px"}} alt="Winner Red Rock"/>
                 <AboutCardsGrid/>
-                {/*<img className="img mb-52 mt-32" src={map} alt=""/>*/}
+                <img className="img mb-52 mt-32" src={map} alt=""/>
                 {/*<AboutTeam/>*/}
                 <LongButton text="join our team" url="career"/>
                 <div className="about__grid-cards mt-112">

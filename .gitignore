@@ -7,6 +7,7 @@
 .pnp.js
 /src/sitemap.xml
 /src/robots.txt
+/src/send_mail.php
 # testing
 /coverage
 

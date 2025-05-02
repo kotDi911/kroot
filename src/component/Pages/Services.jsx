@@ -1,4 +1,4 @@
-import ServicesCard from "../cards/ServicesCard";
+import ServicesCard from "../cards/Services/ServicesCard";
 import {useServiceCard} from "../store/services";
 import {Helmet} from "react-helmet-async";
 const Services = () => {
