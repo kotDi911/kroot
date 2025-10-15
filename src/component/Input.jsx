@@ -1,6 +1,7 @@
-const Input = ({name, type, placeholder, value, onChange, onBlur, touched, errors, ref}) => {
+const Input = ({name, type, placeholder, value, onChange, onBlur, touched, errors, ref, label}) => {
     return (
         <label htmlFor={name} className="input__label">
+            {label}
             <input
                 id={name}
                 className="input__input"

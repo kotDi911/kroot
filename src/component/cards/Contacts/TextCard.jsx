@@ -9,7 +9,7 @@ const ContactInfo = ({props})=>{
                     <span className="btn-bg"></span>
                     <img className="social__img" src={img} alt="icon"/>
                 </div>
-                <img className="img__tel" src={img2} alt="phone number"/>
+                <img className="img__tel" src={img2} alt="phone"/>
             </div>
         )
     }

@@ -46,7 +46,7 @@ const Services1 = () => {
             {/*    <AboutTeam/>*/}
             {/*</section>*/}
             <section className="container-64">
-                <LongButton text="join our team" url="career"/>
+                {/*<LongButton text="join our team" url="career"/>*/}
                 <div className="about__grid-cards mt-112">
                     {cards.map((card, i) =>
                         // <HomeCard key={i} props={card}/>)

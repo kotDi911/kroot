@@ -80,7 +80,9 @@ const Projects = () => {
         setIsLoading(true);
         if (firstLoad) {
             fetchData(URL_PRIORITY)
-                .then(res => setProjects(res.sort(sortFunction)))
+                .then(res => {
+                    setProjects(res.sort(sortFunction))
+                })
                 .catch(err => console.error("Error: ", err.statusText, err.status))
                 .finally(() => {
                         setFirstLoad(false)
@@ -92,7 +94,7 @@ const Projects = () => {
                 fetchData(URL + currentPage)
                     .then(res => {
                         setProjects([...projects, ...res])
-                        // setCurrentPage(prevState => prevState + 1)
+                        setCurrentPage(prevState => prevState + 1)
                     })
                     .catch(err => {
                         console.error("Error", err.statusText, err.status)
@@ -114,7 +116,10 @@ const Projects = () => {
 
         const handleFilter = async (filter) => {
             arrayForHoldingPosts = [];
-            filteredProjects = projects.filter(project => project.filter === filter || filter === "all");
+            filteredProjects = projects.filter(project =>
+                 project.filter.includes(filter) || filter === "all"
+                // project.filter === filter || filter === "all"
+            );
             loopWithSlice(0, window.innerHeight > 1200 ? 9 + next : next)
 
             if (postsToShow.length < 9 && !error && filter !== "all") {

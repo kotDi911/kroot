@@ -27,14 +27,14 @@ const router = Router([
     },
     {
         path: "/about",
-        element: <RouterApp props={<About/>}/>,
-        errorElement: <RouterApp props={<ErrorPage/>}/>,
-    },
-    {
-        path: "/services",
         element: <RouterApp props={<Services2/>}/>,
         errorElement: <RouterApp props={<ErrorPage/>}/>,
     },
+    // {
+    //     path: "/services",
+    //     element: <RouterApp props={<Services2/>}/>,
+    //     errorElement: <RouterApp props={<ErrorPage/>}/>,
+    // },
     {
         path: "/projects",
         children: [

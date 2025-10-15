@@ -81,9 +81,11 @@ const GetInTouchForm = ({sentMail}) => {
         <form className="form flex col" onSubmit={handleSubmit}>
             <div className="flex col-gap">
                 <Input
+                    id="firstName"
                     name="firstName"
                     type="text"
-                    placeholder="First Name*"
+                    label="What's your first name?*"
+                    placeholder="Enter your first name"
                     onChange={handleChange}
                     value={values.firstName}
                     onBlur={handleBlur}
@@ -91,9 +93,11 @@ const GetInTouchForm = ({sentMail}) => {
                     errors={errors.firstName}
                 />
                 <Input
+                    id="lastName"
                     name="lastName"
                     type="text"
-                    placeholder="Last Name*"
+                    label="What's your last name?*"
+                    placeholder="Enter your last name"
                     onChange={handleChange}
                     value={values.lastName}
                     onBlur={handleBlur}
@@ -102,9 +106,11 @@ const GetInTouchForm = ({sentMail}) => {
                 />
             </div>
             <Input
+                id="email"
                 name="email"
                 type="email"
-                placeholder="Email*"
+                label="What's your email?*"
+                placeholder="Enter your email"
                 onChange={handleChange}
                 value={values.email}
                 onBlur={handleBlur}
@@ -112,9 +118,11 @@ const GetInTouchForm = ({sentMail}) => {
                 errors={errors.email}
             />
             <Input
+                id="phone"
                 name="phone"
                 type="tel"
-                placeholder="Phone"
+                label="What's your phone number?"
+                placeholder="Enter your phone number"
                 onChange={handleChange}
                 value={values.phone}
                 onBlur={handleBlur}
@@ -122,20 +130,111 @@ const GetInTouchForm = ({sentMail}) => {
                 errors={errors.phone}
             />
             <Input
+                id="company"
                 name="company"
                 type="text"
-                placeholder="Company"
+                label="What's your company?"
+                placeholder="Enter company"
                 onChange={handleChange}
                 value={values.company}
                 onBlur={handleBlur}
                 touched={touched.company}
                 errors={errors.company}
             />
+            <div className="flex col-gap">
+                <Input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    label="What's your budget?*"
+                    placeholder="Enter your first name"
+                    onChange={handleChange}
+                    value={values.firstName}
+                    onBlur={handleBlur}
+                    touched={touched.firstName}
+                    errors={errors.firstName}
+                />
+                <Input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    label="What's your timeline?*"
+                    placeholder="Enter your last name"
+                    onChange={handleChange}
+                    value={values.lastName}
+                    onBlur={handleBlur}
+                    touched={touched.lastName}
+                    errors={errors.lastName}
+                />
+            </div>
+            <div className="flex col-gap">
+                <Input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    label="What's your start date?"
+                    placeholder="Enter your first name"
+                    onChange={handleChange}
+                    value={values.firstName}
+                    onBlur={handleBlur}
+                    touched={touched.firstName}
+                    errors={errors.firstName}
+                />
+                <Input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    label="What's your deadline date?"
+                    placeholder="dd.mm.yyyy"
+                    onChange={handleChange}
+                    value={values.lastName}
+                    onBlur={handleBlur}
+                    touched={touched.lastName}
+                    errors={errors.lastName}
+                />
+            </div>
+            <Input
+                id="videoTreatment"
+                name="videoTreatment"
+                type="text"
+                label="Link to your video treatment"
+                placeholder="https://example.com/treatment"
+                onChange={handleChange}
+                value={values.company}
+                onBlur={handleBlur}
+                touched={touched.company}
+                errors={errors.company}
+            />
+            <Input
+                id="videoEdit"
+                name="videoEdit"
+                type="text"
+                label="Link to your video edit"
+                placeholder="https://example.com/video"
+                onChange={handleChange}
+                value={values.company}
+                onBlur={handleBlur}
+                touched={touched.company}
+                errors={errors.company}
+            />
+            <Input
+                id="noVideo"
+                name="noVideo"
+                type="text"
+                label="If no edit, please include the expected runtime of the upcoming video"
+                placeholder="(MV) 02:30 or (ADV) :60+ :15 :30 cutdowns"
+                onChange={handleChange}
+                value={values.company}
+                onBlur={handleBlur}
+                touched={touched.company}
+                errors={errors.company}
+            />
+            <label htmlFor="message" className="input__label">Do you have any wishes or comments?</label>
             <textarea
                 className="input__input message"
                 id="message"
                 name="message"
-                placeholder="Message"
+                placeholder="Write your comment here"
                 onChange={handleChange}
                 value={values.message}
                 onBlur={handleBlur}

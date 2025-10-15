@@ -6,8 +6,8 @@ const logo = process.env.PUBLIC_URL + "/assets/icon/LogoMini.svg"
 const links = [
     {name: "home"},
     {name: "about"},
-    {name: "services"},
     {name: "projects"},
+    {name: "career"},
     {name: "contacts"},
 ]
 

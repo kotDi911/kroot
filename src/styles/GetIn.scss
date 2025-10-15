@@ -32,19 +32,14 @@
 .input {
   &__label {
     width: 100%;
+    color: $black;
     position: relative;
     margin-bottom: 2rem;
-  }
-
-  &__err {
-    color: red;
-    position: absolute;
-    bottom: -1rem;
-    left: 1.5rem;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   &__input {
+    margin-top: 10px;
     border-radius: 25px;
     padding: 1rem 1.5rem;
     width: 100%;
@@ -57,6 +52,14 @@
       height: 8rem;
       resize: none;
     }
+  }
+
+  &__err {
+    color: red;
+    position: absolute;
+    bottom: -1rem;
+    left: 1.5rem;
+    font-size: 12px;
   }
 }
 
